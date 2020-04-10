@@ -1,8 +1,13 @@
+# https://github.com/XVimProject/XVim2/blob/master/Documents/FeatureList.md
 set ignorecase
 set wrapscan
-set guioptions=r
-set hlsearch
 set incsearch
+set number
+set hlsearch
+set guioptions=r
+set clipboard=unnamed
+set relativenumber
+set blinkcursor
 
-inoremap jk <ESC>
-vnoremap . :norm.<CR>
+imap jk <ESC>
+vmap . :norm.<CR>
