@@ -1,0 +1,27 @@
+[user]
+	name = mli
+	email = newone8184@163.com
+[color]
+	ui = true
+[alias]
+        co = checkout
+        ci = commit
+        br = branch
+        st = status
+	last = log -1
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    pm = push origin HEAD:refs/for/master
+    pd = push origin HEAD:refs/for/dev
+    pr = pull -r
+    cp = cherry-pick
+    s = stash
+    sp = stash pop
+
+[branch]
+	autosetuprebase = always
+[push]
+	default = simple
+[gc]
+	autoDetach = false
+[i18n]
+	logoutputencoding = utf-8

@@ -1,0 +1,8 @@
+set ignorecase
+set wrapscan
+set guioptions=r
+set hlsearch
+set incsearch
+
+inoremap jk <ESC>
+vnoremap . :norm.<CR>
