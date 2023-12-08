@@ -107,21 +107,7 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.bash_aliases
 
-source "$(navi widget zsh)"
-
 set -o vi
-
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT="/Users/mli/cocos2d-x-4.0/tools/cocos2d-console/bin"
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT="/Users/mli"
-export PATH=$COCOS_X_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT="/Users/mli/cocos2d-x-4.0/templates"
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 export PATH="$HOME/.fastlane/bin:$PATH"
 
@@ -129,3 +115,33 @@ DEFAULT_USER='mli'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# GEM
+export PATH="$PATH:$HOME/.gem/bin"
+export PATH="$PATH:$HOME/.gem"
+
+# Flutter
+export FLUTTER_ROOT="$HOME/flutter/bin"
+export PATH="$PATH:$HOME/flutter/bin"
+# 修改源
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export FLUTTER_GIT_URL=https://gitee.com/mirrors/Flutter.git
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Python pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PATH="$HOME/bin:$PATH"
+
+# MySQL
+export PATH="/usr/local/mysql/bin:$PATH"
+
+# Android
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
