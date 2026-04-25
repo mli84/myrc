@@ -7,7 +7,26 @@
   ],
   "model": "nvidia/stepfun-ai/step-3.5-flash",
   "provider": {
-      "longcat": {
+    "modal": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Modal",
+      "options": {
+        "baseURL": "https://api.us-west-2.modal.direct/v1",
+        "headers": {
+          "Authorization": "Bearer {env:MODAL_API_KEY}"
+        }
+      },
+      "models": {
+        "zai-org/GLM-5.1-FP8": {
+          "name": "GLM 5.1",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        }
+      }
+    },
+    "longcat": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "LongCat",
       "options": {
@@ -128,6 +147,15 @@
         "mcp"
       ],
       "enabled": false,
+      "type": "local"
+    },
+    "pencil": {
+      "command": [
+        "/Users/mli/.pencil/mcp/visual_studio_code/out/mcp-server-darwin-arm64",
+        "--app",
+        "visual_studio_code"
+      ],
+      "enabled": true,
       "type": "local"
     }
   }

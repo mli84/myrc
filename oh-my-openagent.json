@@ -5,129 +5,104 @@
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "nvidia/kimi-k2.5"
-        },
-        {
-          "model": "opencode/minimax-m2.5"
-        },
-        {
-          "model": "nvidia/glm-4.7"
-        },
-        {
-          "model": "nvidia/kimi-k2-instruct"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/z-ai/glm-4.7",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "hephaestus": {
       "model": "nvidia/stepfun-ai/step-3.5-flash",
-      "variant": "medium"
+      "variant": "medium",
+      "fallback_models": [
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/z-ai/glm-4.7",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
+      ]
     },
     "oracle": {
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "high"
-        },
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "high"
-        },
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "high"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/z-ai/glm-4.7",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "explore": {
-          "model": "nvidia/glm-4.7",
+      "model": "nvidia/z-ai/glm-4.7",
       "fallback_models": [
-        {
-          "model": "opencode/minimax-m2.5-free"
-        },
-        {
-          "model": "nvidia/kimi-k2-instruct"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "multimodal-looker": {
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "nvidia/kimi-k2-instruct"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/z-ai/glm-4.7",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "prometheus": {
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "high"
-        },
-        {
-          "model": "longcat/longcat-flash-thinking"
-        },
-        {
-          "model": "opencode/gemini-3.1-pro"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/z-ai/glm-4.7",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "metis": {
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "high"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/z-ai/glm-4.7",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "momus": {
           "model": "opencode/nemotron-3-super-free",
           "variant": "high",
       "fallback_models": [
-        {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
-      "variant": "high"
-        },
-        {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
-      "variant": "high"
-        },
-        {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
-      "variant": "high"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/z-ai/glm-4.7",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "atlas": {
-          "model": "nvidia/glm-4.7",
+          "model": "nvidia/z-ai/glm-4.7",
       "fallback_models": [
-        {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
-          "variant": "medium"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "sisyphus-junior": {
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "fallback_models": [
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "medium"
-        },
-        {
-          "model": "nvidia/kimi-k2-instruct"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/z-ai/glm-4.7",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "librarian": {
-          "model": "nvidia/glm-4.7"
+      "model": "nvidia/z-ai/glm-4.7",
+      "fallback_models": [
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
+      ]
     }
   },
   "categories": {
@@ -135,117 +110,80 @@
       "model": "opencode/glm-4.7-free",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "nvidia/minimax-m2.7"
-        },
-        {
-          "model": "opencode/glm-5"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/z-ai/glm-4.7",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "ultrabrain": {
-          "model": "nvidia/glm-4.7",
-      "variant": "xhigh",
+      "model": "nvidia/z-ai/glm-4.7",
       "fallback_models": [
-        {
-          "model": "longcat/longcat-flash-thinking"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "deep": {
-          "model": "nvidia/glm-4.7",
-      "variant": "medium",
+      "model": "nvidia/z-ai/glm-4.7",
       "fallback_models": [
-        {
-          "model": "nvidia/minimax-m2.7"
-        },
-        {
-          "model": "longcat/longcat-flash-thinking"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "artistry": {
-          "model": "nvidia/glm-4.7",
-      "variant": "high",
+          "model": "nvidia/z-ai/glm-4.7",
       "fallback_models": [
-        {
-          "model": "nvidia/minimax-m2.7"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "quick": {
-          "model": "nvidia/glm-4.7",
+      "model": "longcat/Longcat-Flash-Lite",
       "fallback_models": [
-        {
-          "model": "nvidia/minimax-m2.7"
-        },
-        {
-          "model": "longcat/longcat-flash-thinking"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        }
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "unspecified-low": {
-          "model": "nvidia/glm-4.7",
+      "model": "longcat/Longcat-Flash-Lite",
       "fallback_models": [
-        {
-          "model": "nvidia/minimax-m2.7"
-        },
-        {
-          "model": "longcat/longcat-flash-thinking"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        }
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "unspecified-high": {
-          "model": "nvidia/glm-4.7",
+      "model": "nvidia/z-ai/glm-4.7",
       "fallback_models": [
-        {
-          "model": "nvidia/minimax-m2.7"
-        },
-        {
-          "model": "longcat/longcat-flash-thinking"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        }
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     },
     "writing": {
-          "model": "nvidia/glm-4.7",
+      "model": "nvidia/z-ai/glm-4.7",
       "fallback_models": [
-        {
-          "model": "nvidia/minimax-m2.7"
-        },
-        {
-          "model": "nvidia/minimax-m2.7"
-        }
+         "longcat/Longcat-Flash-Lite",
+         "nvidia/moonshotai/kimi-k2-instruct",
+         "opencode/minimax-m2.5-free"
       ]
     }
-  }
+  },
+  "background_task": {
+      "providerConcurrency": {
+        "modal": 1,
+        "google": 1,
+        "longcat": 10
+         },
+     "modelConcurrency": {
+        "zai-org/GLM-5.1-FP8": 1,
+        "longcat/Longcat-Flash-Lite": 20
+        }
+  },
+  "experimental": { "aggressive_truncation": true, "task_system": true },
+  "tmux": {
+    "enabled": true,
+    "layout": "main-vertical"
+    }
 }
