@@ -5,8 +5,8 @@
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "medium",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
-         "nvidia/z-ai/glm-4.7",
+         "longcat/LongCat-Flash-Lite",
+         "nvidia/zai-org/glm-4.7",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
@@ -15,8 +15,8 @@
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "medium",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
-         "nvidia/z-ai/glm-4.7",
+         "longcat/LongCat-Flash-Lite",
+         "nvidia/zai-org/glm-4.7",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
@@ -25,16 +25,16 @@
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "high",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
-         "nvidia/z-ai/glm-4.7",
+         "longcat/LongCat-Flash-Lite",
+         "nvidia/zai-org/glm-4.7",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "explore": {
-      "model": "nvidia/z-ai/glm-4.7",
+      "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
+         "longcat/LongCat-Flash-Lite",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
@@ -43,8 +43,8 @@
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "medium",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
-         "nvidia/z-ai/glm-4.7",
+         "longcat/LongCat-Flash-Lite",
+         "nvidia/zai-org/glm-4.7",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
@@ -53,8 +53,8 @@
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "high",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
-         "nvidia/z-ai/glm-4.7",
+         "longcat/LongCat-Flash-Lite",
+         "nvidia/zai-org/glm-4.7",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
@@ -63,8 +63,8 @@
       "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "high",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
-         "nvidia/z-ai/glm-4.7",
+         "longcat/LongCat-Flash-Lite",
+         "nvidia/zai-org/glm-4.7",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
@@ -73,33 +73,33 @@
           "model": "opencode/nemotron-3-super-free",
           "variant": "high",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
-         "nvidia/z-ai/glm-4.7",
+         "longcat/LongCat-Flash-Lite",
+         "nvidia/zai-org/glm-4.7",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "atlas": {
-          "model": "nvidia/z-ai/glm-4.7",
+          "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
+         "longcat/LongCat-Flash-Lite",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "sisyphus-junior": {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
+      "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
-         "nvidia/z-ai/glm-4.7",
+         "longcat/LongCat-Flash-Lite",
+         "nvidia/zai-org/glm-4.7",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "librarian": {
-      "model": "nvidia/z-ai/glm-4.7",
+      "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
+         "longcat/LongCat-Flash-Lite",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
@@ -107,86 +107,95 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "opencode/glm-4.7-free",
-      "variant": "high",
+      "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
-         "nvidia/z-ai/glm-4.7",
+         "longcat/LongCat-Flash-Lite",
+         "nvidia/zai-org/glm-4.7",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "ultrabrain": {
-      "model": "nvidia/z-ai/glm-4.7",
+      "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
+         "longcat/LongCat-Flash-Lite",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "deep": {
-      "model": "nvidia/z-ai/glm-4.7",
+      "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
+         "longcat/LongCat-Flash-Lite",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "artistry": {
-          "model": "nvidia/z-ai/glm-4.7",
+          "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
+         "longcat/LongCat-Flash-Lite",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "quick": {
-      "model": "longcat/Longcat-Flash-Lite",
+      "model": "longcat/LongCat-Flash-Lite",
       "fallback_models": [
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "unspecified-low": {
-      "model": "longcat/Longcat-Flash-Lite",
+      "model": "longcat/LongCat-Flash-Lite",
       "fallback_models": [
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "unspecified-high": {
-      "model": "nvidia/z-ai/glm-4.7",
+      "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
       ]
     },
     "writing": {
-      "model": "nvidia/z-ai/glm-4.7",
+      "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-         "longcat/Longcat-Flash-Lite",
+         "longcat/LongCat-Flash-Lite",
          "nvidia/moonshotai/kimi-k2-instruct",
          "opencode/minimax-m2.5-free"
+      ]
+    },
+    "git": {
+      "model": "longcat/LongCat-Flash-Lite",
+      "description": "All git operations",
+      "prompt_append": "Focus on atomic commits, clear messages, and safe operations.",
+      "fallback_models": [
+          "nvidia/zai-org/glm-4.7",
+          "opencode/minimax-m2.5-free"
       ]
     }
   },
   "background_task": {
-      "providerConcurrency": {
-        "modal": 1,
-        "google": 1,
+    "providerConcurrency": {
+      "modal": 1,
+      "google": 1,
       "kimi": 1,
       "nvidia": 3,
       "opencode": 10,
-        "longcat": 10
-         },
-     "modelConcurrency": {
-        "zai-org/GLM-5.1-FP8": 1,
-        "longcat/Longcat-Flash-Lite": 20
-        }
+      "longcat": 10
+    },
+    "modelConcurrency": {
+      "zai-org/GLM-5.1-FP8": 1,
+      "kimi-for-coding/k2p6": 1,
+      "kimi-for-coding/k2p5": 1,
+        "longcat/LongCat-Flash-Lite": 20
+    }
   },
   "experimental": { "aggressive_truncation": true, "task_system": true },
-  "tmux": {
-    "enabled": true,
+  "tmux": { "enabled": true,
     "layout": "main-vertical"
-    }
+ }
 }
