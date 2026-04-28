@@ -69,8 +69,8 @@
   },
   "background_task": {
     "providerConcurrency": {
-      "nvidia": 3,
       "kimi-for-coding": 3,
+      "nvidia": 10,
       "longcat": 10,
       "opencode": 10
     },
