@@ -1,201 +1,97 @@
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/dev/assets/oh-my-opencode.schema.json",
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+
   "agents": {
     "sisyphus": {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
-      "variant": "medium",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/zai-org/glm-4.7",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
+        "nvidia/zai-org/glm-4.7",
+        "nvidia/moonshotai/kimi-k2-instruct",
+        "longcat/LongCat-Flash-Thinking"
       ]
     },
-    "hephaestus": {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
-      "variant": "medium",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/zai-org/glm-4.7",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "oracle": {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
-      "variant": "high",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/zai-org/glm-4.7",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "explore": {
-      "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "multimodal-looker": {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
-      "variant": "medium",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/zai-org/glm-4.7",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "prometheus": {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
-      "variant": "high",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/zai-org/glm-4.7",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "metis": {
-      "model": "nvidia/stepfun-ai/step-3.5-flash",
-      "variant": "high",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/zai-org/glm-4.7",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "momus": {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "high",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/zai-org/glm-4.7",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "atlas": {
-          "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "sisyphus-junior": {
-      "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/zai-org/glm-4.7",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
+
     "librarian": {
-      "model": "longcat/LongCat-Flash-Thinking",
+      "model": "longcat/LongCat-Flash-Lite",
       "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
+        "opencode/minimax-m2.5-free"
       ]
+    },
+
+    "explore": {
+      "model": "longcat/LongCat-Flash-Lite",
+      "fallback_models": [
+        "opencode/minimax-m2.5-free"
+      ]
+    },
+
+    "oracle": {
+      "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
+      "fallback_models": [
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "variant": "medium"
+        },
+        "kimi-for-coding/k2p6"
+      ]
+    },
+
+    "prometheus": {
+      "prompt_append": "Always parallelize tasks aggressively. Prefer explore + librarian for context gathering."
     }
   },
+
   "categories": {
-    "visual-engineering": {
-      "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/zai-org/glm-4.7",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "ultrabrain": {
-      "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "deep": {
-      "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
-    "artistry": {
-          "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
-    },
     "quick": {
-      "model": "longcat/LongCat-Flash-Lite",
-      "fallback_models": [
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
+      "model": "longcat/LongCat-Flash-Lite"
     },
+
     "unspecified-low": {
-      "model": "longcat/LongCat-Flash-Lite",
-      "fallback_models": [
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
+      "model": "opencode/minimax-m2.5-free"
     },
+
     "unspecified-high": {
-      "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
+      "model": "kimi-for-coding/k2p6"
     },
+
     "writing": {
-      "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-         "longcat/LongCat-Flash-Lite",
-         "nvidia/moonshotai/kimi-k2-instruct",
-         "opencode/minimax-m2.5-free"
-      ]
+      "model": "longcat/LongCat-Flash-Lite"
     },
-    "git": {
-      "model": "longcat/LongCat-Flash-Lite",
-      "description": "All git operations",
-      "prompt_append": "Focus on atomic commits, clear messages, and safe operations.",
-      "fallback_models": [
-          "nvidia/zai-org/glm-4.7",
-          "opencode/minimax-m2.5-free"
-      ]
+
+    "deep": {
+      "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
+    },
+
+    "ultrabrain": {
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "variant": "high"
     }
   },
+
   "background_task": {
     "providerConcurrency": {
-      "modal": 1,
-      "google": 1,
-      "kimi": 1,
       "nvidia": 3,
-      "opencode": 10,
-      "longcat": 10
+      "kimi-for-coding": 3,
+      "longcat": 10,
+      "opencode": 10
     },
     "modelConcurrency": {
-      "zai-org/GLM-5.1-FP8": 1,
-      "kimi-for-coding/k2p6": 1,
-      "kimi-for-coding/k2p5": 1,
-        "longcat/LongCat-Flash-Lite": 20
+      "k2p6": 2,
+      "LongCat-Flash-Lite": 20
     }
   },
-  "experimental": { "aggressive_truncation": true, "task_system": true },
-  "tmux": { "enabled": true,
-    "layout": "main-vertical"
- }
+
+  "experimental": {
+    "task_system": true,
+    "aggressive_truncation": true
+  },
+
+  "model_capabilities": {
+    "enabled": true,
+    "auto_refresh_on_start": true
+  },
+
+  "tmux": {
+    "enabled": true
+  }
 }
