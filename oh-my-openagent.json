@@ -16,10 +16,12 @@
       ]
     },
     "explore": {
-      "model": "longcat/LongCat-Flash-Lite",
+      "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
+        "nvidia/moonshotai/kimi-k2-instruct",
         "opencode/minimax-m2.5-free"
-      ]
+       ],
+       "prompt_append": "Use Atlas results as primary context. Expand only when necessary. Focus on code relationships, call chains, and dependencies. Avoid re-reading entire files unless required."
     },
     "oracle": {
       "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
@@ -44,6 +46,33 @@
         "longcat/LongCat-Flash-Thinking"
       ],
       "prompt_append": "Break tasks into minimal independent steps. Maximize parallel execution using explore and librarian. Avoid over-calling oracle unless necessary."
+    },
+    "atlas": {
+      "model": "nvidia/moonshotai/kimi-k2-instruct",
+      "fallback_models": [
+        "longcat/LongCat-Flash-Lite",
+        "opencode/minimax-m2.5-free"
+       ],
+      "prompt_append": "You are a code retrieval engine. Return only the most relevant code snippets. Do NOT summarize entire files. Prefer exact functions, classes, and definitions. Keep output minimal and structured."
+    },
+    "metis": {
+      "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
+      "fallback_models": [
+         "kimi-for-coding/k2p6",
+          {
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "variant": "medium"
+          }
+        ],
+      "prompt_append": "You are a planning and decomposition engine for large codebases. Break tasks into minimal, precise steps. Optimize for minimal file reads. Guide Atlas for retrieval and Explore for deep analysis. Avoid redundant exploration."
+    },
+    "momus": {
+      "model": "nvidia/moonshotai/kimi-k2.5",
+      "fallback_models": [
+            "nvidia/zai-org/glm-4.7",
+            "longcat/LongCat-Flash-Thinking"
+          ],
+      "prompt_append": "You are a strict code reviewer and validator. Verify correctness, completeness, and side effects. Detect missing edge cases and incorrect assumptions. If issues are found, suggest revisiting Metis planning or Explore analysis."
     }
   },
   "categories": {
@@ -71,12 +100,13 @@
     "providerConcurrency": {
       "kimi-for-coding": 3,
       "nvidia": 10,
-      "longcat": 10,
+      "longcat": 15,
       "opencode": 10
     },
     "modelConcurrency": {
       "k2p6": 2,
-      "LongCat-Flash-Lite": 20
+      "LongCat-Flash-Thinking": 10,
+      "LongCat-Flash-Lite": 30
     }
   },
   "experimental": {
