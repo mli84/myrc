@@ -31,6 +31,7 @@
       "name": "LongCat",
       "options": {
         "baseURL": "https://api.longcat.chat/openai/v1",
+        "apiKey": "{env:LONGCAT_API_KEY}",
         "headers": {
           "Authorization": "Bearer {env:LONGCAT_API_KEY}"
         }
