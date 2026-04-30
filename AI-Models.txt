@@ -1,0 +1,21 @@
+longcat/LongCat-Flash-Lite
+longcat/LongCat-Flash-Thinking
+
+kimi-for-coding/k2p6
+kimi-for-coding/k2p5
+
+nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
+nvidia/zai-org/glm-4.7 
+nvidia/moonshotai/kimi-k2-instruct
+nvidia/minimaxai/minimax-m2.7
+nvidia/qwen/qwen3-next-80b-a3b-instruct
+nvidia/nemotron-3-super-120b-a12b (low/medium/high)
+nvidia/deepseek-ai/deepseek-v4-flash
+nvidia/deepseek-ai/deepseek-v4-pro
+
+openroute/nvidia/nemotron-3-super-120b-a12b:free
+
+opencode/minimax-m2.5-free
+opencode/nemotron-3-super-free (low/medium/high)
+opencode/hy3-preview-free (low/medium/high)
+
