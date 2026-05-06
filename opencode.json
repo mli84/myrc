@@ -2,41 +2,53 @@
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
     "opencode-gemini-auth@latest",
-    "opencode-antigravity-auth@latest",
-    "oh-my-openagent@latest"
+    "oh-my-openagent",
+    "opencode-antigravity-auth@latest"
   ],
-  "model": "nvidia/stepfun-ai/step-3.5-flash",
-  "provider": {
-    "modal": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Modal",
-      "options": {
-        "baseURL": "https://api.us-west-2.modal.direct/v1",
-        "headers": {
-          "Authorization": "Bearer {env:MODAL_API_KEY}"
-        }
-      },
-      "models": {
-        "zai-org/GLM-5.1-FP8": {
-          "name": "GLM 5.1",
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        }
-      }
+  "mcp": {
+    "graphify": {
+      "type": "local",
+      "command": [
+        "python3",
+        "-m",
+        "graphify.serve",
+        "graphify-out/graph.json"
+      ]
     },
+    "XcodeBuildMCP": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "xcodebuildmcp",
+        "mcp"
+      ],
+      "enabled": false
+    },
+    "Figma": {
+      "type": "remote",
+      "url": "https://mcp.figma.com/mcp",
+      "enabled": false
+    }
+  },
+  "provider": {
     "longcat": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "LongCat",
       "options": {
         "baseURL": "https://api.longcat.chat/openai/v1",
-        "apiKey": "{env:LONGCAT_API_KEY}",
         "headers": {
           "Authorization": "Bearer {env:LONGCAT_API_KEY}"
         }
       },
       "models": {
+        "LongCat-2.0-Preview": {
+          "name": "LongCat 2.0 Preview",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
         "LongCat-Flash-Thinking": {
           "name": "LongCat Flash Thinking",
           "limit": {
@@ -125,39 +137,25 @@
               }
             }
           }
+        },
+        "gemini-3.1-pro-preview-customtools": {
+          "name": "Gemini 3.1 Pro Preview Custom Tools (Gemini CLI)",
+          "limit": {
+            "context": 1048576,
+            "output": 65535
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         }
       }
-    }
-  },
-  "mcp": {
-    "graphify": {
-      "command": [
-        "python3",
-        "-m",
-        "graphify.serve",
-        "graphify-out/graph.json"
-      ],
-      "enabled": true,
-      "type": "local"
-    },
-    "XcodeBuildMCP": {
-      "command": [
-        "npx",
-        "-y",
-        "xcodebuildmcp@latest",
-        "mcp"
-      ],
-      "enabled": false,
-      "type": "local"
-    },
-    "pencil": {
-      "command": [
-        "/Users/mli/.pencil/mcp/visual_studio_code/out/mcp-server-darwin-arm64",
-        "--app",
-        "visual_studio_code"
-      ],
-      "enabled": true,
-      "type": "local"
     }
   }
 }

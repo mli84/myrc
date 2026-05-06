@@ -1,13 +1,53 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
+    "metis": {
+      "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
+      "fallback_models": [
+        "nvidia/deepseek-ai/deepseek-v4-pro",
+        "kimi-for-coding/k2p6"
+      ],
+      "prompt_append": "Break tasks into minimal steps. Prefer module→file→function search. Minimize total file reads. Guide Atlas and Explore precisely."
+    },
+    "atlas": {
+      "model": "nvidia/moonshotai/kimi-k2-instruct",
+      "fallback_models": [
+        "longcat/LongCat-Flash-Lite",
+        "opencode/minimax-m2.5-free"
+      ],
+      "prompt_append": "Return only relevant code snippets (functions/classes). No full file summaries. Keep output minimal and structured."
+    },
+    "explore": {
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        "longcat/LongCat-Flash-Thinking",
+        "nvidia/deepseek-ai/deepseek-v4-flash"
+      ],
+      "prompt_append": "Use Atlas results as primary context. Expand only if necessary. Focus on call chains, dependencies, and data flow."
+    },
+    "hephaestus": {
+      "model": "kimi-for-coding/k2p6",
+      "fallback_models": [
+        "nvidia/zai-org/glm-4.7",
+        "kimi-for-coding/k2p5"
+      ],
+      "prompt_append": "Minimize code changes. Prefer localized fixes. Avoid touching more than 2-3 files unless required. Ensure backward compatibility."
+    },
     "sisyphus": {
       "model": "kimi-for-coding/k2p6",
       "fallback_models": [
         "nvidia/zai-org/glm-4.7",
-        "nvidia/moonshotai/kimi-k2-instruct",
-        "longcat/LongCat-Flash-Thinking"
+        "nvidia/minimaxai/minimax-m2.7",
+        "kimi-for-coding/k2p5"
       ]
+    },
+    "momus": {
+      "model": "kimi-for-coding/k2p5",
+      "fallback_models": [
+        "longcat/LongCat-2.0-Preview",
+        "nvidia/zai-org/glm-4.7"
+      ],
+      "prompt_append": "Strictly validate correctness, edge cases, side effects. Reject uncertain results and request deeper analysis if needed."
     },
     "librarian": {
       "model": "longcat/LongCat-Flash-Lite",
@@ -15,64 +55,22 @@
         "opencode/minimax-m2.5-free"
       ]
     },
-    "explore": {
-      "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-        "nvidia/moonshotai/kimi-k2-instruct",
-        "opencode/minimax-m2.5-free"
-       ],
-       "prompt_append": "Use Atlas results as primary context. Expand only when necessary. Focus on code relationships, call chains, and dependencies. Avoid re-reading entire files unless required."
-    },
     "oracle": {
-      "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro",
       "fallback_models": [
         {
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "medium"
         },
-        "kimi-for-coding/k2p6"
-      ]
-    },
-    "hephaestus": {
-      "model": "opencode/minimax-m2.5-free",
-      "fallback_models": [
-        "longcat/LongCat-Flash-Lite"
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct"
       ]
     },
     "prometheus": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "longcat/LongCat-Flash-Lite",
       "fallback_models": [
-        "nvidia/zai-org/glm-4.7",
-        "longcat/LongCat-Flash-Thinking"
-      ],
-      "prompt_append": "Break tasks into minimal independent steps. Maximize parallel execution using explore and librarian. Avoid over-calling oracle unless necessary."
-    },
-    "atlas": {
-      "model": "nvidia/moonshotai/kimi-k2-instruct",
-      "fallback_models": [
-        "longcat/LongCat-Flash-Lite",
         "opencode/minimax-m2.5-free"
-       ],
-      "prompt_append": "You are a code retrieval engine. Return only the most relevant code snippets. Do NOT summarize entire files. Prefer exact functions, classes, and definitions. Keep output minimal and structured."
-    },
-    "metis": {
-      "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
-      "fallback_models": [
-         "kimi-for-coding/k2p6",
-          {
-          "model": "nvidia/nemotron-3-super-120b-a12b",
-          "variant": "medium"
-          }
-        ],
-      "prompt_append": "You are a planning and decomposition engine for large codebases. Break tasks into minimal, precise steps. Optimize for minimal file reads. Guide Atlas for retrieval and Explore for deep analysis. Avoid redundant exploration."
-    },
-    "momus": {
-      "model": "nvidia/moonshotai/kimi-k2.5",
-      "fallback_models": [
-            "nvidia/zai-org/glm-4.7",
-            "longcat/LongCat-Flash-Thinking"
-          ],
-      "prompt_append": "You are a strict code reviewer and validator. Verify correctness, completeness, and side effects. Detect missing edge cases and incorrect assumptions. If issues are found, suggest revisiting Metis planning or Explore analysis."
+      ],
+      "prompt_append": "Parallelize Atlas and Explore. Prefer cheap models first. Stop exploration early when context is sufficient. Avoid redundant calls."
     }
   },
   "categories": {
@@ -82,31 +80,32 @@
     "unspecified-low": {
       "model": "opencode/minimax-m2.5-free"
     },
+    "mid": {
+      "model": "longcat/LongCat-2.0-Preview"
+    },
     "unspecified-high": {
       "model": "kimi-for-coding/k2p6"
-    },
-    "writing": {
-      "model": "longcat/LongCat-Flash-Lite"
     },
     "deep": {
       "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
     },
-    "ultrabrain": {
+    "ultra": {
       "model": "nvidia/nemotron-3-super-120b-a12b",
       "variant": "high"
     }
   },
   "background_task": {
     "providerConcurrency": {
+      "longcat": 20,
+      "opencode": 10,
       "kimi-for-coding": 3,
-      "nvidia": 10,
-      "longcat": 15,
-      "opencode": 10
+      "nvidia": 10
     },
     "modelConcurrency": {
-      "k2p6": 2,
-      "LongCat-Flash-Thinking": 10,
-      "LongCat-Flash-Lite": 30
+      "longcat/LongCat-Flash-Lite": 40,
+      "longcat/LongCat-Flash-Thinking": 12,
+      "longcat/LongCat-2.0-Preview": 6,
+      "kimi-for-coding/k2p6": 3
     }
   },
   "experimental": {
