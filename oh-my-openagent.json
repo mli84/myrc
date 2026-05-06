@@ -71,6 +71,14 @@
         "opencode/minimax-m2.5-free"
       ],
       "prompt_append": "Parallelize Atlas and Explore. Prefer cheap models first. Stop exploration early when context is sufficient. Avoid redundant calls."
+    },
+    "sisyphus-junior": {
+      "model": "longcat/LongCat-Flash-Thinking",
+      "fallback_models": [
+        "longcat/LongCat-Flash-Lite",
+        "opencode/minimax-m2.5-free"
+      ],
+      "prompt_append": "Handle small, localized code changes only. Do not perform large refactors. Avoid modifying multiple files. Prefer minimal edits."
     }
   },
   "categories": {
@@ -96,15 +104,15 @@
   },
   "background_task": {
     "providerConcurrency": {
-      "longcat": 20,
-      "opencode": 10,
-      "kimi-for-coding": 3,
+      "longcat": 30,
+      "opencode": 3,
+      "kimi-for-coding": 5,
       "nvidia": 10
     },
     "modelConcurrency": {
       "longcat/LongCat-Flash-Lite": 40,
-      "longcat/LongCat-Flash-Thinking": 12,
-      "longcat/LongCat-2.0-Preview": 6,
+      "longcat/LongCat-Flash-Thinking": 20,
+      "longcat/LongCat-2.0-Preview": 20,
       "kimi-for-coding/k2p6": 3
     }
   },
