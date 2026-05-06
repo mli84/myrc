@@ -42,7 +42,7 @@
       ]
     },
     "momus": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         "longcat/LongCat-2.0-Preview",
         "nvidia/zai-org/glm-4.7"
