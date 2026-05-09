@@ -1,6 +1,5 @@
 longcat/LongCat-Flash-Lite
 longcat/LongCat-Flash-Thinking
-longcat/LongCat-2.0-Preview
 
 kimi-for-coding/k2p6
 kimi-for-coding/k2p5

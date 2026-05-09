@@ -7,7 +7,7 @@
         "nvidia/deepseek-ai/deepseek-v4-pro",
         "kimi-for-coding/k2p6"
       ],
-      "prompt_append": "Break tasks into minimal steps. Prefer module→file→function search. Minimize total file reads. Guide Atlas and Explore precisely."
+      "prompt_append": "Break tasks into minimal steps. Use hierarchical search: module -> file -> function. Optimize for minimal file reads and token usage."
     },
     "atlas": {
       "model": "nvidia/moonshotai/kimi-k2-instruct",
@@ -15,15 +15,14 @@
         "longcat/LongCat-Flash-Lite",
         "opencode/minimax-m2.5-free"
       ],
-      "prompt_append": "Return only relevant code snippets (functions/classes). No full file summaries. Keep output minimal and structured."
+      "prompt_append": "Return only relevant snippets/functions/classes. Never summarize full files. Keep output minimal and structured."
     },
     "explore": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-        "longcat/LongCat-Flash-Thinking",
         "nvidia/deepseek-ai/deepseek-v4-flash"
       ],
-      "prompt_append": "Use Atlas results as primary context. Expand only if necessary. Focus on call chains, dependencies, and data flow."
+      "prompt_append": "Use Atlas results as primary context. Expand only when necessary. Focus on dependencies, call chains, state flow, and architecture."
     },
     "hephaestus": {
       "model": "kimi-for-coding/k2p6",
@@ -31,7 +30,15 @@
         "nvidia/zai-org/glm-4.7",
         "kimi-for-coding/k2p5"
       ],
-      "prompt_append": "Minimize code changes. Prefer localized fixes. Avoid touching more than 2-3 files unless required. Ensure backward compatibility."
+      "prompt_append": "Minimize code changes. Prefer localized fixes. Avoid touching more than 2-3 files unless necessary. Delegate small changes to sisyphus-junior."
+    },
+    "sisyphus-junior": {
+      "model": "longcat/LongCat-Flash-Thinking",
+      "fallback_models": [
+        "longcat/LongCat-Flash-Lite",
+        "opencode/minimax-m2.5-free"
+      ],
+      "prompt_append": "Handle only small localized edits. Avoid refactors. Do not request unrelated files. Prefer minimal diffs."
     },
     "sisyphus": {
       "model": "kimi-for-coding/k2p6",
@@ -42,27 +49,29 @@
       ]
     },
     "momus": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "kimi-for-coding/k2p5",
       "fallback_models": [
-        "longcat/LongCat-2.0-Preview",
-        "nvidia/zai-org/glm-4.7"
+        "nvidia/zai-org/glm-4.7",
+        "longcat/LongCat-Flash-Thinking",
+        "opencode/gemini-3-flash"
       ],
-      "prompt_append": "Strictly validate correctness, edge cases, side effects. Reject uncertain results and request deeper analysis if needed."
+      "prompt_append": "Strictly validate correctness, edge cases, regressions, race conditions, and side effects. Reject uncertain fixes."
     },
     "librarian": {
-      "model": "longcat/LongCat-Flash-Lite",
+      "model": "opencode/gemini-3-flash",
       "fallback_models": [
+        "longcat/LongCat-Flash-Lite",
         "opencode/minimax-m2.5-free"
       ]
     },
     "oracle": {
       "model": "nvidia/deepseek-ai/deepseek-v4-pro",
       "fallback_models": [
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
         {
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "medium"
-        },
-        "nvidia/qwen/qwen3-next-80b-a3b-instruct"
+        }
       ]
     },
     "prometheus": {
@@ -70,15 +79,7 @@
       "fallback_models": [
         "opencode/minimax-m2.5-free"
       ],
-      "prompt_append": "Parallelize Atlas and Explore. Prefer cheap models first. Stop exploration early when context is sufficient. Avoid redundant calls."
-    },
-    "sisyphus-junior": {
-      "model": "longcat/LongCat-Flash-Thinking",
-      "fallback_models": [
-        "longcat/LongCat-Flash-Lite",
-        "opencode/minimax-m2.5-free"
-      ],
-      "prompt_append": "Handle small, localized code changes only. Do not perform large refactors. Avoid modifying multiple files. Prefer minimal edits."
+      "prompt_append": "Parallelize Atlas and Explore aggressively. Prefer cheaper models first. Stop exploration early when enough context is available. Avoid duplicate calls."
     }
   },
   "categories": {
@@ -89,7 +90,7 @@
       "model": "opencode/minimax-m2.5-free"
     },
     "mid": {
-      "model": "longcat/LongCat-2.0-Preview"
+      "model": "longcat/LongCat-Flash-Thinking"
     },
     "unspecified-high": {
       "model": "kimi-for-coding/k2p6"
@@ -111,8 +112,8 @@
     },
     "modelConcurrency": {
       "longcat/LongCat-Flash-Lite": 40,
-      "longcat/LongCat-Flash-Thinking": 20,
-      "longcat/LongCat-2.0-Preview": 20,
+      "longcat/LongCat-Flash-Thinking": 12,
+      "opencode/gemini-3-flash": 1,
       "kimi-for-coding/k2p6": 3
     }
   },
