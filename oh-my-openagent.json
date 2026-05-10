@@ -5,21 +5,19 @@
       "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
       "fallback_models": [
         "nvidia/deepseek-ai/deepseek-v4-pro",
-        {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "medium"
-        },
+        "nvidia/openai/gpt-oss-120b",
+        "kimi-for-coding/k2p6",
+        "nvidia/moonshotai/kimi-k2.6",
         {
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "medium"
         },
-        "kimi-for-coding/k2p6",
         {
           "model": "opencode/nemotron-3-super-free",
           "variant": "medium"
         }
       ],
-      "prompt_append": "Break tasks into minimal executable steps. Prefer hierarchical search: module -> file -> symbol. Minimize total exploration cost and token usage."
+      "prompt_append": "Break tasks into minimal steps. Prefer hierarchical search: module -> file -> function. Minimize file reads and token usage."
     },
     "atlas": {
       "model": "nvidia/moonshotai/kimi-k2-instruct",
@@ -37,70 +35,71 @@
         },
         "opencode/gemini-3-flash"
       ],
-      "prompt_append": "Return only the most relevant snippets/functions/classes. Never summarize full files. Prefer minimal structured outputs."
+      "prompt_append": "Return only relevant snippets/functions/classes. Never summarize entire files. Keep output minimal and structured."
     },
     "explore": {
       "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
         "nvidia/deepseek-ai/deepseek-v4-flash",
+        "nvidia/minimaxai/minimax-m2.7",
+        "nvidia/zai-org/glm-4.7",
         {
           "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "low"
+          "variant": "medium"
         },
         {
           "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "medium"
         },
-        "nvidia/minimaxai/minimax-m2.7",
         {
           "model": "opencode/hy3-preview-free",
           "variant": "medium"
         }
       ],
-      "prompt_append": "Use Atlas results first. Expand context only when necessary. Focus on dependencies, call chains, lifecycle flow, architecture, and state propagation."
+      "prompt_append": "Use Atlas results first. Expand only when necessary. Focus on dependencies, architecture, state flow, and call chains."
     },
     "hephaestus": {
       "model": "kimi-for-coding/k2p6",
       "fallback_models": [
+        "kimi-for-coding/k2p5",
+        "nvidia/zai-org/glm-4.7",
+        "nvidia/moonshotai/kimi-k2.6",
         "nvidia/minimaxai/minimax-m2.7",
         {
           "model": "nvidia/openai/gpt-oss-120b",
           "variant": "medium"
-        },
-        "nvidia/deepseek-ai/deepseek-v4-flash",
-        {
-          "model": "nvidia/nemotron-3-super-120b-a12b",
-          "variant": "low"
-        },
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "low"
         }
       ],
-      "prompt_append": "Minimize code changes. Prefer localized fixes. Delegate trivial edits to sisyphus-junior. Avoid broad refactors unless explicitly required."
+      "prompt_append": "Minimize code changes. Prefer localized fixes. Avoid touching many files. Delegate small changes to sisyphus-junior."
     },
     "sisyphus-junior": {
       "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
         "longcat/LongCat-Flash-Lite",
+        "nvidia/deepseek-ai/deepseek-v4-flash",
         {
           "model": "nvidia/stepfun-ai/step-3.5-flash",
-          "variant": "low"
+          "variant": "medium"
         },
         "opencode/minimax-m2.5-free",
         {
           "model": "opencode/hy3-preview-free",
-          "variant": "low"
-        },
-        "opencode/gemini-3-flash"
+          "variant": "medium"
+        }
       ],
-      "prompt_append": "Handle only small localized edits. Avoid refactors. Prefer minimal diffs. Do not expand exploration scope."
+      "prompt_append": "Handle only localized edits. Avoid refactors. Keep diffs minimal."
     },
     "sisyphus": {
       "model": "kimi-for-coding/k2p6",
       "fallback_models": [
+        "kimi-for-coding/k2p5",
+        "nvidia/zai-org/glm-4.7",
+        "nvidia/moonshotai/kimi-k2.6",
         "nvidia/minimaxai/minimax-m2.7",
-        "nvidia/deepseek-ai/deepseek-v4-pro",
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "high"
+        },
         {
           "model": "nvidia/openai/gpt-oss-120b",
           "variant": "high"
@@ -121,6 +120,9 @@
     "momus": {
       "model": "nvidia/deepseek-ai/deepseek-v4-flash",
       "fallback_models": [
+        "nvidia/zai-org/glm-4.7",
+        "nvidia/deepseek-ai/deepseek-v4-flash",
+        "longcat/LongCat-Flash-Thinking",
         {
           "model": "nvidia/openai/gpt-oss-120b",
           "variant": "medium"
@@ -128,15 +130,11 @@
         "nvidia/minimaxai/minimax-m2.7",
         "longcat/LongCat-Flash-Thinking",
         {
-          "model": "nvidia/nemotron-3-super-120b-a12b",
-          "variant": "low"
-        },
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "medium"
+          "model": "opencode/hy3-preview-free",
+          "variant": "high"
         }
       ],
-      "prompt_append": "Strictly validate correctness, regressions, race conditions, architectural consistency, and edge cases. Reject uncertain fixes."
+      "prompt_append": "Strictly validate correctness, edge cases, regressions, race conditions, and side effects."
     },
     "librarian": {
       "model": "opencode/gemini-3-flash",
@@ -146,11 +144,7 @@
           "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "low"
         },
-        "opencode/minimax-m2.5-free",
-        {
-          "model": "opencode/hy3-preview-free",
-          "variant": "low"
-        }
+        "opencode/minimax-m2.5-free"
       ]
     },
     "oracle": {
@@ -187,23 +181,7 @@
           "variant": "low"
         }
       ],
-      "prompt_append": "Aggressively parallelize Atlas and Explore. Prefer cheap models first. Stop exploration early when confidence is sufficient. Avoid redundant calls."
-    },
-    "multimodal-looker": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro",
-      "fallback_models": [
-        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
-        {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "medium"
-        },
-        "nvidia/deepseek-ai/deepseek-v4-flash",
-        {
-          "model": "nvidia/nemotron-3-super-120b-a12b",
-          "variant": "medium"
-        }
-      ],
-      "prompt_append": "Analyze screenshots, UI layouts, logs, diagrams, and visual debugging information. Focus on UI hierarchy, layout constraints, rendering issues, accessibility, platform conventions, and error diagnostics."
+      "prompt_append": "Parallelize Atlas and Explore aggressively. Prefer cheap models first. Stop exploration early when enough context exists."
     }
   },
   "categories": {
