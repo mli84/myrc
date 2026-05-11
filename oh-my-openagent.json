@@ -1,6 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
-
   "agents": {
     "metis": {
       "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
@@ -14,12 +13,14 @@
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "medium"
         },
-        "nvidia/zai-org/glm-4.7",
+        {
+          "model": "opencode/nemotron-3-super-free",
+          "variant": "medium"
+        },
         "nvidia/minimaxai/minimax-m2.7"
       ],
-      "prompt_append": "Break tasks into minimal steps. Use hierarchical search: module -> file -> function. Optimize for minimal file reads and token usage."
+      "prompt_append": "Break tasks into minimal precise steps. Use hierarchical search: module -> file -> symbol. Optimize for minimal token usage and minimal file reads."
     },
-
     "atlas": {
       "model": "nvidia/moonshotai/kimi-k2-instruct",
       "fallback_models": [
@@ -33,12 +34,10 @@
         {
           "model": "opencode/hy3-preview-free",
           "variant": "low"
-        },
-        "opencode/gemini-3-flash"
+        }
       ],
-      "prompt_append": "Return only relevant snippets/functions/classes. Never summarize full files. Keep output minimal and structured."
+      "prompt_append": "Return only relevant snippets/functions/classes. Never summarize full files. Keep output short, structured, and retrieval-oriented."
     },
-
     "explore": {
       "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
@@ -51,22 +50,18 @@
           "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "medium"
         },
-        "nvidia/zai-org/glm-4.7",
+        "nvidia/minimaxai/minimax-m2.7",
         {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "low"
+          "model": "opencode/hy3-preview-free",
+          "variant": "medium"
         }
       ],
-      "prompt_append": "Use Atlas results as primary context. Expand only when necessary. Focus on dependencies, call chains, state flow, architecture, and data flow."
+      "prompt_append": "Use Atlas output as primary context. Expand only if necessary. Focus on architecture, dependencies, call chains, state flow, lifecycle, and data flow."
     },
-
     "hephaestus": {
-      "model": "nvidia/zai-org/glm-4.7",
+      "model": "nvidia/openai/gpt-oss-120b",
+      "variant": "medium",
       "fallback_models": [
-        {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "medium"
-        },
         "nvidia/minimaxai/minimax-m2.7",
         {
           "model": "nvidia/nemotron-3-super-120b-a12b",
@@ -74,12 +69,11 @@
         },
         {
           "model": "opencode/nemotron-3-super-free",
-          "variant": "medium"
+          "variant": "low"
         }
       ],
-      "prompt_append": "Minimize code changes. Prefer localized fixes. Avoid touching more than 2-3 files unless necessary. Delegate small changes to sisyphus-junior."
+      "prompt_append": "Minimize code changes. Prefer localized fixes. Avoid unnecessary refactors. Delegate trivial edits to sisyphus-junior."
     },
-
     "sisyphus-junior": {
       "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
@@ -91,29 +85,22 @@
         "opencode/minimax-m2.5-free",
         {
           "model": "opencode/hy3-preview-free",
-          "variant": "medium"
+          "variant": "low"
         }
       ],
-      "prompt_append": "Handle only small localized edits. Avoid refactors. Prefer minimal diffs. Do not expand context unnecessarily."
+      "prompt_append": "Handle only small localized edits. Avoid refactors. Prefer minimal diffs."
     },
-
     "sisyphus": {
-      "model": "nvidia/zai-org/glm-4.7",
+      "model": "nvidia/openai/gpt-oss-120b",
+      "variant": "high",
       "fallback_models": [
-        "nvidia/minimaxai/minimax-m2.7",
-        {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "high"
-        },
         "nvidia/deepseek-ai/deepseek-v4-pro",
-        {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "high"
-        },
         {
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "high"
         },
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
+        "nvidia/minimaxai/minimax-m2.7",
         {
           "model": "openroute/nvidia/nemotron-3-super-120b-a12b:free"
         },
@@ -123,28 +110,22 @@
         }
       ]
     },
-
     "momus": {
       "model": "nvidia/minimaxai/minimax-m2.7",
       "fallback_models": [
-        "nvidia/zai-org/glm-4.7",
+        "longcat/LongCat-Flash-Thinking",
+        "nvidia/deepseek-ai/deepseek-v4-flash",
         {
           "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "medium"
-        },
-        "longcat/LongCat-Flash-Thinking",
-        {
-          "model": "nvidia/nemotron-3-super-120b-a12b",
-          "variant": "medium"
+          "variant": "low"
         },
         {
-          "model": "opencode/nemotron-3-super-free",
+          "model": "opencode/hy3-preview-free",
           "variant": "medium"
         }
       ],
-      "prompt_append": "Strictly validate correctness, regressions, edge cases, side effects, race conditions, and architectural consistency. Reject uncertain fixes."
+      "prompt_append": "Strictly validate correctness, regressions, race conditions, edge cases, and hidden side effects. Reject uncertain fixes."
     },
-
     "librarian": {
       "model": "opencode/gemini-3-flash",
       "fallback_models": [
@@ -153,18 +134,12 @@
           "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "low"
         },
-        {
-          "model": "opencode/hy3-preview-free",
-          "variant": "low"
-        },
         "opencode/minimax-m2.5-free"
       ]
     },
-
     "oracle": {
       "model": "nvidia/deepseek-ai/deepseek-v4-pro",
       "fallback_models": [
-        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
         {
           "model": "nvidia/openai/gpt-oss-120b",
           "variant": "high"
@@ -173,6 +148,7 @@
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "high"
         },
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
         {
           "model": "openroute/nvidia/nemotron-3-super-120b-a12b:free"
         },
@@ -182,7 +158,6 @@
         }
       ]
     },
-
     "prometheus": {
       "model": "longcat/LongCat-Flash-Lite",
       "fallback_models": [
@@ -196,46 +171,33 @@
           "variant": "low"
         }
       ],
-      "prompt_append": "Parallelize Atlas and Explore aggressively. Prefer cheap models first. Stop exploration early when enough context is available. Avoid duplicate calls."
+      "prompt_append": "Aggressively parallelize Atlas and Explore. Prefer cheaper models first. Stop exploration early when enough context is available."
     }
   },
-
   "categories": {
     "quick": {
       "model": "longcat/LongCat-Flash-Lite"
     },
-
     "unspecified-low": {
       "model": "opencode/minimax-m2.5-free"
     },
-
     "mid": {
       "model": "longcat/LongCat-Flash-Thinking"
     },
-
     "unspecified-high": {
-      "model": "nvidia/zai-org/glm-4.7"
+      "model": "nvidia/openai/gpt-oss-120b",
+      "variant": "medium"
     },
-
     "deep": {
       "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
     },
-
     "ultra": {
       "model": "nvidia/deepseek-ai/deepseek-v4-pro"
     },
-
-    "free-heavy": {
-      "model": "opencode/nemotron-3-super-free",
-      "variant": "high"
-    },
-
-    "free-fast": {
-      "model": "opencode/hy3-preview-free",
-      "variant": "medium"
+    "free": {
+      "model": "opencode/minimax-m2.5-free"
     }
   },
-
   "background_task": {
     "providerConcurrency": {
       "longcat": 20,
@@ -253,17 +215,14 @@
       "opencode/gemini-3-flash": 1
     }
   },
-
   "experimental": {
     "task_system": true,
     "aggressive_truncation": true
   },
-
   "model_capabilities": {
     "enabled": true,
     "auto_refresh_on_start": true
   },
-
   "tmux": {
     "enabled": true,
     "layout": "main-vertical",

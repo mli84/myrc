@@ -5,7 +5,6 @@ kimi-for-coding/k2p6
 
 nvidia/openai/gpt-oss-120b (low/medium/high)
 nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
-nvidia/zai-org/glm-4.7 
 nvidia/moonshotai/kimi-k2-instruct
 nvidia/minimaxai/minimax-m2.7
 nvidia/qwen/qwen3-next-80b-a3b-instruct
