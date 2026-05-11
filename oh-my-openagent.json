@@ -4,11 +4,8 @@
     "metis": {
       "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
       "fallback_models": [
+        "nvidia/openai/gpt-oss-120b",
         "nvidia/deepseek-ai/deepseek-v4-pro",
-        {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "medium"
-        },
         {
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "medium"
@@ -16,15 +13,13 @@
         {
           "model": "opencode/nemotron-3-super-free",
           "variant": "medium"
-        },
-        "nvidia/minimaxai/minimax-m2.7"
+        }
       ],
-      "prompt_append": "Break tasks into minimal precise steps. Use hierarchical search: module -> file -> symbol. Optimize for minimal token usage and minimal file reads."
+      "prompt_append": "Break tasks into minimal actionable steps. Prefer module -> file -> function exploration. Minimize token usage and unnecessary file reads."
     },
     "atlas": {
-      "model": "nvidia/moonshotai/kimi-k2-instruct",
+      "model": "longcat/LongCat-Flash-Lite",
       "fallback_models": [
-        "longcat/LongCat-Flash-Lite",
         "nvidia/deepseek-ai/deepseek-v4-flash",
         {
           "model": "nvidia/stepfun-ai/step-3.5-flash",
@@ -36,7 +31,7 @@
           "variant": "low"
         }
       ],
-      "prompt_append": "Return only relevant snippets/functions/classes. Never summarize full files. Keep output short, structured, and retrieval-oriented."
+      "prompt_append": "Return only highly relevant snippets, symbols, classes, and functions. Never summarize entire files."
     },
     "explore": {
       "model": "longcat/LongCat-Flash-Thinking",
@@ -50,17 +45,12 @@
           "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "medium"
         },
-        "nvidia/minimaxai/minimax-m2.7",
-        {
-          "model": "opencode/hy3-preview-free",
-          "variant": "medium"
-        }
+        "nvidia/minimaxai/minimax-m2.7"
       ],
-      "prompt_append": "Use Atlas output as primary context. Expand only if necessary. Focus on architecture, dependencies, call chains, state flow, lifecycle, and data flow."
+      "prompt_append": "Use Atlas output first. Expand context only when required. Focus on architecture, dependencies, state flow, and call chains."
     },
     "hephaestus": {
       "model": "nvidia/openai/gpt-oss-120b",
-      "variant": "medium",
       "fallback_models": [
         "nvidia/minimaxai/minimax-m2.7",
         {
@@ -72,40 +62,39 @@
           "variant": "low"
         }
       ],
-      "prompt_append": "Minimize code changes. Prefer localized fixes. Avoid unnecessary refactors. Delegate trivial edits to sisyphus-junior."
+      "prompt_append": "Prefer localized fixes. Minimize modifications. Avoid touching more than 2-3 files unless absolutely required. Delegate small fixes to sisyphus-junior."
     },
     "sisyphus-junior": {
       "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-        "longcat/LongCat-Flash-Lite",
         {
           "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "low"
         },
         "opencode/minimax-m2.5-free",
+        "longcat/LongCat-Flash-Lite",
         {
           "model": "opencode/hy3-preview-free",
-          "variant": "low"
+          "variant": "medium"
         }
       ],
-      "prompt_append": "Handle only small localized edits. Avoid refactors. Prefer minimal diffs."
+      "prompt_append": "Handle only small localized edits. Avoid refactors and broad architectural changes."
     },
     "sisyphus": {
       "model": "nvidia/openai/gpt-oss-120b",
-      "variant": "high",
       "fallback_models": [
+        "nvidia/minimaxai/minimax-m2.7",
         "nvidia/deepseek-ai/deepseek-v4-pro",
         {
           "model": "nvidia/nemotron-3-super-120b-a12b",
-          "variant": "high"
-        },
-        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
-        "nvidia/minimaxai/minimax-m2.7",
-        {
-          "model": "openroute/nvidia/nemotron-3-super-120b-a12b:free"
+          "variant": "medium"
         },
         {
           "model": "opencode/nemotron-3-super-free",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "high"
         }
       ]
@@ -114,32 +103,36 @@
       "model": "nvidia/minimaxai/minimax-m2.7",
       "fallback_models": [
         "longcat/LongCat-Flash-Thinking",
-        "nvidia/deepseek-ai/deepseek-v4-flash",
         {
           "model": "nvidia/openai/gpt-oss-120b",
           "variant": "low"
         },
         {
-          "model": "opencode/hy3-preview-free",
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "medium"
+        },
+        {
+          "model": "opencode/hy3-preview-free",
+          "variant": "high"
         }
       ],
-      "prompt_append": "Strictly validate correctness, regressions, race conditions, edge cases, and hidden side effects. Reject uncertain fixes."
+      "prompt_append": "Strictly validate correctness, regressions, edge cases, race conditions, and side effects. Reject uncertain changes."
     },
     "librarian": {
       "model": "opencode/gemini-3-flash",
       "fallback_models": [
         "longcat/LongCat-Flash-Lite",
+        "opencode/minimax-m2.5-free",
         {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "model": "opencode/hy3-preview-free",
           "variant": "low"
-        },
-        "opencode/minimax-m2.5-free"
+        }
       ]
     },
     "oracle": {
       "model": "nvidia/deepseek-ai/deepseek-v4-pro",
       "fallback_models": [
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
         {
           "model": "nvidia/openai/gpt-oss-120b",
           "variant": "high"
@@ -148,10 +141,7 @@
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "high"
         },
-        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
-        {
-          "model": "openroute/nvidia/nemotron-3-super-120b-a12b:free"
-        },
+        "openroute/nvidia/nemotron-3-super-120b-a12b:free",
         {
           "model": "opencode/nemotron-3-super-free",
           "variant": "high"
@@ -171,7 +161,7 @@
           "variant": "low"
         }
       ],
-      "prompt_append": "Aggressively parallelize Atlas and Explore. Prefer cheaper models first. Stop exploration early when enough context is available."
+      "prompt_append": "Aggressively parallelize Atlas and Explore. Prefer cheaper models first. Stop exploration early once confidence is sufficient."
     }
   },
   "categories": {
