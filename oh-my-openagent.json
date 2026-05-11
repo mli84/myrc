@@ -188,6 +188,22 @@
         }
       ],
       "prompt_append": "Aggressively parallelize Atlas and Explore. Prefer cheap models first. Stop exploration early when confidence is sufficient. Avoid redundant calls."
+    },
+    "multimodal-looker": {
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro",
+      "fallback_models": [
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "medium"
+        },
+        "nvidia/deepseek-ai/deepseek-v4-flash",
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "variant": "medium"
+        }
+      ],
+      "prompt_append": "Analyze screenshots, UI layouts, logs, diagrams, and visual debugging information. Focus on UI hierarchy, layout constraints, rendering issues, accessibility, platform conventions, and error diagnostics."
     }
   },
   "categories": {
@@ -220,12 +236,12 @@
       "nvidia": 6,
       "opencode": 12,
       "openroute": 2,
-      "kimi-for-coding": 4
+      "kimi-for-coding": 2
     },
     "modelConcurrency": {
       "longcat/LongCat-Flash-Lite": 40,
       "longcat/LongCat-Flash-Thinking": 12,
-      "kimi-for-coding/k2p6": 3,
+      "kimi-for-coding/k2p6": 2,
       "nvidia/deepseek-ai/deepseek-v4-pro": 2,
       "nvidia/qwen/qwen3-next-80b-a3b-instruct": 2,
       "opencode/gemini-3-flash": 1
