@@ -5,7 +5,10 @@
       "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
       "fallback_models": [
         "nvidia/deepseek-ai/deepseek-v4-pro",
-        "nvidia/moonshotai/kimi-k2.6",
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "medium"
+        },
         {
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "medium"
@@ -16,7 +19,7 @@
           "variant": "medium"
         }
       ],
-      "prompt_append": "Break tasks into minimal precise steps. Prefer hierarchical search: module -> file -> symbol. Optimize for minimal token usage and minimal file reads."
+      "prompt_append": "Break tasks into minimal executable steps. Prefer hierarchical search: module -> file -> symbol. Minimize total exploration cost and token usage."
     },
     "atlas": {
       "model": "nvidia/moonshotai/kimi-k2-instruct",
@@ -27,45 +30,54 @@
           "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "low"
         },
-        "nvidia/minimaxai/minimax-m2.7",
         "opencode/minimax-m2.5-free",
         {
           "model": "opencode/hy3-preview-free",
           "variant": "low"
-        }
+        },
+        "opencode/gemini-3-flash"
       ],
-      "prompt_append": "Return only relevant functions/classes/snippets. Never summarize entire files. Keep output compact and structured."
+      "prompt_append": "Return only the most relevant snippets/functions/classes. Never summarize full files. Prefer minimal structured outputs."
     },
     "explore": {
       "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
         "nvidia/deepseek-ai/deepseek-v4-flash",
-        "nvidia/moonshotai/kimi-k2.6",
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "low"
+        },
         {
           "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "medium"
         },
-        "nvidia/zai-org/glm-4.7",
+        "nvidia/minimaxai/minimax-m2.7",
         {
           "model": "opencode/hy3-preview-free",
           "variant": "medium"
         }
       ],
-      "prompt_append": "Use Atlas results as primary context. Expand only when necessary. Focus on architecture, dependencies, state flow, and call chains."
+      "prompt_append": "Use Atlas results first. Expand context only when necessary. Focus on dependencies, call chains, lifecycle flow, architecture, and state propagation."
     },
     "hephaestus": {
-      "model": "nvidia/minimaxai/minimax-m2.7",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        "nvidia/zai-org/glm-4.7",
-        "kimi-for-coding/k2p5",
-        "nvidia/moonshotai/kimi-k2.6",
         "nvidia/minimaxai/minimax-m2.7",
         {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
-          "variant": "high"
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "medium"
+        },
+        "nvidia/deepseek-ai/deepseek-v4-flash",
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "variant": "low"
+        },
+        {
+          "model": "opencode/nemotron-3-super-free",
+          "variant": "low"
         }
       ],
-      "prompt_append": "Minimize modifications. Prefer localized fixes. Avoid touching more than 2-3 files unless absolutely necessary. Delegate trivial edits to sisyphus-junior."
+      "prompt_append": "Minimize code changes. Prefer localized fixes. Delegate trivial edits to sisyphus-junior. Avoid broad refactors unless explicitly required."
     },
     "sisyphus-junior": {
       "model": "longcat/LongCat-Flash-Thinking",
@@ -79,47 +91,52 @@
         {
           "model": "opencode/hy3-preview-free",
           "variant": "low"
-        }
+        },
+        "opencode/gemini-3-flash"
       ],
-      "prompt_append": "Handle only small localized edits. Avoid refactors. Avoid unrelated file reads. Prefer minimal diffs."
+      "prompt_append": "Handle only small localized edits. Avoid refactors. Prefer minimal diffs. Do not expand exploration scope."
     },
     "sisyphus": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        "nvidia/zai-org/glm-4.7",
-        "kimi-for-coding/k2p5",
-        "nvidia/moonshotai/kimi-k2.6",
         "nvidia/minimaxai/minimax-m2.7",
         "nvidia/deepseek-ai/deepseek-v4-pro",
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "high"
+        },
         {
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "medium"
         },
         {
+          "model": "openroute/nvidia/nemotron-3-super-120b-a12b:free"
+        },
+        {
           "model": "opencode/nemotron-3-super-free",
-          "variant": "medium"
+          "variant": "high"
         }
       ]
     },
     "momus": {
-      "model": "nvidia/openai/gpt-oss-120b",
-      "variant": "medium",
+      "model": "nvidia/deepseek-ai/deepseek-v4-flash",
       "fallback_models": [
-        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
-        "nvidia/minimaxai/minimax-m2.7",
-        "longcat/LongCat-Flash-Thinking",
-        "nvidia/moonshotai/kimi-k2.6",
-        "nvidia/deepseek-ai/deepseek-v4-flash",
         {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "model": "nvidia/openai/gpt-oss-120b",
           "variant": "medium"
         },
+        "nvidia/minimaxai/minimax-m2.7",
+        "longcat/LongCat-Flash-Thinking",
         {
-          "model": "opencode/hy3-preview-free",
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "variant": "low"
+        },
+        {
+          "model": "opencode/nemotron-3-super-free",
           "variant": "medium"
         }
       ],
-      "prompt_append": "Strictly validate correctness, regressions, race conditions, edge cases, and side effects. Reject uncertain solutions."
+      "prompt_append": "Strictly validate correctness, regressions, race conditions, architectural consistency, and edge cases. Reject uncertain fixes."
     },
     "librarian": {
       "model": "opencode/gemini-3-flash",
@@ -139,6 +156,7 @@
     "oracle": {
       "model": "nvidia/deepseek-ai/deepseek-v4-pro",
       "fallback_models": [
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
         {
           "model": "nvidia/openai/gpt-oss-120b",
           "variant": "high"
@@ -147,7 +165,6 @@
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "high"
         },
-        "nvidia/moonshotai/kimi-k2.6",
         {
           "model": "openroute/nvidia/nemotron-3-super-120b-a12b:free"
         },
@@ -170,7 +187,7 @@
           "variant": "low"
         }
       ],
-      "prompt_append": "Aggressively parallelize Atlas and Explore. Prefer cheaper models first. Stop exploration early when sufficient context is collected. Avoid duplicate calls."
+      "prompt_append": "Aggressively parallelize Atlas and Explore. Prefer cheap models first. Stop exploration early when confidence is sufficient. Avoid redundant calls."
     }
   },
   "categories": {
@@ -184,7 +201,7 @@
       "model": "longcat/LongCat-Flash-Thinking"
     },
     "unspecified-high": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-flash"
+      "model": "kimi-for-coding/k2p6"
     },
     "deep": {
       "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
@@ -192,23 +209,25 @@
     "ultra": {
       "model": "nvidia/deepseek-ai/deepseek-v4-pro"
     },
-    "experimental": {
-      "model": "nvidia/moonshotai/kimi-k2.6"
-    },
-    "free-tier": {
-      "model": "opencode/minimax-m2.5-free"
+    "free-emergency": {
+      "model": "opencode/nemotron-3-super-free",
+      "variant": "medium"
     }
   },
   "background_task": {
     "providerConcurrency": {
-      "longcat": 50,
-      "kimi-for-coding": 5,
-      "nvidia": 20,
-      "opencode": 10,
-      "openroute": 2
+      "longcat": 20,
+      "nvidia": 6,
+      "opencode": 12,
+      "openroute": 2,
+      "kimi-for-coding": 4
     },
     "modelConcurrency": {
+      "longcat/LongCat-Flash-Lite": 40,
+      "longcat/LongCat-Flash-Thinking": 12,
       "kimi-for-coding/k2p6": 3,
+      "nvidia/deepseek-ai/deepseek-v4-pro": 2,
+      "nvidia/qwen/qwen3-next-80b-a3b-instruct": 2,
       "opencode/gemini-3-flash": 1
     }
   },

@@ -2,12 +2,10 @@ longcat/LongCat-Flash-Lite
 longcat/LongCat-Flash-Thinking
 
 kimi-for-coding/k2p6
-kimi-for-coding/k2p5
 
 nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
 nvidia/zai-org/glm-4.7 
 nvidia/moonshotai/kimi-k2-instruct
-nvidia/moonshotai/kimi-k2.6
 nvidia/minimaxai/minimax-m2.7
 nvidia/qwen/qwen3-next-80b-a3b-instruct
 nvidia/nemotron-3-super-120b-a12b (low/medium/high)
