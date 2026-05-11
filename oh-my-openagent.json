@@ -54,7 +54,7 @@
       "prompt_append": "Use Atlas results as primary context. Expand only when necessary. Focus on architecture, dependencies, state flow, and call chains."
     },
     "hephaestus": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "nvidia/minimaxai/minimax-m2.7",
       "fallback_models": [
         "nvidia/zai-org/glm-4.7",
         "kimi-for-coding/k2p5",
@@ -84,7 +84,7 @@
       "prompt_append": "Handle only small localized edits. Avoid refactors. Avoid unrelated file reads. Prefer minimal diffs."
     },
     "sisyphus": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro",
       "fallback_models": [
         "nvidia/zai-org/glm-4.7",
         "kimi-for-coding/k2p5",
@@ -102,9 +102,11 @@
       ]
     },
     "momus": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "nvidia/openai/gpt-oss-120b",
+      "variant": "medium",
       "fallback_models": [
-        "nvidia/zai-org/glm-4.7",
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
+        "nvidia/minimaxai/minimax-m2.7",
         "longcat/LongCat-Flash-Thinking",
         "nvidia/moonshotai/kimi-k2.6",
         "nvidia/deepseek-ai/deepseek-v4-flash",
@@ -137,7 +139,10 @@
     "oracle": {
       "model": "nvidia/deepseek-ai/deepseek-v4-pro",
       "fallback_models": [
-        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "high"
+        },
         {
           "model": "nvidia/nemotron-3-super-120b-a12b",
           "variant": "high"
@@ -179,7 +184,7 @@
       "model": "longcat/LongCat-Flash-Thinking"
     },
     "unspecified-high": {
-      "model": "kimi-for-coding/k2p6"
+      "model": "nvidia/deepseek-ai/deepseek-v4-flash"
     },
     "deep": {
       "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
