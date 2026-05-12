@@ -1,11 +1,11 @@
-openrouter/inclusionai/ring-2.6-1t:free
-openrouter/google/gemini-3.1-flash-lite
-openrouter/baidu/cobuddy:free
-openrouter/openai/gpt-chat-latest
-openrouter/x-ai/grok-4.3
-openrouter/ibm-granite/granite-4.1-8b
-openrouter/mistralai/mistral-medium-3-5
-openrouter/owl-alpha
-openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
-openrouter/poolside/laguna-xs.2:free
+openroute/inclusionai/ring-2.6-1t:free
+openroute/google/gemini-3.1-flash-lite
+openroute/baidu/cobuddy:free
+openroute/openai/gpt-chat-latest
+openroute/x-ai/grok-4.3
+openroute/ibm-granite/granite-4.1-8b
+openroute/mistralai/mistral-medium-3-5
+openroute/owl-alpha
+openroute/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+openroute/poolside/laguna-xs.2:free
 
