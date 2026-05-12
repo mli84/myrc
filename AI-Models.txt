@@ -13,6 +13,8 @@ nvidia/deepseek-ai/deepseek-v4-pro
 
 openroute/nvidia/nemotron-3-super-120b-a12b:free
 
+opencode/deepSeek-v4-flash-free (low/medium/high/max)
+opencode/ring-2.6-1t-free (low/medium/high)
 opencode/gemini-3-flash
 opencode/minimax-m2.5-free
 opencode/nemotron-3-super-free (low/medium/high)
