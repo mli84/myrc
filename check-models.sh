@@ -2,7 +2,26 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MODELS_FILE="${1:-$SCRIPT_DIR/AI-Models.txt}"
+ENV_FILE="${2:-$SCRIPT_DIR/.env}"
 TIMEOUT="${CHECK_MODELS_TIMEOUT:-30}"
+
+load_env() {
+  local env_file="$1"
+  if [[ ! -f "$env_file" ]]; then
+    return
+  fi
+  while IFS= read -r line || [[ -n "$line" ]]; do
+    line="$(echo "$line" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
+    [[ -z "$line" ]] && continue
+    [[ "$line" == \#* ]] && continue
+    local key="${line%%=*}"
+    local val="${line#*=}"
+    val="$(echo "$val" | sed 's/^["'"'"']//;s/["'"'"']$//')"
+    eval "export ${key}=\"\${val}\""
+  done < "$env_file"
+}
+
+load_env "$ENV_FILE"
 
 get_base_url() {
   case "$1" in
@@ -10,7 +29,7 @@ get_base_url() {
     nvidia)          echo "https://integrate.api.nvidia.com/v1" ;;
     openroute)       echo "https://openrouter.ai/api/v1" ;;
     opencode)        echo "https://api.opencode.ai/v1" ;;
-    kimi-for-coding) echo "https://api.moonshot.cn/v1" ;;
+    kimi-for-coding) echo "https://api.kimi.com/coding/v1" ;;
     *)               echo "" ;;
   esac
 }
@@ -132,6 +151,11 @@ fi
 
 echo "🔍 AI 模型可用性检测"
 echo "📋 模型列表: $MODELS_FILE"
+if [[ -f "$ENV_FILE" ]]; then
+  echo "🔑 环境变量: $ENV_FILE"
+else
+  echo "🔑 环境变量: 未找到 $ENV_FILE，使用系统环境变量"
+fi
 echo ""
 
 tmpdir="$(mktemp -d)"
