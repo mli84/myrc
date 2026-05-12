@@ -11,7 +11,7 @@ nvidia/nemotron-3-super-120b-a12b (low/medium/high)
 nvidia/deepseek-ai/deepseek-v4-flash
 nvidia/deepseek-ai/deepseek-v4-pro
 
-openroute/nvidia/nemotron-3-super-120b-a12b:free
+openroute/x-ai/grok-4.3
 
 #opencode/deepSeek-v4-flash-free (low/medium/high/max)
 #opencode/ring-2.6-1t-free (low/medium/high)
