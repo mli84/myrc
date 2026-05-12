@@ -123,6 +123,18 @@ check_model() {
 
 print_result() {
   local result="$1"
+
+  if [[ "${CHECK_MODELS_RAW_OUTPUT:-}" == "1" ]]; then
+    echo "$result"
+    local status="${result%%|*}"
+    case "$status" in
+      OK) available=$((available + 1)) ;;
+      FAIL) unavailable=$((unavailable + 1)) ;;
+      SKIP) skipped=$((skipped + 1)) ;;
+    esac
+    return
+  fi
+
   local status="${result%%|*}"
   local rest="${result#*|}"
   local name="${rest%%|*}"
