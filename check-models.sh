@@ -167,6 +167,7 @@ variant_file="$tmpdir/variants.txt"
 while IFS= read -r line || [[ -n "$line" ]]; do
   line="$(echo "$line" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
   [[ -z "$line" ]] && continue
+  [[ "$line" == \#* ]] && continue
 
   line_variants=""
   if echo "$line" | grep -qE '\([^)]+\)'; then
