@@ -1,0 +1,282 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "sisyphus": {
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        "nvidia/qwen/qwen3.5-122b-a10b",
+        "nvidia/openai/gpt-oss-120b",
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "medium"
+        },
+        {
+          "model": "opencode/deepseek-v4-flash-free",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/ring-2.6-1t-free",
+          "variant": "medium"
+        }
+      ]
+    },
+    "metis": {
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
+        "nvidia/qwen/qwen3.5-122b-a10b",
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/nemotron-3-super-free",
+          "variant": "high"
+        }
+      ],
+      "prompt_append": "Break tasks into minimal hierarchical steps. Prefer module to file to function exploration. Minimize token usage and unnecessary reads."
+    },
+    "prometheus": {
+      "model": "longcat/LongCat-Flash-Thinking",
+      "fallback_models": [
+        "longcat/LongCat-Flash-Lite",
+        {
+          "model": "opencode/ring-2.6-1t-free",
+          "variant": "low"
+        },
+        "opencode/minimax-m2.5-free",
+        {
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "variant": "low"
+        }
+      ],
+      "prompt_append": "Optimize execution speed, parallelize Atlas and Explore, prefer cheaper models first, and terminate redundant exploration early."
+    },
+    "atlas": {
+      "model": "longcat/LongCat-Flash-Thinking",
+      "fallback_models": [
+        "longcat/LongCat-Flash-Lite",
+        {
+          "model": "opencode/deepseek-v4-flash-free",
+          "variant": "medium"
+        },
+        {
+          "model": "opencode/ring-2.6-1t-free",
+          "variant": "low"
+        },
+        "opencode/gemini-3-flash",
+        {
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "variant": "medium"
+        }
+      ],
+      "prompt_append": "Return only relevant functions, classes, snippets, and definitions. Avoid full file summaries and keep outputs structured and compact."
+    },
+    "hephaestus": {
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        "nvidia/qwen/qwen3.5-122b-a10b",
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "medium"
+        },
+        {
+          "model": "opencode/hy3-preview-free",
+          "variant": "high"
+        }
+      ],
+      "prompt_append": "Minimize code changes, prefer localized fixes, maintain backward compatibility, and delegate small edits to sisyphus-junior."
+    },
+    "oracle": {
+      "model": "nvidia/qwen/qwen3.5-122b-a10b",
+      "fallback_models": [
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/nemotron-3-super-free",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/deepseek-v4-flash-free",
+          "variant": "max"
+        }
+      ]
+    },
+    "momus": {
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        "longcat/LongCat-Flash-Thinking",
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "medium"
+        },
+        {
+          "model": "opencode/hy3-preview-free",
+          "variant": "medium"
+        }
+      ],
+      "prompt_append": "Strictly validate correctness, regressions, edge cases, race conditions, and unintended side effects. Reject uncertain solutions."
+    },
+    "explore": {
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        "longcat/LongCat-Flash-Thinking",
+        {
+          "model": "opencode/deepseek-v4-flash-free",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/ring-2.6-1t-free",
+          "variant": "medium"
+        }
+      ],
+      "prompt_append": "Use Atlas results as primary context. Expand only when necessary. Focus on dependencies, call chains, state flow, and architectural relationships."
+    },
+    "librarian": {
+      "model": "longcat/LongCat-Flash-Thinking",
+      "fallback_models": [
+        "opencode/gemini-3-flash",
+        "longcat/LongCat-Flash-Lite",
+        "opencode/minimax-m2.5-free"
+      ]
+    },
+    "multimodal-looker": {
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "medium"
+        },
+        {
+          "model": "opencode/deepseek-v4-flash-free",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/hy3-preview-free",
+          "variant": "high"
+        }
+      ]
+    },
+    "sisyphus-junior": {
+      "model": "longcat/LongCat-Flash-Thinking",
+      "fallback_models": [
+        "longcat/LongCat-Flash-Lite",
+        {
+          "model": "opencode/ring-2.6-1t-free",
+          "variant": "low"
+        },
+        "opencode/minimax-m2.5-free",
+        {
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "variant": "low"
+        }
+      ],
+      "prompt_append": "Handle only small localized edits and avoid refactors, broad exploration, or unrelated file modifications."
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "longcat/LongCat-2.0-Preview"
+    },
+    "artistry": {
+      "model": "longcat/LongCat-2.0-Preview"
+    },
+    "ultrabrain": {
+      "model": "nvidia/qwen/qwen3.5-122b-a10b",
+      "fallback_models": [
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "high"
+        }
+      ]
+    },
+    "deep": {
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct",
+        {
+          "model": "opencode/deepseek-v4-flash-free",
+          "variant": "max"
+        }
+      ]
+    },
+    "quick": {
+      "model": "longcat/LongCat-Flash-Lite"
+    },
+    "unspecified-high": {
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        "nvidia/qwen/qwen3-next-80b-a3b-instruct"
+      ]
+    },
+    "unspecified-low": {
+      "model": "opencode/minimax-m2.5-free",
+      "fallback_models": [
+        {
+          "model": "opencode/ring-2.6-1t-free",
+          "variant": "low"
+        },
+        "longcat/LongCat-Flash-Lite"
+      ]
+    },
+    "writing": {
+      "model": "longcat/LongCat-Flash-Thinking",
+      "fallback_models": [
+        "opencode/gemini-3-flash"
+      ]
+    },
+    "git": {
+      "model": "longcat/LongCat-Flash-Thinking",
+      "fallback_models": [
+        {
+          "model": "opencode/deepseek-v4-flash-free",
+          "variant": "medium"
+        }
+      ]
+    }
+  },
+  "background_task": {
+    "providerConcurrency": {
+      "nvidia": 2,
+      "opencode": 6,
+      "longcat": 16
+    },
+    "modelConcurrency": {
+      "longcat/LongCat-Flash-Lite": 40,
+      "longcat/LongCat-Flash-Thinking": 16,
+      "longcat/LongCat-2.0-Preview": 8,
+      "nvidia/qwen/qwen3.5-122b-a10b": 2,
+      "nvidia/qwen/qwen3-next-80b-a3b-instruct": 3,
+      "opencode/deepseek-v4-flash-free": 8
+    }
+  },
+  "experimental": {
+    "task_system": true,
+    "aggressive_truncation": true
+  },
+  "model_capabilities": {
+    "enabled": true,
+    "auto_refresh_on_start": true
+  },
+  "tmux": {
+    "enabled": true,
+    "layout": "main-vertical",
+    "main_pane_size": 60,
+    "main_pane_min_width": 120,
+    "agent_pane_min_width": 40
+  }
+}

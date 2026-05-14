@@ -2,7 +2,7 @@
  * @Author         : midoll@midoll.ai
  * @Date           : 2026-05-12 15:57:24
  * @LastEditors    : Midoll
- * @LastEditTime   : 2026-05-13 16:13:28
+ * @LastEditTime   : 2026-05-14 19:26:18
  * @FilePath       : /omo.md
  * @Description    : 
  * 
@@ -14,17 +14,17 @@
 
 ## 下面是必须填写的Agents和Categories列表
 - Agents
-  - Sisyphus
-  - Metis
-  - Prometheus
-  - Atlas
-  - Hephaestus
-  - Oracle
-  - Momus
-  - Explore
-  - Librarian
-  - Multimodal-Looker
-  - Sisyphus-Junior
+  - sisyphus
+  - metis
+  - prometheus
+  - atlas
+  - hephaestus
+  - oracle
+  - momus
+  - explore
+  - librarian
+  - multimodal-Looker
+  - sisyphus-Junior
 
 - Categories
   - visual-engineering
@@ -46,3 +46,4 @@
   - nvidia 
   - opencode 
   - longcat
+- 不要出现注释

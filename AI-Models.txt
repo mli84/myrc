@@ -1,13 +1,14 @@
 #longcat/LongCat-Flash-Lite
 #longcat/LongCat-Flash-Thinking
+#longcat/LongCat-2.0-Preview
 
 #kimi-for-coding/kimi-for-coding
 
 #nvidia/openai/gpt-oss-120b (low/medium/high)
 #nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
 #nvidia/qwen/qwen3-next-80b-a3b-instruct
+#nvidia/qwen/qwen3.5-122b-a10b
 #nvidia/nvidia/nemotron-3-super-120b-a12b (low/medium/high) 
-#nvidia/deepseek-ai/deepseek-v4-flash
 
 #opencode/deepSeek-v4-flash-free (low/medium/high/max)
 #opencode/ring-2.6-1t-free (low/medium/high)
