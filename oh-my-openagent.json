@@ -10,7 +10,7 @@
         },
         "nvidia/deepseek-ai/deepseek-v4-pro",
         {
-        "model": "nvidia/nemotron-3-super",
+        "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
         "variant": "high"
         },
         {
@@ -94,7 +94,7 @@
         },
         "nvidia/deepseek-ai/deepseek-v4-pro",
         {
-        "model": "nvidia/nemotron-3-super",
+        "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
         "variant": "medium"
         },
         {
@@ -133,7 +133,7 @@
         "nvidia/deepseek-ai/deepseek-v4-pro",
         "nvidia/qwen/qwen3-next-80b-a3b-instruct",
         {
-        "model": "nvidia/nemotron-3-super",
+        "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
         "variant": "high"
         },
         {
@@ -157,7 +157,7 @@
         "variant": "medium"
         },
         {
-        "model": "nvidia/nemotron-3-super",
+        "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
         "variant": "medium"
         },
         {
@@ -176,7 +176,7 @@
         },
         "nvidia/qwen/qwen3-next-80b-a3b-instruct",
         {
-        "model": "nvidia/nemotron-3-super",
+        "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
         "variant": "high"
         },
         {
@@ -211,7 +211,7 @@
         "variant": "medium"
         },
         {
-        "model": "nvidia/nemotron-3-super",
+        "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
         "variant": "medium"
         }
       ],

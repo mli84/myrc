@@ -3,12 +3,11 @@
 
 #kimi-for-coding/kimi-for-coding
 
-nvidia/openai/gpt-oss-120b (low/medium/high)
-nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
-nvidia/qwen/qwen3-next-80b-a3b-instruct
-nvidia/nemotron-3-super (low/medium/high)
-nvidia/deepseek-ai/deepseek-v4-flash
-nvidia/deepseek-ai/deepseek-v4-pro
+#nvidia/openai/gpt-oss-120b (low/medium/high)
+#nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
+#nvidia/qwen/qwen3-next-80b-a3b-instruct
+#nvidia/nvidia/nemotron-3-super-120b-a12b (low/medium/high) 
+#nvidia/deepseek-ai/deepseek-v4-flash
 
 #opencode/deepSeek-v4-flash-free (low/medium/high/max)
 #opencode/ring-2.6-1t-free (low/medium/high)
@@ -16,4 +15,3 @@ nvidia/deepseek-ai/deepseek-v4-pro
 #opencode/minimax-m2.5-free
 #opencode/nemotron-3-super-free (low/medium/high)
 #opencode/hy3-preview-free (low/medium/high)
-
