@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "kimi-for-coding/kimi-for-coding",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
         "nvidia/qwen/qwen3.5-122b-a10b",
         "nvidia/qwen/qwen3-next-80b-a3b-instruct",
@@ -68,7 +68,7 @@
       "prompt_append": "Return only relevant snippets, functions, and classes. Avoid full file summaries. Keep output structured and minimal."
     },
     "hephaestus": {
-      "model": "kimi-for-coding/kimi-for-coding",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
         "nvidia/qwen/qwen3.5-122b-a10b",
         {
@@ -193,7 +193,7 @@
       "model": "longcat/LongCat-Flash-Lite"
     },
     "unspecified-high": {
-      "model": "kimi-for-coding/kimi-for-coding"
+      "model": "kimi-for-coding/k2p6"
     },
     "unspecified-low": {
       "model": "opencode/minimax-m2.5-free"
@@ -215,7 +215,7 @@
       "longcat/LongCat-Flash-Lite": 40,
       "longcat/LongCat-Flash-Thinking": 16,
       "longcat/LongCat-2.0-Preview": 8,
-      "kimi-for-coding/kimi-for-coding": 3,
+      "kimi-for-coding/k2p6": 1,
       "nvidia/qwen/qwen3-next-80b-a3b-instruct": 2,
       "nvidia/qwen/qwen3.5-122b-a10b": 2,
       "opencode/deepseek-v4-flash-free": 8

@@ -2,7 +2,7 @@
 #longcat/LongCat-Flash-Thinking
 #longcat/LongCat-2.0-Preview
 
-#kimi-for-coding/kimi-for-coding
+#kimi-for-coding/k2p6
 
 #nvidia/openai/gpt-oss-120b (low/medium/high)
 #nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
