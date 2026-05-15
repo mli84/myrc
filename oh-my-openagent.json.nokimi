@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
-    "Sisyphus": {
+    "sisyphus": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
@@ -20,7 +20,7 @@
         }
       ]
     },
-    "Metis": {
+    "metis": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
@@ -37,7 +37,7 @@
       ],
       "prompt_append": "Break tasks into hierarchical steps. Optimize for minimal exploration depth and token usage."
     },
-    "Prometheus": {
+    "prometheus": {
       "model": "longcat/LongCat-Flash-Lite",
       "fallback_models": [
         {
@@ -50,7 +50,7 @@
       ],
       "prompt_append": "Optimize concurrency, cost, and execution speed. Prefer cheap models first and avoid redundant calls."
     },
-    "Atlas": {
+    "atlas": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
@@ -66,7 +66,7 @@
       ],
       "prompt_append": "Return only highly relevant snippets, functions, and classes. Never summarize full files."
     },
-    "Hephaestus": {
+    "hephaestus": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
@@ -84,7 +84,7 @@
       ],
       "prompt_append": "Prefer localized modifications and minimal diffs. Avoid broad refactors unless explicitly required."
     },
-    "Oracle": {
+    "oracle": {
       "model": "nvidia/qwen/qwen3.5-122b-a10b",
       "fallback_models": [
         {
@@ -101,7 +101,7 @@
         }
       ]
     },
-    "Momus": {
+    "momus": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
@@ -118,7 +118,7 @@
       ],
       "prompt_append": "Strictly validate correctness, regressions, edge cases, and side effects. Reject uncertain fixes."
     },
-    "Explore": {
+    "explore": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
@@ -135,7 +135,7 @@
       ],
       "prompt_append": "Focus on architecture, dependencies, state flow, and call chains. Expand context only when necessary."
     },
-    "Librarian": {
+    "librarian": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
@@ -149,7 +149,7 @@
         }
       ]
     },
-    "Multimodal-Looker": {
+    "multimodal-looker": {
       "model": "nvidia/openai/gpt-oss-120b",
       "variant": "medium",
       "fallback_models": [
@@ -166,7 +166,7 @@
         }
       ]
     },
-    "Sisyphus-Junior": {
+    "sisyphus-junior": {
       "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
         {
