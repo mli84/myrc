@@ -16,3 +16,4 @@
 #opencode/minimax-m2.5-free
 #opencode/nemotron-3-super-free (low/medium/high)
 #opencode/hy3-preview-free (low/medium/high)
+#opencode/qwen3.6-plus-free
