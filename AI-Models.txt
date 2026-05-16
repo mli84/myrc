@@ -17,3 +17,6 @@
 #opencode/nemotron-3-super-free (low/medium/high)
 #opencode/hy3-preview-free (low/medium/high)
 #opencode/qwen3.6-plus-free
+#opencode/grok-code-fast-1
+#opencode/glm-4.7
+#opencode/big-pickle

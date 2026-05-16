@@ -26,6 +26,7 @@ load_env "$ENV_FILE"
 get_base_url() {
   case "$1" in
     longcat)         echo "https://api.longcat.chat/openai/v1" ;;
+    groq)            echo "https://api.groq.com/openai/v1" ;;
     nvidia)          echo "https://integrate.api.nvidia.com/v1" ;;
     openroute)       echo "https://openrouter.ai/api/v1" ;;
     opencode)        echo "https://api.opencode.ai/v1" ;;
@@ -37,6 +38,7 @@ get_base_url() {
 get_key_env() {
   case "$1" in
     longcat)         echo "LONGCAT_API_KEY" ;;
+    groq)            echo "GROQ_API_KEY" ;;
     nvidia)          echo "NVIDIA_API_KEY" ;;
     openroute)       echo "OPENROUTER_API_KEY" ;;
     opencode)        echo "OPENCODE_API_KEY" ;;
@@ -54,7 +56,7 @@ get_extra_header() {
 
 is_known_provider() {
   case "$1" in
-    longcat|nvidia|openroute|opencode|kimi-for-coding) return 0 ;;
+    longcat|groq|nvidia|openroute|opencode|kimi-for-coding) return 0 ;;
     *) return 1 ;;
   esac
 }
