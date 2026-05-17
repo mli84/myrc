@@ -10,13 +10,9 @@
 #nvidia/qwen/qwen3.5-122b-a10b
 #nvidia/nvidia/nemotron-3-super-120b-a12b (low/medium/high) 
 
-#opencode/deepSeek-v4-flash-free (low/medium/high/max)
-#opencode/ring-2.6-1t-free (low/medium/high)
 #opencode/gemini-3-flash
+#opencode/deepSeek-v4-flash-free (low/medium/high/max)
 #opencode/minimax-m2.5-free
 #opencode/nemotron-3-super-free (low/medium/high)
-#opencode/hy3-preview-free (low/medium/high)
 #opencode/qwen3.6-plus-free
-#opencode/grok-code-fast-1
-#opencode/glm-4.7
 #opencode/big-pickle

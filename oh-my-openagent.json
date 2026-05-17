@@ -2,23 +2,18 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        {
-          "model": "kimi-for-coding/k2p6"
-        },
-        {
-          "model": "opencode/grok-code-fast-1"
-        },
-        {
-          "model": "opencode/glm-4.7"
-        },
+        "longcat/LongCat-2.0-Preview",
         {
           "model": "nvidia/qwen/qwen3.5-122b-a10b"
         },
         {
           "model": "nvidia/openai/gpt-oss-120b",
           "variant": "medium"
+        },
+        {
+          "model": "opencode/qwen3.6-plus-free"
         }
       ]
     },
@@ -29,17 +24,15 @@
           "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
         },
         {
-          "model": "nvidia/qwen/qwen3.5-122b-a10b"
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "high"
         },
         {
-          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "model": "opencode/nemotron-3-super-free",
           "variant": "medium"
-        },
-        {
-          "model": "opencode/qwen3.6-plus-free"
         }
       ],
-      "prompt_append": "Break tasks into minimal executable steps. Prefer module to file to function exploration order. Minimize redundant reads."
+      "prompt_append": "Break tasks into minimal precise steps. Prefer hierarchical search: module -> file -> function. Minimize exploration depth and token usage."
     },
     "prometheus": {
       "model": "longcat/LongCat-Flash-Lite",
@@ -48,46 +41,37 @@
           "model": "opencode/minimax-m2.5-free"
         },
         {
-          "model": "opencode/deepseek-v4-flash-free",
-          "variant": "low"
-        },
-        {
-          "model": "opencode/ring-2.6-1t-free",
-          "variant": "low"
+          "model": "opencode/big-pickle"
         }
       ],
-      "prompt_append": "Optimize for latency and token efficiency. Parallelize atlas and explore when useful. Prefer cheap models before expensive fallbacks."
+      "prompt_append": "Aggressively parallelize Atlas and Explore. Prefer cheap models first. Stop exploration early when context is sufficient."
     },
     "atlas": {
       "model": "longcat/LongCat-Flash-Lite",
       "fallback_models": [
+        "longcat/LongCat-Flash-Thinking",
         {
-          "model": "opencode/big-pickle"
-        },
-        {
-          "model": "opencode/gemini-3-flash"
+          "model": "opencode/deepseek-v4-flash-free",
+          "variant": "low"
         },
         {
           "model": "opencode/minimax-m2.5-free"
         }
       ],
-      "prompt_append": "Return only highly relevant snippets, functions, symbols, and file paths. Avoid full file summaries."
+      "prompt_append": "Return only relevant code snippets, functions, classes, and symbols. Never summarize full files. Keep output compact and structured."
     },
     "hephaestus": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
+        "kimi-for-coding/k2p6",
         {
-          "model": "kimi-for-coding/k2p6"
+          "model": "nvidia/qwen/qwen3.5-122b-a10b"
         },
         {
-          "model": "opencode/grok-code-fast-1"
-        },
-        {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "high"
+          "model": "opencode/qwen3.6-plus-free"
         }
       ],
-      "prompt_append": "Minimize code modifications. Prefer localized edits. Delegate trivial changes to sisyphus-junior."
+      "prompt_append": "Minimize code changes. Prefer localized fixes. Avoid unnecessary refactors. Delegate trivial edits to sisyphus-junior."
     },
     "oracle": {
       "model": "nvidia/qwen/qwen3.5-122b-a10b",
@@ -103,64 +87,59 @@
         {
           "model": "opencode/nemotron-3-super-free",
           "variant": "high"
-        }
+        },
+        "longcat/LongCat-2.0-Preview"
       ]
     },
     "momus": {
-      "model": "longcat/LongCat-Flash-Thinking",
+      "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
+        "longcat/LongCat-Flash-Thinking",
         {
-          "model": "opencode/glm-4.7"
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "medium"
         },
         {
           "model": "opencode/deepseek-v4-flash-free",
           "variant": "medium"
-        },
-        {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "low"
         }
       ],
-      "prompt_append": "Strictly validate correctness, regressions, edge cases, and side effects. Reject uncertain fixes."
+      "prompt_append": "Strictly validate correctness, regressions, edge cases, side effects, concurrency risks, and architectural consistency. Reject uncertain fixes."
     },
     "explore": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
-        {
-          "model": "longcat/LongCat-Flash-Thinking"
-        },
+        "longcat/LongCat-Flash-Thinking",
         {
           "model": "opencode/deepseek-v4-flash-free",
-          "variant": "high"
+          "variant": "medium"
         },
         {
-          "model": "opencode/ring-2.6-1t-free",
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "medium"
         }
       ],
-      "prompt_append": "Use atlas output as primary context. Expand only when necessary. Focus on dependencies, architecture, and call chains."
+      "prompt_append": "Use Atlas results as primary context. Expand only when necessary. Focus on dependencies, call chains, architecture, and state flow."
     },
     "librarian": {
       "model": "opencode/gemini-3-flash",
       "fallback_models": [
+        "longcat/LongCat-Flash-Lite",
         {
-          "model": "longcat/LongCat-Flash-Lite"
-        },
-        {
-          "model": "opencode/qwen3.6-plus-free"
+          "model": "opencode/big-pickle"
         }
       ]
     },
     "multimodal-looker": {
-      "model": "opencode/hy3-preview-free",
-      "variant": "medium",
+      "model": "nvidia/stepfun-ai/step-3.5-flash",
+      "variant": "high",
       "fallback_models": [
         {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "model": "nvidia/openai/gpt-oss-120b",
           "variant": "medium"
         },
         {
-          "model": "opencode/ring-2.6-1t-free",
+          "model": "opencode/deepseek-v4-flash-free",
           "variant": "high"
         }
       ]
@@ -168,9 +147,7 @@
     "sisyphus-junior": {
       "model": "longcat/LongCat-Flash-Thinking",
       "fallback_models": [
-        {
-          "model": "longcat/LongCat-Flash-Lite"
-        },
+        "longcat/LongCat-Flash-Lite",
         {
           "model": "opencode/minimax-m2.5-free"
         },
@@ -179,17 +156,16 @@
           "variant": "low"
         }
       ],
-      "prompt_append": "Handle only small localized edits. Avoid broad refactors and unnecessary context expansion."
+      "prompt_append": "Handle only small localized edits. Avoid broad refactors. Prefer minimal diffs and minimal context expansion."
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "opencode/hy3-preview-free",
+      "model": "nvidia/stepfun-ai/step-3.5-flash",
       "variant": "high"
     },
     "artistry": {
-      "model": "opencode/ring-2.6-1t-free",
-      "variant": "high"
+      "model": "longcat/LongCat-2.0-Preview"
     },
     "ultrabrain": {
       "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
@@ -202,7 +178,7 @@
       "model": "longcat/LongCat-Flash-Lite"
     },
     "unspecified-high": {
-      "model": "longcat/LongCat-2.0-Preview"
+      "model": "kimi-for-coding/k2p6"
     },
     "unspecified-low": {
       "model": "opencode/minimax-m2.5-free"
@@ -211,7 +187,7 @@
       "model": "opencode/gemini-3-flash"
     },
     "git": {
-      "model": "opencode/grok-code-fast-1"
+      "model": "longcat/LongCat-Flash-Thinking"
     }
   },
   "background_task": {
