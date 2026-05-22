@@ -6,15 +6,6 @@
     "opencode-antigravity-auth@latest"
   ],
   "mcp": {
-    "graphify": {
-      "type": "local",
-      "command": [
-        "python3",
-        "-m",
-        "graphify.serve",
-        "graphify-out/graph.json"
-      ]
-    },
     "XcodeBuildMCP": {
       "type": "local",
       "command": [
@@ -23,11 +14,6 @@
         "xcodebuildmcp",
         "mcp"
       ],
-      "enabled": false
-    },
-    "Figma": {
-      "type": "remote",
-      "url": "https://mcp.figma.com/mcp",
       "enabled": false
     }
   },
