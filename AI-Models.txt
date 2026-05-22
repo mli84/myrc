@@ -16,3 +16,19 @@
 #opencode/nemotron-3-super-free (low/medium/high)
 #opencode/qwen3.6-plus-free
 #opencode/big-pickle
+
+#blazeai/deepseek-r1:70b
+#blazeai/grok-4.1-fast
+#blazeai/grok-4.20-fast
+#blazeai/qwen3.5-omni-flash-search
+#blazeai/qwen3.5-omni-flash-thinking-search
+#blazeai/qwen3.5-omni-plus-search
+#blazeai/qwen3.5-omni-plus-thinking
+#blazeai/qwen3.5-omni-plus-thinking-search
+#blazeai/qwen3.6-max-preview
+#blazeai/qwen3.6-max-preview-thinking
+#blazeai/qwen3.6-plus
+#blazeai/qwen3.6-plus-search
+#blazeai/qwen3.6-plus-thinking
+#blazeai/qwen3.6-plus-thinking-search
+#blazeai/z-ai/glm-5.1

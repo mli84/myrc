@@ -25,6 +25,7 @@ load_env "$ENV_FILE"
 
 get_base_url() {
   case "$1" in
+    blazeai)         echo "https://blazeai.boxu.dev/api/v1" ;;
     longcat)         echo "https://api.longcat.chat/openai/v1" ;;
     groq)            echo "https://api.groq.com/openai/v1" ;;
     nvidia)          echo "https://integrate.api.nvidia.com/v1" ;;
@@ -37,6 +38,7 @@ get_base_url() {
 
 get_key_env() {
   case "$1" in
+    blazeai)         echo "BLAZE_API_KEY" ;;
     longcat)         echo "LONGCAT_API_KEY" ;;
     groq)            echo "GROQ_API_KEY" ;;
     nvidia)          echo "NVIDIA_API_KEY" ;;
@@ -56,7 +58,7 @@ get_extra_header() {
 
 is_known_provider() {
   case "$1" in
-    longcat|groq|nvidia|openroute|opencode|kimi-for-coding) return 0 ;;
+    blazeai|longcat|groq|nvidia|openroute|opencode|kimi-for-coding) return 0 ;;
     *) return 1 ;;
   esac
 }
