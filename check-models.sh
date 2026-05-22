@@ -1,8 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MODELS_FILE="${1:-$SCRIPT_DIR/AI-Models.txt}"
 ENV_FILE="${2:-$SCRIPT_DIR/.env}"
+PROVIDERS_FILE="${3:-$SCRIPT_DIR/providers.conf}"
 TIMEOUT="${CHECK_MODELS_TIMEOUT:-30}"
 
 load_env() {
@@ -23,44 +24,47 @@ load_env() {
 
 load_env "$ENV_FILE"
 
+typeset -A PROVIDER_BASE_URL
+typeset -A PROVIDER_KEY_ENV
+typeset -A PROVIDER_EXTRA_HEADER
+
+load_providers() {
+  local file="$1"
+  if [[ ! -f "$file" ]]; then
+    echo "❌ 提供商配置文件不存在: $file" >&2
+    exit 1
+  fi
+  while IFS= read -r line || [[ -n "$line" ]]; do
+    line="${line#"${line%%[![:space:]]*}"}"
+    line="${line%"${line##*[![:space:]]}"}"
+    [[ -z "$line" ]] && continue
+    [[ "$line" == \#* ]] && continue
+
+    IFS='|' read -r name base_url key_env extra_header <<< "$line"
+    [[ -z "$name" || -z "$base_url" || -z "$key_env" ]] && continue
+
+    PROVIDER_BASE_URL[$name]="$base_url"
+    PROVIDER_KEY_ENV[$name]="$key_env"
+    PROVIDER_EXTRA_HEADER[$name]="${extra_header:-}"
+  done < "$file"
+}
+
+load_providers "$PROVIDERS_FILE"
+
 get_base_url() {
-  case "$1" in
-    blazeai)         echo "https://blazeai.boxu.dev/api/v1" ;;
-    longcat)         echo "https://api.longcat.chat/openai/v1" ;;
-    groq)            echo "https://api.groq.com/openai/v1" ;;
-    nvidia)          echo "https://integrate.api.nvidia.com/v1" ;;
-    openroute)       echo "https://openrouter.ai/api/v1" ;;
-    opencode)        echo "https://api.opencode.ai/v1" ;;
-    kimi-for-coding) echo "https://api.kimi.com/coding/v1" ;;
-    *)               echo "" ;;
-  esac
+  echo "${PROVIDER_BASE_URL[$1]:-}"
 }
 
 get_key_env() {
-  case "$1" in
-    blazeai)         echo "BLAZE_API_KEY" ;;
-    longcat)         echo "LONGCAT_API_KEY" ;;
-    groq)            echo "GROQ_API_KEY" ;;
-    nvidia)          echo "NVIDIA_API_KEY" ;;
-    openroute)       echo "OPENROUTER_API_KEY" ;;
-    opencode)        echo "OPENCODE_API_KEY" ;;
-    kimi-for-coding) echo "KIMI_API_KEY" ;;
-    *)               echo "" ;;
-  esac
+  echo "${PROVIDER_KEY_ENV[$1]:-}"
 }
 
 get_extra_header() {
-  case "$1" in
-    openroute) echo "X-Title: check-models" ;;
-    *)         echo "" ;;
-  esac
+  echo "${PROVIDER_EXTRA_HEADER[$1]:-}"
 }
 
 is_known_provider() {
-  case "$1" in
-    blazeai|longcat|groq|nvidia|openroute|opencode|kimi-for-coding) return 0 ;;
-    *) return 1 ;;
-  esac
+  [[ -n "${PROVIDER_BASE_URL[$1]:-}" ]]
 }
 
 available=0
@@ -130,8 +134,8 @@ print_result() {
 
   if [[ "${CHECK_MODELS_RAW_OUTPUT:-}" == "1" ]]; then
     echo "$result"
-    local status="${result%%|*}"
-    case "$status" in
+    local _st="${result%%|*}"
+    case "$_st" in
       OK) available=$((available + 1)) ;;
       FAIL) unavailable=$((unavailable + 1)) ;;
       SKIP) skipped=$((skipped + 1)) ;;
@@ -139,12 +143,12 @@ print_result() {
     return
   fi
 
-  local status="${result%%|*}"
+  local _st="${result%%|*}"
   local rest="${result#*|}"
   local name="${rest%%|*}"
   local detail="${rest#*|}"
 
-  case "$status" in
+  case "$_st" in
     OK)
       printf "  ✅  %s — 可用 (%s)\n" "$name" "$detail"
       available=$((available + 1))
@@ -167,6 +171,7 @@ fi
 
 echo "🔍 AI 模型可用性检测"
 echo "📋 模型列表: $MODELS_FILE"
+echo "🔌 提供商配置: $PROVIDERS_FILE"
 if [[ -f "$ENV_FILE" ]]; then
   echo "🔑 环境变量: $ENV_FILE"
 else
