@@ -6,6 +6,14 @@
     "opencode-antigravity-auth@latest"
   ],
   "mcp": {
+    "swiftlens": {
+      "enabled": false,
+      "type": "local",
+      "command": [
+        "uvx",
+        "swiftlens"
+      ]
+    },
     "XcodeBuildMCP": {
       "type": "local",
       "command": [
@@ -14,6 +22,11 @@
         "xcodebuildmcp",
         "mcp"
       ],
+      "enabled": false
+    },
+    "Figma": {
+      "type": "remote",
+      "url": "https://mcp.figma.com/mcp",
       "enabled": false
     }
   },
