@@ -326,13 +326,45 @@
       "opencode/gemini-3.5-flash": 4
     }
   },
-  "experimental": {
-    "task_system": true,
-    "aggressive_truncation": true
+  "runtime_fallback": {
+    "enabled": true,
+    "retry_on_errors": [429, 500, 502, 503, 504],
+    "max_fallback_attempts": 3,
+    "cooldown_seconds": 60,
+    "timeout_seconds": 30,
+    "notify_on_fallback": true
   },
   "model_capabilities": {
     "enabled": true,
-    "auto_refresh_on_start": true
+    "auto_refresh_on_start": true,
+    "refresh_timeout_ms": 5000,
+    "source_url": "https://models.dev/api.json"
+  },
+  "experimental": {
+    "truncate_all_tool_outputs": false,
+    "aggressive_truncation": false,
+    "auto_resume": false,
+    "disable_omo_env": false,
+    "task_system": true,
+    "dynamic_context_pruning": {
+      "enabled": false,
+      "notification": "detailed",
+      "turn_protection": { "enabled": true, "turns": 3 },
+      "protected_tools": [
+        "task",
+        "todowrite",
+        "todoread",
+        "lsp_rename",
+        "session_read",
+        "session_write",
+        "session_search"
+      ],
+      "strategies": {
+        "deduplication": { "enabled": true },
+        "supersede_writes": { "enabled": true, "aggressive": false },
+        "purge_errors": { "enabled": true, "turns": 5 }
+      }
+    }
   },
   "tmux": {
     "enabled": true,
