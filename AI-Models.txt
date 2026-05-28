@@ -1,5 +1,3 @@
-#longcat/LongCat-Flash-Lite
-#longcat/LongCat-Flash-Thinking
 #longcat/LongCat-2.0-Preview
 
 #kimi-for-coding/k2p6
@@ -13,12 +11,11 @@
 #nvidia/deepseek-ai/deepseek-v4-pro (low/medium/high/max)
 
 #opencode/gemini-3-flash
-#opencode/deepSeek-v4-flash-free (low/medium/high/max)
-#opencode/minimax-m2.5-free
-#opencode/nemotron-3-super-free (low/medium/high)
-#opencode/qwen3.6-plus-free
-#opencode/big-pickle
 #opencode/gemini-3.5-flash (minimal/low/medium/high)
+#opencode/big-pickle
+#opencode/deepSeek-v4-flash-free (low/medium/high/max)
+#opencode/nemotron-3-super-free (low/medium/high)
+#opencode/mimo-v2.5-free (low/medium/high)
 
 #blazeai/deepseek-r1:70b
 #blazeai/grok-4.1-fast

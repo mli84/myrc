@@ -5,69 +5,82 @@
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
-          "model": "nvidia/qwen/qwen3.5-122b-a10b"
+          "model": "opencode/gemini-3.5-flash",
+          "variant": "high"
+        },
+        {
+          "model": "blazeai/qwen3.6-max-preview-thinking"
+        },
+        {
+          "model": "nvidia/deepseek-ai/deepseek-v4-pro",
+          "variant": "high"
         },
         {
           "model": "nvidia/openai/gpt-oss-120b",
           "variant": "high"
         },
         {
-          "model": "opencode/qwen3.6-plus-free"
+          "model": "kimi-for-coding/k2"
         }
       ]
     },
     "metis": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "opencode/gemini-3.5-flash",
+      "variant": "medium",
       "fallback_models": [
         {
           "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
         },
         {
-          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
-          "variant": "medium"
-        },
-        {
           "model": "opencode/nemotron-3-super-free",
           "variant": "medium"
+        },
+        {
+          "model": "blazeai/qwen3.6-plus"
         }
-      ],
-      "prompt_append": "Break tasks into minimal hierarchical steps. Prefer module to file to function exploration. Minimize unnecessary file reads and token usage."
+      ]
     },
     "prometheus": {
-      "model": "longcat/LongCat-Flash-Lite",
-      "fallback_models": [
-        {
-          "model": "opencode/minimax-m2.5-free"
-        },
-        {
-          "model": "opencode/big-pickle"
-        },
-        {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
-          "variant": "low"
-        }
-      ],
-      "prompt_append": "Optimize for throughput and low latency. Parallelize Atlas and Explore aggressively. Prefer cheap models first. Stop exploration early when sufficient context is gathered."
-    },
-    "atlas": {
-      "model": "longcat/LongCat-Flash-Lite",
-      "fallback_models": [
-        {
-          "model": "longcat/LongCat-Flash-Thinking"
-        },
-        {
-          "model": "opencode/deepseek-v4-flash-free",
-          "variant": "low"
-        },
-        {
-          "model": "opencode/minimax-m2.5-free"
-        }
-      ],
-      "prompt_append": "Return only highly relevant snippets, functions, symbols, and definitions. Never summarize entire files. Keep outputs concise and structured."
-    },
-    "hephaestus": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
+        {
+          "model": "blazeai/deepseek-r1:70b"
+        },
+        {
+          "model": "blazeai/qwen3.6-max-preview-thinking"
+        },
+        {
+          "model": "nvidia/deepseek-ai/deepseek-v4-pro",
+          "variant": "max"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "high"
+        }
+      ]
+    },
+    "atlas": {
+      "model": "opencode/gemini-3-flash",
+      "fallback_models": [
+        {
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "variant": "medium"
+        },
+        {
+          "model": "opencode/deepSeek-v4-flash-free",
+          "variant": "medium"
+        },
+        {
+          "model": "blazeai/qwen3.6-plus-search"
+        }
+      ]
+    },
+    "hephaestus": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        {
+          "model": "longcat/LongCat-2.0-Preview"
+        },
         {
           "model": "nvidia/qwen/qwen3.5-122b-a10b"
         },
@@ -76,153 +89,241 @@
           "variant": "medium"
         },
         {
-          "model": "opencode/qwen3.6-plus-free"
+          "model": "blazeai/z-ai/glm-5.1"
         }
-      ],
-      "prompt_append": "Minimize code changes. Prefer localized fixes over large refactors. Avoid touching unrelated files. Delegate small changes to sisyphus-junior."
+      ]
     },
     "oracle": {
-      "model": "nvidia/qwen/qwen3.5-122b-a10b",
+      "model": "blazeai/qwen3.5-omni-plus-thinking-search",
       "fallback_models": [
         {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "high"
+          "model": "blazeai/qwen3.5-omni-flash-thinking-search"
         },
         {
-          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
-          "variant": "high"
+          "model": "blazeai/qwen3.6-plus-thinking-search"
         },
         {
-          "model": "opencode/nemotron-3-super-free",
+          "model": "opencode/gemini-3.5-flash",
           "variant": "high"
         }
       ]
     },
     "momus": {
-      "model": "longcat/LongCat-Flash-Thinking",
+      "model": "blazeai/grok-4.20-fast",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "blazeai/grok-4.1-fast"
         },
         {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "medium"
-        },
-        {
-          "model": "opencode/deepseek-v4-flash-free",
-          "variant": "medium"
-        }
-      ],
-      "prompt_append": "Strictly validate correctness, regressions, edge cases, concurrency issues, and side effects. Reject uncertain solutions."
-    },
-    "explore": {
-      "model": "longcat/LongCat-2.0-Preview",
-      "fallback_models": [
-        {
-          "model": "longcat/LongCat-Flash-Thinking"
-        },
-        {
-          "model": "opencode/deepseek-v4-flash-free",
+          "model": "opencode/mimo-v2.5-free",
           "variant": "high"
         },
         {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
-          "variant": "medium"
+          "model": "blazeai/qwen3.6-plus"
         }
-      ],
-      "prompt_append": "Use Atlas output as primary context. Expand only when necessary. Focus on architecture, call chains, state flow, and dependencies."
+      ]
     },
-    "librarian": {
-      "model": "opencode/gemini-3-flash",
+    "explore": {
+      "model": "blazeai/qwen3.5-omni-plus-search",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-Flash-Lite"
+          "model": "blazeai/qwen3.5-omni-flash-search"
         },
         {
-          "model": "opencode/big-pickle"
+          "model": "blazeai/qwen3.6-plus-search"
         },
         {
-          "model": "opencode/minimax-m2.5-free"
+          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+          "variant": "medium"
+        }
+      ]
+    },
+    "librarian": {
+      "model": "opencode/gemini-3.5-flash",
+      "variant": "low",
+      "fallback_models": [
+        {
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "variant": "low"
+        },
+        {
+          "model": "opencode/nemotron-3-super-free",
+          "variant": "low"
         }
       ]
     },
     "multimodal-looker": {
-      "model": "nvidia/openai/gpt-oss-120b",
-      "variant": "medium",
+      "model": "blazeai/qwen3.5-omni-plus-thinking",
       "fallback_models": [
         {
-          "model": "opencode/deepseek-v4-flash-free",
-          "variant": "max"
+          "model": "blazeai/qwen3.5-omni-plus-thinking-search"
         },
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "blazeai/qwen3.5-omni-flash-thinking-search"
         },
         {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
-          "variant": "high"
+          "model": "blazeai/qwen3.5-omni-plus-search"
         }
       ]
     },
     "sisyphus-junior": {
-      "model": "longcat/LongCat-Flash-Thinking",
+      "model": "opencode/gemini-3.5-flash",
+      "variant": "minimal",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-Flash-Lite"
+          "model": "opencode/deepSeek-v4-flash-free",
+          "variant": "low"
         },
         {
-          "model": "opencode/minimax-m2.5-free"
+          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+          "variant": "low"
         },
         {
-          "model": "opencode/deepseek-v4-flash-free",
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "low"
         }
-      ],
-      "prompt_append": "Handle only small localized edits. Avoid broad refactors. Prefer minimal diffs and limited context."
+      ]
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "nvidia/openai/gpt-oss-120b",
-      "variant": "high"
+      "model": "blazeai/qwen3.5-omni-plus-thinking",
+      "fallback_models": [
+        {
+          "model": "blazeai/qwen3.5-omni-plus-thinking-search"
+        },
+        {
+          "model": "blazeai/qwen3.6-plus-thinking"
+        }
+      ]
     },
     "artistry": {
-      "model": "longcat/LongCat-2.0-Preview"
+      "model": "blazeai/grok-4.20-fast",
+      "fallback_models": [
+        {
+          "model": "opencode/mimo-v2.5-free",
+          "variant": "high"
+        },
+        {
+          "model": "blazeai/qwen3.6-max-preview"
+        }
+      ]
     },
     "ultrabrain": {
-      "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
-      "variant": "high"
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        {
+          "model": "blazeai/qwen3.6-max-preview-thinking"
+        },
+        {
+          "model": "nvidia/deepseek-ai/deepseek-v4-pro",
+          "variant": "max"
+        },
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
+          "variant": "high"
+        }
+      ]
     },
     "deep": {
-      "model": "nvidia/qwen/qwen3.5-122b-a10b"
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro",
+      "variant": "high",
+      "fallback_models": [
+        {
+          "model": "blazeai/deepseek-r1:70b"
+        },
+        {
+          "model": "blazeai/qwen3.6-plus-thinking"
+        },
+        {
+          "model": "longcat/LongCat-2.0-Preview"
+        }
+      ]
     },
     "quick": {
-      "model": "longcat/LongCat-Flash-Lite"
+      "model": "opencode/gemini-3-flash",
+      "fallback_models": [
+        {
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "variant": "low"
+        },
+        {
+          "model": "opencode/deepSeek-v4-flash-free",
+          "variant": "low"
+        },
+        {
+          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+          "variant": "low"
+        }
+      ]
     },
     "unspecified-high": {
-      "model": "longcat/LongCat-2.0-Preview"
+      "model": "opencode/gemini-3.5-flash",
+      "variant": "high",
+      "fallback_models": [
+        {
+          "model": "longcat/LongCat-2.0-Preview"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "high"
+        }
+      ]
     },
     "unspecified-low": {
-      "model": "opencode/minimax-m2.5-free"
+      "model": "opencode/gemini-3.5-flash",
+      "variant": "low",
+      "fallback_models": [
+        {
+          "model": "opencode/nemotron-3-super-free",
+          "variant": "low"
+        },
+        {
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "variant": "low"
+        }
+      ]
     },
     "writing": {
-      "model": "opencode/gemini-3-flash"
+      "model": "blazeai/z-ai/glm-5.1",
+      "fallback_models": [
+        {
+          "model": "opencode/gemini-3.5-flash",
+          "variant": "medium"
+        },
+        {
+          "model": "blazeai/qwen3.6-plus"
+        }
+      ]
     },
     "git": {
-      "model": "longcat/LongCat-Flash-Thinking"
+      "model": "nvidia/openai/gpt-oss-120b",
+      "variant": "medium",
+      "fallback_models": [
+        {
+          "model": "nvidia/qwen/qwen3.5-122b-a10b"
+        },
+        {
+          "model": "longcat/LongCat-2.0-Preview"
+        }
+      ]
     }
   },
   "background_task": {
     "providerConcurrency": {
       "nvidia": 4,
-      "opencode": 10,
-      "longcat": 20
+      "blazeai": 10,
+      "opencode": 16,
+      "longcat": 24
     },
     "modelConcurrency": {
       "longcat/LongCat-Flash-Lite": 40,
       "longcat/LongCat-Flash-Thinking": 16,
       "longcat/LongCat-2.0-Preview": 8,
-      "nvidia/qwen/qwen3.5-122b-a10b": 3,
-      "nvidia/openai/gpt-oss-120b": 3
+      "blazeai/qwen3.6-plus": 6,
+      "blazeai/qwen3.6-plus-thinking": 4,
+      "blazeai/qwen3.6-max-preview-thinking": 2,
+      "opencode/gemini-3.5-flash": 4
     }
   },
   "experimental": {
