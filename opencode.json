@@ -226,20 +226,6 @@
             "context": 200000,
             "output": 65536
           }
-        },
-        "LongCat-Flash-Thinking": {
-          "name": "LongCat Flash Thinking",
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        },
-        "LongCat-Flash-Lite": {
-          "name": "LongCat Flash Lite",
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
         }
       }
     },

@@ -116,11 +116,26 @@ echo "🔍 开始检测模型可用性..."
 
 available_models=()
 
+contains_model() {
+    local needle="$1"
+    local item
+    if [[ ${#available_models[@]} -eq 0 ]]; then
+        return 1
+    fi
+    for item in "${available_models[@]}"; do
+        [[ "$item" == "$needle" ]] && return 0
+    done
+    return 1
+}
+
 while IFS= read -r result; do
     if [[ "$result" =~ ^OK\|(.+)\|(.+)$ ]]; then
         model="${BASH_REMATCH[1]}"
-        available_models+=("$model")
-        echo "  ✅ ${model}"
+        detail="${BASH_REMATCH[2]}"
+        if ! contains_model "$model"; then
+            available_models+=("$model")
+        fi
+        echo "  ✅ ${model} — ${detail}"
     elif [[ "$result" =~ ^FAIL\|(.+)\|(.+)$ ]]; then
         model="${BASH_REMATCH[1]}"
         detail="${BASH_REMATCH[2]}"

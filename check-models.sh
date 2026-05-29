@@ -73,27 +73,39 @@ skipped=0
 missing_providers=""
 
 check_model() {
-  local provider="$1" model="$2" variant="$3"
-  local base_url key_env api_key
+  local provider="$1" model="$2" variant="$3" endpoint="$4"
+  local base_url key_env api_key extra_header endpoint_path endpoint_label request_body
 
   base_url="$(get_base_url "$provider")"
   key_env="$(get_key_env "$provider")"
   eval "api_key=\${$key_env:-}"
+  extra_header="$(get_extra_header "$provider")"
 
   if [[ -z "$api_key" ]]; then
     echo "SKIP|${provider}/${model}|缺少 ${key_env}"
     return
   fi
 
-  local request_body
-  if [[ -n "$variant" ]]; then
-    request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":1,\"thinkingLevel\":\"${variant}\"}"
-  else
-    request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":1}"
-  fi
-
-  local extra_header
-  extra_header="$(get_extra_header "$provider")"
+  case "$endpoint" in
+    chat|chat/completions)
+      endpoint_path="/chat/completions"
+      endpoint_label="chat/completions"
+      if [[ -n "$variant" ]]; then
+        request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":1,\"thinkingLevel\":\"${variant}\"}"
+      else
+        request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":1}"
+      fi
+      ;;
+    responses)
+      endpoint_path="/responses"
+      endpoint_label="responses"
+      request_body="{\"model\":\"${model}\",\"input\":\"hi\",\"max_output_tokens\":1}"
+      ;;
+    *)
+      echo "FAIL|${provider}/${model}|未知端点 ${endpoint}"
+      return
+      ;;
+  esac
 
   local start_time end_time elapsed
   start_time=$(python3 -c 'import time; print(int(time.time()*1000))' 2>/dev/null || echo "0")
@@ -106,26 +118,27 @@ check_model() {
     -H "Authorization: Bearer ${api_key}" \
     ${extra_header:+-H "$extra_header"} \
     -d "$request_body" \
-    "${base_url}/chat/completions" 2>/dev/null) || http_code="000"
+    "${base_url}${endpoint_path}" 2>/dev/null) || http_code="000"
 
   end_time=$(python3 -c 'import time; print(int(time.time()*1000))' 2>/dev/null || echo "0")
   elapsed=$((end_time - start_time))
   [[ "$elapsed" -lt 0 ]] && elapsed=0
 
   if [[ "$http_code" == "200" ]]; then
-    echo "OK|${provider}/${model}${variant:+ [$variant]}|${elapsed}ms"
+    echo "OK|${provider}/${model}|${endpoint_label}${variant:+ [$variant]} ${elapsed}ms"
   else
     local error_msg
     case "$http_code" in
       000) error_msg="超时或连接失败" ;;
       401) error_msg="API Key 无效" ;;
       403) error_msg="无权限" ;;
-      404) error_msg="模型不存在" ;;
+      404) error_msg="${endpoint_label} 不支持或模型不存在" ;;
+      405) error_msg="${endpoint_label} 方法不允许" ;;
       429) error_msg="频率超限" ;;
       500|502|503) error_msg="服务器错误" ;;
       *) error_msg="HTTP $http_code" ;;
     esac
-    echo "FAIL|${provider}/${model}${variant:+ [$variant]}|${error_msg}"
+    echo "FAIL|${provider}/${model}|${endpoint_label}${variant:+ [$variant]} — ${error_msg}"
   fi
 }
 
@@ -169,7 +182,7 @@ if [[ ! -f "$MODELS_FILE" ]]; then
   exit 1
 fi
 
-echo "🔍 AI 模型可用性检测"
+echo "🔍 AI 模型可用性检测（chat/completions + responses）"
 echo "📋 模型列表: $MODELS_FILE"
 echo "🔌 提供商配置: $PROVIDERS_FILE"
 if [[ -f "$ENV_FILE" ]]; then
@@ -243,25 +256,34 @@ while IFS= read -r provider; do
     [[ "$p" != "$provider" ]] && continue
 
     m="${entry#*/}"
-    variants="$(grep "^${entry}|" "$variant_file" | head -1 | cut -d'|' -f2-)"
-
-    if [[ -n "$variants" ]]; then
-      default_variant="medium"
-      if echo "$variants" | grep -qv "medium"; then
-        default_variant="$(echo "$variants" | cut -d'/' -f1)"
+    variants=""
+    while IFS='|' read -r variant_entry variant_values; do
+      [[ -z "$variant_entry" ]] && continue
+      if [[ "$variant_entry" == "$entry" ]]; then
+        variants="$variant_values"
+        break
       fi
-      result="$(check_model "$provider" "$m" "$default_variant")"
-    else
-      result="$(check_model "$provider" "$m" "")"
+    done < "$variant_file"
+
+    chat_variant=""
+    if [[ -n "$variants" ]]; then
+      chat_variant="medium"
+      if echo "$variants" | grep -qv "medium"; then
+        chat_variant="$(echo "$variants" | cut -d'/' -f1)"
+      fi
     fi
 
+    result="$(check_model "$provider" "$m" "$chat_variant" "chat/completions")"
+    print_result "$result"
+
+    result="$(check_model "$provider" "$m" "" "responses")"
     print_result "$result"
   done < "$model_file"
   echo ""
 done <<< "$provider_list"
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "📊 检测汇总"
+echo "📊 检测汇总（按接口）"
 echo "  ✅ 可用: $available"
 echo "  ❌ 不可用: $unavailable"
 echo "  ⚠️  跳过: $skipped"
