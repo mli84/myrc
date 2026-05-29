@@ -31,6 +31,68 @@
     }
   },
   "provider": {
+    "freemodel": {
+      "npm": "@ai-sdk/openai",
+      "name": "FreeModel",
+      "options": {
+        "baseURL": "https://api.freemodel.dev/v1",
+        "apiKey": "{env:FREEMODEL_API_KEY}",
+        "headers": {
+          "Authorization": "Bearer {env:FREEMODEL_API_KEY}"
+        }
+      },
+      "models": {
+        "gpt-5.2": {
+          "name": "gpt-5.2",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "gpt-5": {
+          "name": "gpt-5",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "gpt-5.5": {
+          "name": "gpt-5.5",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "claude-haiku-4.5": {
+          "name": "claude-haiku-4.5",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "claude-4.6": {
+          "name": "claude-4.6",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "claude-opus-4.7": {
+          "name": "claude-opus-4.7",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "claude-opus-4.8": {
+          "name": "claude-opus-4.8",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        }
+      }
+    },
     "blazeai": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "BlazeAI",
