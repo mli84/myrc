@@ -388,19 +388,18 @@
   },
   "background_task": {
     "providerConcurrency": {
+      "kimi-for-coding": 1,
+      "freemodel": 2,
       "nvidia": 4,
       "blazeai": 10,
       "opencode": 16,
       "longcat": 24
     },
     "modelConcurrency": {
-      "longcat/LongCat-Flash-Lite": 40,
-      "longcat/LongCat-Flash-Thinking": 16,
-      "longcat/LongCat-2.0-Preview": 8,
-      "blazeai/qwen3.6-plus": 6,
-      "blazeai/qwen3.6-plus-thinking": 4,
-      "blazeai/qwen3.6-max-preview-thinking": 2,
-      "opencode/gemini-3.5-flash": 4
+      "nvidia/deepseek-ai/deepseek-v4-pro": 2,
+      "nvidia/deepseek-ai/deepseek-v4-flash": 6,
+      "opencode/gemini-3.5-flash": 1,
+      "opencode/gemini-3-flash": 1
     }
   },
   "runtime_fallback": {

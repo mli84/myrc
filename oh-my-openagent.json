@@ -2,33 +2,32 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "freemodel/claude-opus-4.8",
-      "variant": "high",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
         {
-          "model": "freemodel/claude-opus-4.7",
-          "variant": "high"
-        },
-        {
-          "model": "freemodel/claude-4.6",
-          "variant": "high"
-        },
-        {
           "model": "longcat/LongCat-2.0-Preview"
+        },
+        {
+          "model": "opencode/gemini-3.5-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/deepSeek-v4-flash-free",
+          "variant": "high"
+        },
+        {
+          "model": "blazeai/qwen3.6-max-preview-thinking"
         }
       ]
     },
     "metis": {
-      "model": "freemodel/gpt-5.5",
-      "variant": "high",
+      "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
-          "model": "freemodel/gpt-5.2",
-          "variant": "high"
+          "model": "opencode/qwen3.6-plus-free"
         },
         {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "high"
+          "model": "nvidia/qwen/qwen3.5-122b-a10b"
         }
       ]
     },
@@ -36,174 +35,216 @@
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
-          "model": "nvidia/qwen/qwen3.5-122b-a10b"
-        },
-        {
-          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
-          "variant": "high"
-        }
-      ]
-    },
-    "atlas": {
-      "model": "freemodel/claude-4.6",
-      "variant": "high",
-      "fallback_models": [
-        {
-          "model": "freemodel/claude-haiku-4.5"
-        },
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "variant": "high"
-        }
-      ]
-    },
-    "hephaestus": {
-      "model": "kimi-for-coding/k2p6",
-      "fallback_models": [
-        {
-          "model": "freemodel/gpt-5",
+          "model": "opencode/gemini-3.5-flash",
           "variant": "medium"
         },
         {
           "model": "nvidia/deepseek-ai/deepseek-v4-pro",
+          "variant": "medium"
+        }
+      ]
+    },
+    "atlas": {
+      "model": "longcat/LongCat-2.0-Preview",
+      "fallback_models": [
+        {
+          "model": "blazeai/qwen3.6-max-preview"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "medium"
+        }
+      ]
+    },
+    "hephaestus": {
+      "model": "opencode/gemini-3.5-flash",
+      "variant": "high",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k2p6"
+        },
+        {
+          "model": "nvidia/openai/gpt-oss-120b",
           "variant": "high"
         }
       ]
     },
     "oracle": {
-      "model": "freemodel/claude-opus-4.7",
-      "variant": "high",
+      "model": "opencode/qwen3.6-plus-free",
       "fallback_models": [
         {
-          "model": "freemodel/claude-opus-4.8",
-          "variant": "medium"
+          "model": "blazeai/qwen3.6-plus-thinking"
         },
         {
-          "model": "blazeai/z-ai/glm-5.1"
+          "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
         }
       ]
     },
     "momus": {
-      "model": "opencode/gemini-3.5-flash",
-      "variant": "medium",
+      "model": "opencode/minimax-m3-free",
       "fallback_models": [
         {
-          "model": "opencode/gemini-3-flash"
+          "model": "blazeai/glm-5.1"
         },
         {
-          "model": "opencode/big-pickle"
+          "model": "opencode/gemini-3-flash"
         }
       ]
     },
     "explore": {
-      "model": "blazeai/qwen3.6-max-preview-thinking",
+      "model": "opencode/big-pickle",
       "fallback_models": [
         {
-          "model": "blazeai/qwen3.6-plus-thinking-search"
+          "model": "opencode/qwen3.6-plus-free"
         },
         {
-          "model": "blazeai/qwen3.5-omni-plus-thinking-search"
+          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+          "variant": "medium"
         }
       ]
     },
     "librarian": {
-      "model": "opencode/gemini-3-flash",
+      "model": "opencode/qwen3.6-plus-free",
       "fallback_models": [
         {
-          "model": "opencode/gemini-3.5-flash",
-          "variant": "low"
+          "model": "blazeai/qwen3.5-omni-flash-search"
         },
         {
           "model": "nvidia/stepfun-ai/step-3.5-flash",
-          "variant": "medium"
+          "variant": "low"
         }
       ]
     },
     "multimodal-looker": {
-      "model": "blazeai/qwen3.5-omni-plus-thinking",
+      "model": "blazeai/qwen3.5-omni-plus-thinking-search",
       "fallback_models": [
         {
-          "model": "blazeai/qwen3.5-omni-plus-thinking-search"
+          "model": "blazeai/qwen3.5-omni-flash-thinking-search"
         },
         {
-          "model": "blazeai/qwen3.5-omni-flash-thinking-search"
+          "model": "blazeai/qwen3.5-omni-plus-search"
         }
       ]
     },
     "sisyphus-junior": {
-      "model": "freemodel/claude-haiku-4.5",
+      "model": "opencode/deepSeek-v4-flash-free",
+      "variant": "medium",
       "fallback_models": [
         {
-          "model": "freemodel/claude-4.6",
+          "model": "opencode/nemotron-3-super-free",
           "variant": "medium"
         },
         {
           "model": "nvidia/deepseek-ai/deepseek-v4-flash",
-          "variant": "high"
+          "variant": "low"
         }
       ]
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "blazeai/qwen3.5-omni-plus-thinking"
+      "model": "blazeai/qwen3.5-omni-plus-thinking-search"
     },
     "artistry": {
-      "model": "opencode/big-pickle"
+      "model": "opencode/minimax-m3-free"
     },
     "ultrabrain": {
-      "model": "freemodel/claude-opus-4.8",
-      "variant": "max"
+      "model": "longcat/LongCat-2.0-Preview"
     },
     "deep": {
-      "model": "freemodel/gpt-5.5",
-      "variant": "high"
+      "model": "kimi-for-coding/k2p6"
     },
     "quick": {
-      "model": "opencode/gemini-3-flash"
+      "model": "opencode/deepSeek-v4-flash-free",
+      "variant": "low"
     },
     "unspecified-high": {
-      "model": "freemodel/claude-4.6",
-      "variant": "high"
+      "model": "longcat/LongCat-2.0-Preview"
     },
     "unspecified-low": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-flash",
-      "variant": "medium"
+      "model": "opencode/deepSeek-v4-flash-free",
+      "variant": "low"
     },
     "writing": {
-      "model": "freemodel/claude-opus-4.7",
-      "variant": "high"
+      "model": "opencode/qwen3.6-plus-free"
     },
     "git": {
-      "model": "kimi-for-coding/k2p6"
+      "model": "opencode/gemini-3.5-flash",
+      "variant": "medium"
     }
   },
   "background_task": {
     "providerConcurrency": {
-      "kimi-for-coding": 2,
-      "blazeai": 4,
-      "nvidia": 6,
-      "opencode": 10,
-      "longcat": 20
+      "kimi-for-coding": 1,
+      "freemodel": 2,
+      "nvidia": 4,
+      "blazeai": 10,
+      "opencode": 16,
+      "longcat": 24
     },
     "modelConcurrency": {
-      "longcat/LongCat-Flash-Lite": 40,
-      "longcat/LongCat-Flash-Thinking": 16,
-      "longcat/LongCat-2.0-Preview": 8,
-      "kimi-for-coding/k2p6": 2,
       "nvidia/deepseek-ai/deepseek-v4-pro": 2,
       "nvidia/deepseek-ai/deepseek-v4-flash": 6,
-      "opencode/gemini-3.5-flash": 4
+      "opencode/gemini-3.5-flash": 1,
+      "opencode/gemini-3-flash": 1
     }
   },
-  "experimental": {
-    "task_system": true,
-    "aggressive_truncation": true
+  "runtime_fallback": {
+    "enabled": true,
+    "retry_on_errors": [
+      429,
+      500,
+      502,
+      503,
+      504
+    ],
+    "max_fallback_attempts": 3,
+    "cooldown_seconds": 60,
+    "timeout_seconds": 30,
+    "notify_on_fallback": true
   },
   "model_capabilities": {
     "enabled": true,
-    "auto_refresh_on_start": true
+    "auto_refresh_on_start": true,
+    "refresh_timeout_ms": 5000,
+    "source_url": "https://models.dev/api.json"
   },
+  "experimental": {
+    "truncate_all_tool_outputs": false,
+    "aggressive_truncation": false,
+    "auto_resume": false,
+    "disable_omo_env": false,
+    "task_system": true,
+    "dynamic_context_pruning": {
+      "enabled": false,
+      "notification": "detailed",
+      "turn_protection": {
+        "enabled": true,
+        "turns": 3
+      },
+      "protected_tools": [
+        "task",
+        "todowrite",
+        "todoread",
+        "lsp_rename",
+        "session_read",
+        "session_write",
+        "session_search"
+      ],
+      "strategies": {
+        "deduplication": {
+          "enabled": true
+        },
+        "supersede_writes": {
+          "enabled": true,
+          "aggressive": false
+        },
+        "purge_errors": {
+          "enabled": true,
+          "turns": 5
+        }
+      }
+    }},
   "tmux": {
     "enabled": true,
     "layout": "main-vertical",

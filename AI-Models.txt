@@ -10,12 +10,14 @@
 #nvidia/deepseek-ai/deepseek-v4-flash (low/medium/high/max)
 #nvidia/deepseek-ai/deepseek-v4-pro (low/medium/high/max)
 
+#opencode/big-pickle
 #opencode/gemini-3-flash
 #opencode/gemini-3.5-flash (minimal/low/medium/high)
-#opencode/big-pickle
 #opencode/deepSeek-v4-flash-free (low/medium/high/max)
-#opencode/nemotron-3-super-free (low/medium/high)
+#opencode/qwen3.6-plus-free
+#opencode/minimax-m3-free 
 #opencode/mimo-v2.5-free (low/medium/high)
+#opencode/nemotron-3-super-free (low/medium/high)
 
 #blazeai/deepseek-r1:70b
 #blazeai/grok-4.1-fast
