@@ -5,6 +5,7 @@
     "oh-my-openagent",
     "opencode-antigravity-auth@latest"
   ],
+  "lsp": true,
   "mcp": {
     "swiftlens": {
       "enabled": false,
