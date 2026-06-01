@@ -396,8 +396,6 @@
       "longcat": 24
     },
     "modelConcurrency": {
-      "nvidia/deepseek-ai/deepseek-v4-pro": 2,
-      "nvidia/deepseek-ai/deepseek-v4-flash": 6,
       "opencode/gemini-3.5-flash": 1,
       "opencode/gemini-3-flash": 1
     }
