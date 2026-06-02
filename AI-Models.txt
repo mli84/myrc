@@ -14,7 +14,6 @@
 #opencode/gemini-3-flash
 #opencode/gemini-3.5-flash (minimal/low/medium/high)
 #opencode/deepSeek-v4-flash-free (low/medium/high/max)
-#opencode/qwen3.6-plus-free
 #opencode/minimax-m3-free 
 #opencode/mimo-v2.5-free (low/medium/high)
 #opencode/nemotron-3-super-free (low/medium/high)
@@ -34,6 +33,7 @@
 #blazeai/qwen3.6-plus-thinking
 #blazeai/qwen3.6-plus-thinking-search
 #blazeai/z-ai/glm-5.1
+#blazeai/moonshotai/kimi-k2.6
 
 
 #freemodel/gpt-5.2 (low/medium/high/max)

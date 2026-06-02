@@ -44,49 +44,49 @@
       },
       "models": {
         "gpt-5.2": {
-          "name": "gpt-5.2",
+          "name": "FreeModel gpt-5.2",
           "limit": {
             "context": 200000,
             "output": 65536
           }
         },
         "gpt-5": {
-          "name": "gpt-5",
+          "name": "FreeModel gpt-5",
           "limit": {
             "context": 200000,
             "output": 65536
           }
         },
         "gpt-5.5": {
-          "name": "gpt-5.5",
+          "name": "FreeModel gpt-5.5",
           "limit": {
             "context": 200000,
             "output": 65536
           }
         },
         "claude-haiku-4.5": {
-          "name": "claude-haiku-4.5",
+          "name": "FreeModel claude-haiku-4.5",
           "limit": {
             "context": 200000,
             "output": 65536
           }
         },
         "claude-4.6": {
-          "name": "claude-4.6",
+          "name": "FreeModel claude-4.6",
           "limit": {
             "context": 200000,
             "output": 65536
           }
         },
         "claude-opus-4.7": {
-          "name": "claude-opus-4.7",
+          "name": "FreeModel claude-opus-4.7",
           "limit": {
             "context": 200000,
             "output": 65536
           }
         },
         "claude-opus-4.8": {
-          "name": "claude-opus-4.8",
+          "name": "FreeModel claude-opus-4.8",
           "limit": {
             "context": 200000,
             "output": 65536
@@ -203,7 +203,14 @@
           }
         },
         "z-ai/glm-5.1": {
-          "name": "glm-5.1",
+          "name": "Blaze glm-5.1",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "moonshotai/kimi-k2.6": {
+          "name": "Blaze kimi-k2.6",
           "limit": {
             "context": 200000,
             "output": 65536
