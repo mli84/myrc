@@ -216,7 +216,7 @@
           "variant": "low"
         },
         {
-          "model": "opencode/deepSeek-v4-flash-free",
+          "model": "opencode/deepseek-v4-flash-free",
           "variant": "medium"
         },
         {
@@ -311,7 +311,7 @@
           "model": "blazeai/grok-4.1-fast"
         },
         {
-          "model": "opencode/deepSeek-v4-flash-free",
+          "model": "opencode/deepseek-v4-flash-free",
           "variant": "low"
         }
       ]
@@ -344,7 +344,7 @@
           "variant": "low"
         },
         {
-          "model": "opencode/deepSeek-v4-flash-free",
+          "model": "opencode/deepseek-v4-flash-free",
           "variant": "low"
         }
       ]

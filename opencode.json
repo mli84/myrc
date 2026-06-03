@@ -32,6 +32,26 @@
     }
   },
   "provider": {
+    "opencode2": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "OpenCode2",
+      "options": {
+        "baseURL": "https://opencode.ai/zen/v1",
+        "apiKey": "{env:OPENCODE_API_KEY}",
+        "headers": {
+          "Authorization": "Bearer {env:OPENCODE_API_KEY}"
+        }
+      },
+      "models": {
+        "deepseek-v4-flash-free": {
+          "name": "OpenCode2 deepseek-v4-flash-free",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        }
+      }
+    },
     "freemodel": {
       "npm": "@ai-sdk/openai",
       "name": "FreeModel",
@@ -65,6 +85,7 @@
           }
         },
         "claude-haiku-4.5": {
+          "provider.npm": "@ai-sdk/anthropic",
           "name": "FreeModel claude-haiku-4.5",
           "limit": {
             "context": 200000,
@@ -72,6 +93,7 @@
           }
         },
         "claude-4.6": {
+          "provider.npm": "@ai-sdk/anthropic",
           "name": "FreeModel claude-4.6",
           "limit": {
             "context": 200000,
@@ -79,6 +101,7 @@
           }
         },
         "claude-opus-4.7": {
+          "provider.npm": "@ai-sdk/anthropic",
           "name": "FreeModel claude-opus-4.7",
           "limit": {
             "context": 200000,
@@ -86,6 +109,7 @@
           }
         },
         "claude-opus-4.8": {
+          "provider.npm": "@ai-sdk/anthropic",
           "name": "FreeModel claude-opus-4.8",
           "limit": {
             "context": 200000,
