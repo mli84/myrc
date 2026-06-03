@@ -215,6 +215,34 @@
             "context": 200000,
             "output": 65536
           }
+        },
+        "qwen3.5-omni-flash": {
+          "name": "Blaze qwen3.5-omni-flash",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "qwen3.5-omni-plus": {
+          "name": "Blaze qwen3.5-omni-plus",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "qwen3.6-plus-preview-search": {
+          "name": "Blaze qwen3.6-plus-preview-search",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "qwen3.7-max": {
+          "name": "Blaze qwen3.7-max",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
         }
       }
     },
