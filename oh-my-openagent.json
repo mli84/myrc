@@ -351,6 +351,7 @@
       "longcat": 24
     },
     "modelConcurrency": {
+      "kimi-for-coding/k2p6": 1,
       "opencode/gemini-3.5-flash": 1,
       "opencode/gemini-3-flash": 1
     }
