@@ -4,6 +4,7 @@
 
 #nvidia/openai/gpt-oss-120b (low/medium/high)
 #nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
+#nvidia/stepfun-ai/step-3.7-flash (low/medium/high)
 #nvidia/qwen/qwen3-next-80b-a3b-instruct
 #nvidia/qwen/qwen3.5-122b-a10b
 #nvidia/nvidia/nemotron-3-super-120b-a12b (low/medium/high) 
@@ -16,27 +17,12 @@
 #opencode/minimax-m3-free 
 #opencode/mimo-v2.5-free (low/medium/high)
 #opencode/nemotron-3-super-free (low/medium/high)
+#opencode/nemotron-3-ultra-free (low/medium/high)
+#opencode/north-mini-code-free 
 
-#blazeai/deepseek-r1:70b
-#blazeai/grok-4.1-fast
+
 #blazeai/grok-4.20-fast
-#blazeai/qwen3.5-omni-flash-search
-#blazeai/qwen3.5-omni-flash-thinking-search
-#blazeai/qwen3.5-omni-plus-search
-#blazeai/qwen3.5-omni-plus-thinking
-#blazeai/qwen3.5-omni-plus-thinking-search
-#blazeai/qwen3.6-max-preview
-#blazeai/qwen3.6-max-preview-thinking
-#blazeai/qwen3.6-plus
-#blazeai/qwen3.6-plus-search
-#blazeai/qwen3.6-plus-thinking
-#blazeai/qwen3.6-plus-thinking-search
-#blazeai/z-ai/glm-5.1
 #blazeai/moonshotai/kimi-k2.6
-#blazeai/qwen3.5-omni-flash
-#blazeai/qwen3.5-omni-plus
-#blazeai/qwen3.6-plus-preview-search
-#blazeai/qwen3.7-max
 
 
 #freemodel/gpt-5.2 (low/medium/high/max)
