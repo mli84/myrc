@@ -2,188 +2,108 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "blazeai/moonshotai/kimi-k2.6",
       "fallback_models": [
         {
-          "model": "freemodel/claude-opus-4.8",
-          "variant": "medium"
+          "model": "nvidia/qwen/qwen3.5-122b-a10b"
         },
         {
-          "model": "freemodel/claude-opus-4.7",
-          "variant": "medium"
-        },
-        {
-          "model": "opencode/nemotron-3-ultra-free",
+          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
           "variant": "high"
         },
         {
-          "model": "blazeai/qwen3.7-max"
-        },
-        {
-          "model": "nvidia/qwen3.5-122b-a10b"
-        },
-        {
-          "model": "nvidia/nemotron-3-super-120b-a12b",
-          "variant": "high"
+          "model": "opencode/north-mini-code-free"
         }
       ]
     },
     "metis": {
-      "model": "freemodel/gpt-5.5",
-      "variant": "medium",
+      "model": "nvidia/qwen/qwen3.5-122b-a10b",
       "fallback_models": [
         {
-          "model": "jlen/gpt-5.5",
-          "variant": "medium"
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "high"
         },
         {
-          "model": "_5552220/gpt-5.5",
-          "variant": "medium"
-        },
-        {
-          "model": "freemodel/claude-4.6",
-          "variant": "medium"
-        },
-        {
-          "model": "blazeai/qwen3.7-max"
+          "model": "opencode/nemotron-3-ultra-free",
+          "variant": "high"
         }
       ]
     },
     "prometheus": {
-      "model": "freemodel/claude-opus-4.8",
-      "variant": "medium",
+      "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+      "variant": "high",
       "fallback_models": [
         {
-          "model": "freemodel/claude-opus-4.7",
-          "variant": "medium"
+          "model": "longcat/LongCat-2.0-Preview"
         },
         {
-          "model": "freemodel/claude-4.6",
-          "variant": "high"
-        },
-        {
-          "model": "jlen/gpt-5.5",
-          "variant": "high"
-        },
-        {
-          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "model": "opencode/nemotron-3-super-free",
           "variant": "high"
         }
       ]
     },
     "atlas": {
-      "model": "jlen/gpt-5.5",
-      "variant": "medium",
+      "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
-          "model": "_5552220/gpt-5.5",
-          "variant": "medium"
+          "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
         },
         {
-          "model": "freemodel/gpt-5.5",
-          "variant": "medium"
-        },
-        {
-          "model": "blazeai/kimi-k2.6"
+          "model": "opencode/minimax-m3-free"
         }
       ]
     },
     "hephaestus": {
-      "model": "freemodel/gpt-5.5",
+      "model": "nvidia/deepseek-ai/deepseek-v4-flash",
       "variant": "high",
       "fallback_models": [
         {
-          "model": "jlen/gpt-5.5",
-          "variant": "high"
+          "model": "blazeai/moonshotai/kimi-k2.6"
         },
         {
-          "model": "_5552220/gpt-5.5",
-          "variant": "high"
-        },
-        {
-          "model": "longcat/LongCat-2.0-Preview"
-        },
-        {
-          "model": "nvidia/openai/gpt-oss-120b",
+          "model": "opencode/deepseek-v4-flash-free",
           "variant": "high"
         }
       ]
     },
     "oracle": {
-      "model": "freemodel/claude-opus-4.8",
-      "variant": "high",
+      "model": "blazeai/grok-4.20-fast",
       "fallback_models": [
         {
-          "model": "freemodel/claude-opus-4.7",
+          "model": "nvidia/openai/gpt-oss-120b",
           "variant": "high"
         },
         {
-          "model": "longcat/LongCat-2.0-Preview"
-        },
-        {
-          "model": "blazeai/glm-5.1"
+          "model": "opencode/gemini-3.5-flash",
+          "variant": "high"
         }
       ]
     },
     "momus": {
-      "model": "opencode/gemini-3.5-flash",
-      "variant": "medium",
+      "model": "opencode/big-pickle",
       "fallback_models": [
         {
-          "model": "opencode/gemini-3-flash"
+          "model": "opencode/mimo-v2.5-free",
+          "variant": "high"
         },
         {
           "model": "opencode/minimax-m3-free"
-        },
-        {
-          "model": "blazeai/qwen3.5-omni-plus"
         }
       ]
     },
     "explore": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-flash",
-      "variant": "medium",
+      "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
       "fallback_models": [
         {
-          "model": "blazeai/qwen3.6-plus-preview-search"
+          "model": "longcat/LongCat-2.0-Preview"
         },
         {
-          "model": "blazeai/qwen3.6-max-preview"
-        },
-        {
-          "model": "opencode/big-pickle"
+          "model": "opencode/gemini-3-flash"
         }
       ]
     },
     "librarian": {
-      "model": "freemodel/claude-haiku-4.5",
-      "fallback_models": [
-        {
-          "model": "opencode/deepseek-v4-flash-free",
-          "variant": "medium"
-        },
-        {
-          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
-          "variant": "medium"
-        }
-      ]
-    },
-    "multimodal-looker": {
-      "model": "nvidia/stepfun-ai/step-3.7-flash",
-      "variant": "high",
-      "fallback_models": [
-        {
-          "model": "opencode/gemini-3.5-flash",
-          "variant": "high"
-        },
-        {
-          "model": "opencode/gemini-3.5-flash",
-          "variant": "high"
-        }
-      ]
-    },
-    "sisyphus-junior": {
-      "model": "opencode/mimo-v2.5-free",
+      "model": "nvidia/openai/gpt-oss-120b",
       "variant": "medium",
       "fallback_models": [
         {
@@ -191,11 +111,33 @@
           "variant": "medium"
         },
         {
-          "model": "opencode/nemotron-3-ultra-free",
+          "model": "opencode/gemini-3-flash"
+        }
+      ]
+    },
+    "multimodal-looker": {
+      "model": "opencode/gemini-3.5-flash",
+      "variant": "high",
+      "fallback_models": [
+        {
+          "model": "opencode/gemini-3-flash"
+        },
+        {
+          "model": "nvidia/stepfun-ai/step-3.7-flash",
+          "variant": "high"
+        }
+      ]
+    },
+    "sisyphus-junior": {
+      "model": "nvidia/stepfun-ai/step-3.7-flash",
+      "variant": "medium",
+      "fallback_models": [
+        {
+          "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "medium"
         },
         {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
+          "model": "opencode/mimo-v2.5-free",
           "variant": "medium"
         }
       ]
@@ -203,184 +145,91 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "freemodel/gpt-5.5",
+      "model": "opencode/gemini-3.5-flash",
       "variant": "high",
       "fallback_models": [
         {
-          "model": "jlen/gpt-5.5",
-          "variant": "high"
-        },
-        {
-          "model": "freemodel/claude-opus-4.8",
-          "variant": "medium"
-        }
-      ]
-    },
-    "artistry": {
-      "model": "freemodel/claude-opus-4.8",
-      "variant": "medium",
-      "fallback_models": [
-        {
-          "model": "blazeai/kimi-k2.6"
-        },
-        {
-          "model": "longcat/LongCat-2.0-Preview"
-        }
-      ]
-    },
-    "ultrabrain": {
-      "model": "freemodel/claude-opus-4.8",
-      "variant": "high",
-      "fallback_models": [
-        {
-          "model": "longcat/LongCat-2.0-Preview"
-        },
-        {
-          "model": "jlen/gpt-5.5",
+          "model": "nvidia/stepfun-ai/step-3.7-flash",
           "variant": "high"
         }
       ]
     },
-    "deep": {
-      "model": "longcat/LongCat-2.0-Preview",
-      "fallback_models": [
-        {
-          "model": "freemodel/claude-opus-4.8",
-          "variant": "medium"
-        },
-        {
-          "model": "nvidia/qwen3-next-80b-a3b-instruct"
-        }
-      ]
-    },
-    "quick": {
-      "model": "opencode/gemini-3-flash",
-      "fallback_models": [
-        {
-          "model": "opencode/deepseek-v4-flash-free",
-          "variant": "low"
-        },
-        {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
-          "variant": "low"
-        }
-      ]
-    },
     "artistry": {
-      "model": "opencode/gemini-3-flash",
+      "model": "blazeai/grok-4.20-fast",
       "fallback_models": [
         {
-          "model": "opencode/minimax-m3-free"
-        },
-        {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
-          "variant": "medium"
+          "model": "opencode/big-pickle"
         }
       ]
     },
     "ultrabrain": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+      "variant": "high",
       "fallback_models": [
         {
           "model": "nvidia/qwen/qwen3.5-122b-a10b"
-        },
-        {
-          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
-          "variant": "high"
         }
       ]
     },
     "deep": {
-      "model": "blazeai/moonshotai/kimi-k2.6",
+      "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+      "variant": "max",
       "fallback_models": [
         {
-          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
-          "variant": "max"
-        },
-        {
-          "model": "opencode/nemotron-3-ultra-free",
+          "model": "nvidia/openai/gpt-oss-120b",
           "variant": "high"
         }
       ]
     },
     "quick": {
-      "model": "opencode/gemini-3.5-flash",
-      "variant": "minimal",
+      "model": "nvidia/stepfun-ai/step-3.5-flash",
+      "variant": "low",
       "fallback_models": [
         {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
-          "variant": "low"
-        },
+          "model": "opencode/gemini-3-flash"
+        }
+      ]
+    },
+    "unspecified-high": {
+      "model": "nvidia/qwen/qwen3.5-122b-a10b",
+      "fallback_models": [
+        {
+          "model": "longcat/LongCat-2.0-Preview"
+        }
+      ]
+    },
+    "unspecified-low": {
+      "model": "nvidia/stepfun-ai/step-3.7-flash",
+      "variant": "low",
+      "fallback_models": [
         {
           "model": "opencode/mimo-v2.5-free",
           "variant": "low"
         }
       ]
     },
-    "unspecified-high": {
-      "model": "freemodel/gpt-5.5",
-      "variant": "medium",
+    "writing": {
+      "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
-        {
-          "model": "jlen/gpt-5.5",
-          "variant": "medium"
-        },
-        {
-          "model": "_5552220/gpt-5.5",
-          "variant": "medium"
-        }
-      ]
-    },
-    "unspecified-low": {
-      "model": "opencode/deepseek-v4-flash-free",
-      "variant": "low",
-      "fallback_models": [
-        {
-          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
-          "variant": "low"
-        },
         {
           "model": "opencode/minimax-m3-free"
         }
       ]
     },
-    "writing": {
-      "model": "freemodel/claude-opus-4.8",
-      "variant": "medium",
-      "fallback_models": [
-        {
-          "model": "freemodel/claude-4.6",
-          "variant": "medium"
-        },
-        {
-          "model": "blazeai/glm-5.1"
-        }
-      ]
-    },
     "git": {
-      "model": "freemodel/gpt-5",
-      "variant": "medium",
+      "model": "blazeai/moonshotai/kimi-k2.6",
       "fallback_models": [
         {
-          "model": "jlen/gpt-5.4",
-          "variant": "medium"
-        },
-        {
-          "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "medium"
+          "model": "opencode/north-mini-code-free"
         }
       ]
     },
     "general": {
-      "model": "freemodel/gpt-5.5",
-      "variant": "medium",
+      "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
       "fallback_models": [
         {
-          "model": "_5552220/gpt-5.5",
+          "model": "opencode/nemotron-3-ultra-free",
           "variant": "medium"
-        },
-        {
-          "model": "longcat/LongCat-2.0-Preview"
         }
       ]
     }
@@ -389,8 +238,7 @@
     "providerConcurrency": {
       "kimi-for-coding": 1,
       "freemodel": 1,
-      "jlen": 1,
-      "_5552220": 1,
+      "shared": 1,
       "nvidia": 4,
       "blazeai": 10,
       "opencode": 16,
