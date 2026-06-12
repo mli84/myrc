@@ -1,7 +1,5 @@
 #longcat/LongCat-2.0-Preview
 
-#kimi-for-coding/k2p6
-
 #nvidia/openai/gpt-oss-120b (low/medium/high)
 #nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
 #nvidia/stepfun-ai/step-3.7-flash (low/medium/high)
@@ -32,3 +30,14 @@
 #freemodel/claude-4.6 (low/medium/high/max)
 #freemodel/claude-opus-4.7 (low/medium/high/max)
 #freemodel/claude-opus-4.8 (low/medium/high/max)
+
+#openroute/openrouter/owl-alpha
+#openroute/poolside/laguna-m.1:free (low/medium/high)
+#openroute/poolside/laguna-xs.2:free (low/medium/high)
+#openroute/nvidia/nemotron-3-super-120b-a12b:free
+#openroute/nvidia/nemotron-3-super:free (low/medium/high)
+#openroute/nvidia/nemotron-3-ultra:free (low/medium/high)
+#openroute/openai/gpt-oss-120b:free (minimal/low/medium/high/xhigh)
+
+#agnes/agnes-1.5-flash
+#agnes/agnes-2.0-flash
