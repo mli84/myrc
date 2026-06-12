@@ -32,6 +32,33 @@
     }
   },
   "provider": {
+    "cline": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Cline",
+      "options": {
+        "baseURL": "https://api.cline.bot/api/v1",
+        "apiKey": "{env:CLINE_API_KEY}",
+        "headers": {
+          "Authorization": "Bearer {env:CLINE_API_KEY}"
+        }
+      },
+      "models": {
+        "xiaomi/mimo-v2.5": {
+          "name": "Cline mimo-v2.5",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "deepseek/deepseek-v4-flash": {
+          "name": "Cline deepseek-v4-flash",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        }
+      }
+    },
     "agnes": {
       "npm": "@ai-sdk/openai",
       "name": "Agnes",

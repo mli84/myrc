@@ -31,18 +31,23 @@
 #freemodel/claude-opus-4.7 (low/medium/high/max)
 #freemodel/claude-opus-4.8 (low/medium/high/max)
 
-#openroute/openrouter/owl-alpha
-#openroute/poolside/laguna-m.1:free (low/medium/high)
-#openroute/poolside/laguna-xs.2:free (low/medium/high)
-#openroute/nvidia/nemotron-3-super-120b-a12b:free
-#openroute/nvidia/nemotron-3-super:free (low/medium/high)
-#openroute/nvidia/nemotron-3-ultra:free (low/medium/high)
-#openroute/openai/gpt-oss-120b:free (minimal/low/medium/high/xhigh)
+#openrouter/poolside/laguna-m.1:free (low/medium/high)
+#openrouter/poolside/laguna-xs.2:free (low/medium/high)
+#openrouter/nvidia/nemotron-3-super-120b-a12b:free
+#openrouter/nvidia/nemotron-3-super:free (low/medium/high)
+#openrouter/nvidia/nemotron-3-ultra:free (low/medium/high)
+#openrouter/openai/gpt-oss-120b:free (minimal/low/medium/high/xhigh)
 
 #agnes/agnes-1.5-flash
 #agnes/agnes-2.0-flash
 
-#glm/glm-5.1
-#glm/glm-4.5-air
-#glm/glm-4.6
-#glm/glm-4.7
+#zhipuai-coding-plan/glm-4.5-air
+#zhipuai-coding-plan/glm-4.6
+#zhipuai-coding-plan/glm-4.6v
+#zhipuai-coding-plan/glm-4.7
+#zhipuai-coding-plan/glm-5-turbo
+#zhipuai-coding-plan/glm-5v-turbo
+#zhipuai-coding-plan/glm-5.1
+
+#cline/xiaomi/mimo-v2.5
+#cline/deepseek/deepseek-v4-flash
