@@ -41,3 +41,8 @@
 
 #agnes/agnes-1.5-flash
 #agnes/agnes-2.0-flash
+
+#glm/glm-5.1
+#glm/glm-4.5-air
+#glm/glm-4.6
+#glm/glm-4.7
