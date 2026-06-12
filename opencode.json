@@ -52,67 +52,6 @@
         }
       }
     },
-    "jlen": {
-      "npm": "@ai-sdk/openai",
-      "name": "jlen",
-      "options": {
-        "baseURL": "https://ai.jlen.top/v1",
-        "apiKey": "{env:JLEN_API_KEY}",
-        "headers": {
-          "Authorization": "Bearer {env:JLEN_API_KEY}"
-        }
-      },
-      "models": {
-        "gpt-5.4": {
-          "name": "Jlen gpt-5.4",
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        },
-        "gpt-5.5": {
-          "name": "Jlen gpt-5.5",
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        }
-      }
-    },
-    "_5552220": {
-      "npm": "@ai-sdk/openai",
-      "name": "_5552220",
-      "options": {
-        "baseURL": "https://codex.5552220.xyz/v1",
-        "apiKey": "{env:_5552220_API_KEY}",
-        "headers": {
-          "Authorization": "Bearer {env:_5552220_API_KEY}"
-        }
-      },
-      "models": {
-        "gpt-5": {
-          "name": "_5552220 gpt-5",
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        },
-        "gpt-5.4": {
-          "name": "_5552220 gpt-5.4",
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        },
-        "gpt-5.5": {
-          "name": "_5552220 gpt-5.5",
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        }
-      }
-    },
     "freemodel": {
       "npm": "@ai-sdk/openai",
       "name": "FreeModel",
