@@ -32,6 +32,42 @@
     }
   },
   "provider": {
+    "sensenova": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Sense Nova",
+      "options": {
+        "baseURL": "https://token.sensenova.cn/v1",
+        "apiKey": "{env:SENSENOVA_API_KEY}",
+        "headers": {
+          "Authorization": "Bearer {env:SENSENOVA_API_KEY}"
+        }
+      },
+      "models": {
+        "sensenova-6.7-flash-lite": {
+          "name": "Sense Nova sensenova-6.7-flash-lite",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "deepseek-v4-flash": {
+          "name": "Sense Nova deepseek-v4-flash",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        }
+      }
+    },
     "cline": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Cline",
@@ -79,6 +115,15 @@
         },
         "agnes-2.0-flash": {
           "name": "agnes-2.0-flash",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
           "options": {
             "reasoningEffort": "high",
             "textVerbosity": "low",
