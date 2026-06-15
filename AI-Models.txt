@@ -38,6 +38,5 @@
 #openrouter/nvidia/nemotron-3-ultra:free (low/medium/high)
 #openrouter/openai/gpt-oss-120b:free (minimal/low/medium/high/xhigh)
 
-#zhipuai-coding-plan/glm-4.5-air
 #zhipuai-coding-plan/glm-4.6v
 #zhipuai-coding-plan/glm-4.7
