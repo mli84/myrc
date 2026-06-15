@@ -41,7 +41,3 @@
 #zhipuai-coding-plan/glm-4.5-air
 #zhipuai-coding-plan/glm-4.6v
 #zhipuai-coding-plan/glm-4.7
-
-#github-models/openai/gpt-4o-mini
-#github-models/openai/gpt-4.1-nano
-#github-models/openai/gpt-4.1-mini
