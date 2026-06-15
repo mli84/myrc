@@ -2,28 +2,75 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
+      "model": "zhipuai-coding-plan/glm-4.7",
+      "fallback_models": [
+        {
+          "model": "blazeai/moonshotai/kimi-k2.6"
+        },
+        {
+          "model": "nvidia/qwen/qwen3.5-122b-a10b"
+        },
+        {
+          "model": "opencode/north-mini-code-free"
+        }
+      ]
+    },
+    "metis": {
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
-          "model": "agnes/agnes-2.0-flash"
+          "model": "zhipuai-coding-plan/glm-4.5-air"
+        },
+        {
+          "model": "opencode/gemini-3.5-flash",
+          "variant": "medium"
+        },
+        {
+          "model": "openrouter/openai/gpt-oss-120b:free",
+          "variant": "medium"
+        }
+      ]
+    },
+    "prometheus": {
+      "model": "nvidia/openai/gpt-oss-120b",
+      "variant": "high",
+      "fallback_models": [
+        {
+          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+          "variant": "max"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "high"
+        },
+        {
+          "model": "openrouter/openai/gpt-oss-120b:free",
+          "variant": "xhigh"
+        }
+      ]
+    },
+    "atlas": {
+      "model": "github-models/openai/gpt-4.1-mini",
+      "fallback_models": [
+        {
+          "model": "opencode/gemini-3-flash"
         },
         {
           "model": "opencode/minimax-m3-free"
         },
         {
-          "model": "nvidia/qwen/qwen3.5-122b-a10b"
+          "model": "longcat/LongCat-2.0-Preview"
         }
       ]
     },
-    "metis": {
-      "model": "agnes/agnes-2.0-flash",
+    "hephaestus": {
+      "model": "blazeai/moonshotai/kimi-k2.6",
       "fallback_models": [
         {
-          "model": "zhipuai-coding-plan/glm-4.7"
+          "model": "zhipuai-coding-plan/glm-4.6v"
         },
         {
-          "model": "opencode/gemini-3.5-flash",
-          "variant": "medium"
+          "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
         },
         {
           "model": "nvidia/openai/gpt-oss-120b",
@@ -31,67 +78,20 @@
         }
       ]
     },
-    "prometheus": {
-      "model": "zhipuai-coding-plan/glm-4.7",
-      "fallback_models": [
-        {
-          "model": "sensenova/deepseek-v4-flash",
-          "variant": "medium"
-        },
-        {
-          "model": "opencode/deepseek-v4-flash-free",
-          "variant": "medium"
-        },
-        {
-          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
-          "variant": "high"
-        }
-      ]
-    },
-    "atlas": {
-      "model": "cloudflare-workers-ai/@cf/moonshotai/kimi-k2.7-code",
-      "fallback_models": [
-        {
-          "model": "blazeai/moonshotai/kimi-k2.6"
-        },
-        {
-          "model": "github-models/openai/gpt-4.1-mini"
-        },
-        {
-          "model": "openrouter/poolside/laguna-xs.2:free",
-          "variant": "medium"
-        }
-      ]
-    },
-    "hephaestus": {
-      "model": "cline/deepseek/deepseek-v4-flash",
-      "fallback_models": [
-        {
-          "model": "cloudflare-workers-ai/@cf/moonshotai/kimi-k2.7-code"
-        },
-        {
-          "model": "opencode/north-mini-code-free"
-        },
-        {
-          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
-          "variant": "high"
-        }
-      ]
-    },
     "oracle": {
-      "model": "nvidia/openai/gpt-oss-120b",
-      "variant": "high",
+      "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+      "variant": "max",
       "fallback_models": [
         {
-          "model": "openrouter/openai/gpt-oss-120b:free",
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
           "variant": "high"
         },
         {
-          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "model": "openrouter/nvidia/nemotron-3-ultra:free",
           "variant": "high"
         },
         {
-          "model": "opencode/nemotron-3-ultra-free",
+          "model": "openrouter/poolside/laguna-m.1:free",
           "variant": "high"
         }
       ]
@@ -101,45 +101,44 @@
       "variant": "medium",
       "fallback_models": [
         {
-          "model": "agnes/agnes-1.5-flash"
+          "model": "opencode/minimax-m3-free"
         },
         {
-          "model": "blazeai/grok-4.20-fast"
-        },
-        {
-          "model": "openrouter/poolside/laguna-m.1:free",
+          "model": "opencode/mimo-v2.5-free",
           "variant": "medium"
+        },
+        {
+          "model": "longcat/LongCat-2.0-Preview"
         }
       ]
     },
     "explore": {
-      "model": "sensenova/deepseek-v4-flash",
-      "variant": "medium",
+      "model": "github-models/openai/gpt-4o-mini",
       "fallback_models": [
         {
           "model": "opencode/deepseek-v4-flash-free",
           "variant": "medium"
         },
         {
-          "model": "zhipuai-coding-plan/glm-4.6v"
+          "model": "openrouter/nvidia/nemotron-3-super:free",
+          "variant": "medium"
         },
         {
-          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
-          "variant": "medium"
+          "model": "zhipuai-coding-plan/glm-4.5-air"
         }
       ]
     },
     "librarian": {
-      "model": "github-models/openai/gpt-4o-mini",
+      "model": "opencode/minimax-m3-free",
       "fallback_models": [
-        {
-          "model": "github-models/openai/gpt-4.1-mini"
-        },
         {
           "model": "github-models/openai/gpt-4.1-nano"
         },
         {
           "model": "opencode/gemini-3-flash"
+        },
+        {
+          "model": "longcat/LongCat-2.0-Preview"
         }
       ]
     },
@@ -150,25 +149,26 @@
           "model": "github-models/openai/gpt-4o-mini"
         },
         {
-          "model": "opencode/gemini-3-flash"
+          "model": "opencode/gemini-3.5-flash",
+          "variant": "high"
         },
         {
-          "model": "sensenova/sensenova-6.7-flash-lite"
+          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+          "variant": "high"
         }
       ]
     },
     "sisyphus-junior": {
-      "model": "sensenova/sensenova-6.7-flash-lite",
+      "model": "opencode/north-mini-code-free",
       "fallback_models": [
+        {
+          "model": "zhipuai-coding-plan/glm-4.5-air"
+        },
         {
           "model": "longcat/LongCat-2.0-Preview"
         },
         {
           "model": "opencode/mimo-v2.5-free",
-          "variant": "low"
-        },
-        {
-          "model": "nvidia/stepfun-ai/step-3.5-flash",
           "variant": "low"
         }
       ]
@@ -182,19 +182,20 @@
           "model": "github-models/openai/gpt-4o-mini"
         },
         {
-          "model": "opencode/gemini-3-flash"
+          "model": "opencode/gemini-3.5-flash",
+          "variant": "high"
         }
       ]
     },
     "artistry": {
       "model": "opencode/gemini-3.5-flash",
-      "variant": "medium",
+      "variant": "high",
       "fallback_models": [
         {
-          "model": "agnes/agnes-1.5-flash"
+          "model": "opencode/minimax-m3-free"
         },
         {
-          "model": "blazeai/grok-4.20-fast"
+          "model": "longcat/LongCat-2.0-Preview"
         }
       ]
     },
@@ -203,25 +204,25 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "openrouter/openai/gpt-oss-120b:free",
-          "variant": "high"
+          "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+          "variant": "max"
         },
         {
-          "model": "nvidia/nemotron-3-super-120b-a12b",
-          "variant": "high"
+          "model": "openrouter/openai/gpt-oss-120b:free",
+          "variant": "xhigh"
         }
       ]
     },
     "deep": {
-      "model": "nvidia/nemotron-3-super-120b-a12b",
-      "variant": "high",
+      "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+      "variant": "max",
       "fallback_models": [
         {
-          "model": "opencode/nemotron-3-super-free",
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
           "variant": "high"
         },
         {
-          "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
+          "model": "blazeai/grok-4.20-fast"
         }
       ]
     },
@@ -229,57 +230,56 @@
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
-          "model": "sensenova/sensenova-6.7-flash-lite"
+          "model": "zhipuai-coding-plan/glm-4.5-air"
         },
         {
-          "model": "agnes/agnes-1.5-flash"
+          "model": "github-models/openai/gpt-4.1-nano"
         }
       ]
     },
     "unspecified-high": {
-      "model": "nvidia/qwen/qwen3.5-122b-a10b",
+      "model": "blazeai/moonshotai/kimi-k2.6",
       "fallback_models": [
         {
-          "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
+          "model": "nvidia/qwen/qwen3.5-122b-a10b"
         },
         {
           "model": "nvidia/openai/gpt-oss-120b",
-          "variant": "medium"
+          "variant": "high"
         }
       ]
     },
     "unspecified-low": {
-      "model": "opencode/mimo-v2.5-free",
-      "variant": "low",
+      "model": "github-models/openai/gpt-4.1-mini",
       "fallback_models": [
         {
-          "model": "sensenova/sensenova-6.7-flash-lite"
+          "model": "longcat/LongCat-2.0-Preview"
         },
         {
-          "model": "agnes/agnes-1.5-flash"
+          "model": "opencode/gemini-3-flash"
         }
       ]
     },
     "writing": {
-      "model": "agnes/agnes-2.0-flash",
+      "model": "opencode/minimax-m3-free",
       "fallback_models": [
+        {
+          "model": "blazeai/moonshotai/kimi-k2.6"
+        },
         {
           "model": "opencode/gemini-3.5-flash",
           "variant": "medium"
-        },
-        {
-          "model": "blazeai/grok-4.20-fast"
         }
       ]
     },
     "git": {
-      "model": "cloudflare-workers-ai/@cf/moonshotai/kimi-k2.7-code",
+      "model": "opencode/north-mini-code-free",
       "fallback_models": [
         {
-          "model": "opencode/north-mini-code-free"
+          "model": "zhipuai-coding-plan/glm-4.5-air"
         },
         {
-          "model": "cline/deepseek/deepseek-v4-flash"
+          "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct"
         }
       ]
     },
@@ -287,10 +287,10 @@
       "model": "longcat/LongCat-2.0-Preview",
       "fallback_models": [
         {
-          "model": "agnes/agnes-2.0-flash"
+          "model": "github-models/openai/gpt-4.1-mini"
         },
         {
-          "model": "sensenova/sensenova-6.7-flash-lite"
+          "model": "opencode/gemini-3-flash"
         }
       ]
     }

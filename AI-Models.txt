@@ -38,21 +38,10 @@
 #openrouter/nvidia/nemotron-3-ultra:free (low/medium/high)
 #openrouter/openai/gpt-oss-120b:free (minimal/low/medium/high/xhigh)
 
-#agnes/agnes-1.5-flash
-#agnes/agnes-2.0-flash
-
 #zhipuai-coding-plan/glm-4.5-air
 #zhipuai-coding-plan/glm-4.6v
 #zhipuai-coding-plan/glm-4.7
 
-#cline/xiaomi/mimo-v2.5
-#cline/deepseek/deepseek-v4-flash
-
-#sensenova/sensenova-6.7-flash-lite
-#sensenova/deepseek-v4-flash (none/low/medium/high)
-
 #github-models/openai/gpt-4o-mini
 #github-models/openai/gpt-4.1-nano
 #github-models/openai/gpt-4.1-mini
-
-#cloudflare-workers-ai/@cf/moonshotai/kimi-k2.7-code

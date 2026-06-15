@@ -96,7 +96,7 @@
       }
     },
     "agnes": {
-      "npm": "@ai-sdk/openai",
+      "npm": "@ai-sdk/openai-compatible",
       "name": "Agnes",
       "options": {
         "baseURL": "https://apihub.agnes-ai.com/v1",
