@@ -250,10 +250,10 @@
       }
     },
     "longcat": {
-      "npm": "@ai-sdk/anthropic",
+      "npm": "@ai-sdk/openai-compatible",
       "name": "LongCat",
       "options": {
-        "baseURL": "https://api.longcat.chat/anthropic/v1",
+        "baseURL": "https://api.longcat.chat/openai/v1",
         "headers": {
           "Authorization": "Bearer {env:LONGCAT_API_KEY}"
         }
