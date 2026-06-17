@@ -344,6 +344,8 @@
   "background_task": {
     "providerConcurrency": {
       "freemodel": 1,
+      "longcat": 1,
+      "openrouter": 1,
       "zhipuai-coding-plan": 1
     },
     "modelConcurrency": {
