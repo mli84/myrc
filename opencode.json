@@ -6,6 +6,9 @@
     "opencode-antigravity-auth@latest"
   ],
   "lsp": true,
+  "compaction": {
+    "auto": false
+  },
   "mcp": {
     "swiftlens": {
       "enabled": false,
