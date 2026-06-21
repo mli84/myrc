@@ -64,6 +64,20 @@
         },
         "deepseek-v4-flash": {
           "name": "Sense Nova deepseek-v4-flash",
+          "variants": {
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "none": {
+              "reasoningEffort": "none"
+            }
+          },
           "limit": {
             "context": 200000,
             "output": 65536
@@ -177,6 +191,20 @@
       "models": {
         "gpt-5.2": {
           "name": "FreeModel gpt-5.2",
+          "variants": {
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "max": {
+              "reasoningEffort": "max"
+            }
+          },
           "limit": {
             "context": 200000,
             "output": 65536
@@ -184,6 +212,20 @@
         },
         "gpt-5": {
           "name": "FreeModel gpt-5",
+          "variants": {
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "max": {
+              "reasoningEffort": "max"
+            }
+          },
           "limit": {
             "context": 200000,
             "output": 65536
@@ -191,6 +233,20 @@
         },
         "gpt-5.5": {
           "name": "FreeModel gpt-5.5",
+          "variants": {
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "max": {
+              "reasoningEffort": "max"
+            }
+          },
           "limit": {
             "context": 200000,
             "output": 65536
@@ -205,6 +261,20 @@
         },
         "claude-4.6": {
           "name": "FreeModel claude-4.6",
+          "variants": {
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "max": {
+              "reasoningEffort": "max"
+            }
+          },
           "limit": {
             "context": 200000,
             "output": 65536
@@ -212,6 +282,20 @@
         },
         "claude-opus-4.7": {
           "name": "FreeModel claude-opus-4.7",
+          "variants": {
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "max": {
+              "reasoningEffort": "max"
+            }
+          },
           "limit": {
             "context": 200000,
             "output": 65536
@@ -219,6 +303,20 @@
         },
         "claude-opus-4.8": {
           "name": "FreeModel claude-opus-4.8",
+          "variants": {
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "max": {
+              "reasoningEffort": "max"
+            }
+          },
           "limit": {
             "context": 200000,
             "output": 65536
