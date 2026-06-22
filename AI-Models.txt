@@ -4,7 +4,6 @@
 #nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
 #nvidia/stepfun-ai/step-3.7-flash (low/medium/high)
 #nvidia/qwen/qwen3-next-80b-a3b-instruct
-#nvidia/qwen/qwen3.5-122b-a10b
 #nvidia/nvidia/nemotron-3-super-120b-a12b (low/medium/high) 
 #nvidia/deepseek-ai/deepseek-v4-flash (low/medium/high/max)
 

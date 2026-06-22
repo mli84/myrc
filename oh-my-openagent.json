@@ -14,9 +14,6 @@
           "model": "opencode/big-pickle"
         },
         {
-          "model": "nvidia/qwen/qwen3.5-122b-a10b"
-        },
-        {
           "model": "openrouter/openai/gpt-oss-120b:free",
           "variant": "high"
         }
@@ -104,9 +101,6 @@
           "variant": "medium"
         },
         {
-          "model": "nvidia/qwen/qwen3.5-122b-a10b"
-        },
-        {
           "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
           "variant": "high"
         },
@@ -124,9 +118,6 @@
         },
         {
           "model": "opencode/big-pickle"
-        },
-        {
-          "model": "nvidia/qwen/qwen3.5-122b-a10b"
         },
         {
           "model": "nvidia/openai/gpt-oss-120b",
@@ -312,9 +303,6 @@
           "model": "longcat/LongCat-2.0-Preview"
         },
         {
-          "model": "nvidia/qwen/qwen3.5-122b-a10b"
-        },
-        {
           "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
           "variant": "high"
         },
@@ -325,11 +313,8 @@
       ]
     },
     "deep": {
-      "model": "nvidia/qwen/qwen3.5-122b-a10b",
+      "model": "cline/deepseek/deepseek-v4-flash",
       "fallback_models": [
-        {
-          "model": "cline/deepseek/deepseek-v4-flash"
-        },
         {
           "model": "longcat/LongCat-2.0-Preview"
         },
@@ -382,9 +367,6 @@
         {
           "model": "nvidia/openai/gpt-oss-120b",
           "variant": "medium"
-        },
-        {
-          "model": "nvidia/qwen/qwen3.5-122b-a10b"
         },
         {
           "model": "openrouter/openai/gpt-oss-120b:free",
