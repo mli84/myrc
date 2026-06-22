@@ -490,7 +490,12 @@
       "freemodel": 1,
       "longcat": 1,
       "openrouter": 1,
-      "zhipuai-coding-plan": 1
+      "zhipuai-coding-plan": 1,
+      "sensenova": 2,
+      "cline": 2,
+      "agnes": 2,
+      "nvidia": 3,
+      "opencode": 4
     },
     "modelConcurrency": {
       "opencode/gemini-3.5-flash": 1,

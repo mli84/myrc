@@ -7,7 +7,7 @@
   ],
   "lsp": true,
   "compaction": {
-    "auto": false
+    "auto": true
   },
   "mcp": {
     "swiftlens": {
