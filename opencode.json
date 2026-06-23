@@ -64,17 +64,26 @@
         },
         "deepseek-v4-flash": {
           "name": "Sense Nova deepseek-v4-flash",
+          "stream": true,
           "variants": {
             "low": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
               "reasoningEffort": "low"
             },
             "medium": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
               "reasoningEffort": "medium"
             },
             "high": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
               "reasoningEffort": "high"
             },
             "none": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
               "reasoningEffort": "none"
             }
           },
@@ -132,6 +141,7 @@
         },
         "agnes-2.0-flash": {
           "name": "agnes-2.0-flash",
+          "stream": true,
           "modalities": {
             "input": [
               "text",
@@ -142,6 +152,7 @@
             ]
           },
           "options": {
+            "stream": true,
             "reasoningEffort": "high",
             "textVerbosity": "low",
             "reasoningSummary": "auto",
@@ -305,15 +316,23 @@
           "name": "FreeModel claude-opus-4.8",
           "variants": {
             "low": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
               "reasoningEffort": "low"
             },
             "medium": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
               "reasoningEffort": "medium"
             },
             "high": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
               "reasoningEffort": "high"
             },
             "max": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
               "reasoningEffort": "max"
             }
           },
