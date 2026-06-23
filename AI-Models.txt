@@ -26,8 +26,6 @@
 
 #openrouter/openai/gpt-oss-120b:free (minimal/low/medium/high/xhigh)
 
-#zhipuai-coding-plan/glm-4.6v
-
 #cline/xiaomi/mimo-v2.5
 #cline/deepseek/deepseek-v4-flash
 
