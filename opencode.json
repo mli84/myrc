@@ -132,13 +132,6 @@
         }
       },
       "models": {
-        "agnes-1.5-flash": {
-          "name": "agnes-1.5-flash",
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        },
         "agnes-2.0-flash": {
           "name": "agnes-2.0-flash",
           "stream": true,
@@ -336,32 +329,6 @@
               "reasoningEffort": "max"
             }
           },
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        }
-      }
-    },
-    "blazeai": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "BlazeAI",
-      "options": {
-        "baseURL": "https://blazeai.boxu.dev/api/v1",
-        "headers": {
-          "Authorization": "Bearer {env:BLAZE_API_KEY}"
-        }
-      },
-      "models": {
-        "grok-4.20-fast": {
-          "name": "grok-4.20-fast",
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        },
-        "moonshotai/kimi-k2.6": {
-          "name": "Blaze kimi-k2.6",
           "limit": {
             "context": 200000,
             "output": 65536
