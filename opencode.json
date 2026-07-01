@@ -46,6 +46,13 @@
         }
       },
       "models": {
+        "glm-5.2": {
+          "name": "Sense Nova glm-5.2",
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
         "sensenova-6.7-flash-lite": {
           "name": "Sense Nova sensenova-6.7-flash-lite",
           "modalities": {
