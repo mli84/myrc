@@ -1,4 +1,4 @@
-#longcat/LongCat-2.0-Preview
+#longcat/LongCat-2.0
 
 #nvidia/openai/gpt-oss-120b (low/medium/high)
 #nvidia/stepfun-ai/step-3.5-flash (low/medium/high)

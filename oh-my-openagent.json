@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "metis": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "longcat/LongCat-2.0",
       "fallback_models": [
         {
           "model": "sensenova/glm-5.2"
@@ -29,7 +29,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "cline/deepseek/deepseek-v4-flash"
@@ -52,7 +52,7 @@
       "model": "cline/xiaomi/mimo-v2.5",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "agnes/agnes-2.0-flash"
@@ -76,7 +76,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/glm-5.2"
@@ -99,7 +99,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/glm-5.2"
@@ -122,7 +122,7 @@
       "variant": "medium",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -140,7 +140,7 @@
       ]
     },
     "explore": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "longcat/LongCat-2.0",
       "fallback_models": [
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -165,7 +165,7 @@
       "model": "sensenova/glm-5.2",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "agnes/agnes-2.0-flash"
@@ -188,7 +188,7 @@
       "variant": "medium",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/glm-5.2"
@@ -210,7 +210,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "cline/deepseek/deepseek-v4-flash"
@@ -238,7 +238,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/glm-5.2"
@@ -261,7 +261,7 @@
       "variant": "medium",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -279,7 +279,7 @@
       ]
     },
     "ultrabrain": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "longcat/LongCat-2.0",
       "fallback_models": [
         {
           "model": "sensenova/glm-5.2"
@@ -307,7 +307,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "cline/deepseek/deepseek-v4-flash"
@@ -326,7 +326,7 @@
       ]
     },
     "quick": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "longcat/LongCat-2.0",
       "fallback_models": [
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -352,7 +352,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/glm-5.2"
@@ -372,7 +372,7 @@
       ]
     },
     "unspecified-low": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "longcat/LongCat-2.0",
       "fallback_models": [
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -397,7 +397,7 @@
       "model": "sensenova/glm-5.2",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "agnes/agnes-2.0-flash"
@@ -420,7 +420,7 @@
       "model": "cline/deepseek/deepseek-v4-flash",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "opencode/north-mini-code-free"
@@ -441,7 +441,7 @@
       "model": "agnes/agnes-2.0-flash",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -463,12 +463,12 @@
   "background_task": {
     "providerConcurrency": {
       "freemodel": 1,
-      "longcat": 1,
       "openrouter": 1,
       "sensenova": 2,
       "cline": 2,
       "agnes": 2,
       "nvidia": 3,
+      "longcat": 10,
       "opencode": 4
     },
     "modelConcurrency": {

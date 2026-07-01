@@ -353,8 +353,8 @@
         }
       },
       "models": {
-        "LongCat-2.0-Preview": {
-          "name": "LongCat 2.0 Preview",
+        "LongCat-2.0": {
+          "name": "LongCat 2.0",
           "limit": {
             "context": 200000,
             "output": 65536
