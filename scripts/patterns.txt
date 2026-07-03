@@ -1,0 +1,7 @@
+[WATER_CACHE_DEBUG][didUpdateHealthData]
+[WATER_CACHE_DEBUG][invalidate-start]
+[WATER_CACHE_DEBUG][invalidate-cache-done]
+[WATER_CACHE_DEBUG][invalidate-buckets-done]
+[WATER_CACHE_DEBUG][cache-query-summary]
+[WATER_CACHE_DEBUG][hk-query-result]
+[WATER_CACHE_DEBUG][write-bucket]
