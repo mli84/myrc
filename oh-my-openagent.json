@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "metis": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "longcat/LongCat-2.0",
       "fallback_models": [
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -33,7 +33,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "cline/xiaomi/mimo-v2.5"
@@ -60,7 +60,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -89,7 +89,7 @@
       "model": "cline/deepseek/deepseek-v4-flash",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -115,7 +115,7 @@
       "model": "agnes/agnes-2.0-flash",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -142,7 +142,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -165,7 +165,7 @@
       ]
     },
     "explore": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "longcat/LongCat-2.0",
       "fallback_models": [
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -193,7 +193,7 @@
       "model": "sensenova/sensenova-6.7-flash-lite",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "cline/xiaomi/mimo-v2.5"
@@ -218,7 +218,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -244,7 +244,7 @@
       "variant": "low",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -272,7 +272,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -297,7 +297,7 @@
       "model": "opencode/gemini-3-flash",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -319,7 +319,7 @@
       ]
     },
     "ultrabrain": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "longcat/LongCat-2.0",
       "fallback_models": [
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -350,7 +350,7 @@
       "variant": "max",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -377,7 +377,7 @@
       ]
     },
     "quick": {
-      "model": "longcat/LongCat-2.0-Preview",
+      "model": "longcat/LongCat-2.0",
       "fallback_models": [
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -406,7 +406,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -436,7 +436,7 @@
       "model": "sensenova/sensenova-6.7-flash-lite",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "cline/xiaomi/mimo-v2.5"
@@ -462,7 +462,7 @@
       "model": "agnes/agnes-2.0-flash",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
@@ -488,7 +488,7 @@
       "model": "cline/xiaomi/mimo-v2.5",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/deepseek-v4-flash",
@@ -513,7 +513,7 @@
       "model": "nvidia/qwen/qwen3-next-80b-a3b-instruct",
       "fallback_models": [
         {
-          "model": "longcat/LongCat-2.0-Preview"
+          "model": "longcat/LongCat-2.0"
         },
         {
           "model": "sensenova/deepseek-v4-flash",
