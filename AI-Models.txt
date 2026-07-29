@@ -1,18 +1,20 @@
 #longcat/LongCat-2.0
 
 #nvidia/openai/gpt-oss-120b (low/medium/high)
-#nvidia/stepfun-ai/step-3.5-flash (low/medium/high)
 #nvidia/stepfun-ai/step-3.7-flash (low/medium/high)
-#nvidia/qwen/qwen3-next-80b-a3b-instruct
+#nvidia/deepseek-ai/deepseek-v4-pro
 #nvidia/nvidia/nemotron-3-super-120b-a12b (low/medium/high) 
-#nvidia/deepseek-ai/deepseek-v4-flash (low/medium/high/max)
+#nvidia/nvidia/nemotron-3-ultra-550b-a55b (low/medium/high)
 
 #opencode/big-pickle
 #opencode/gemini-3-flash
 #opencode/gemini-3.5-flash (minimal/low/medium/high)
+#opencode/gemini-3.5-flash-lite
+#opencode/gemini-3.6-flash
 #opencode/deepseek-v4-flash-free (low/medium/high/max)
 #opencode/mimo-v2.5-free (low/medium/high)
-#opencode/nemotron-3-super-free (low/medium/high)
+#opencode/laguna-s-2.1-free
+#opencode/laguna-3.0-flash-free
 #opencode/nemotron-3-ultra-free (low/medium/high)
 #opencode/north-mini-code-free (none/high) 
 
@@ -24,9 +26,6 @@
 #freemodel/claude-opus-4.7 (low/medium/high/max)
 #freemodel/claude-opus-4.8 (low/medium/high/max)
 
-#openrouter/openai/gpt-oss-120b:free (minimal/low/medium/high/xhigh)
-
-#cline/xiaomi/mimo-v2.5
 #cline/deepseek/deepseek-v4-flash
 
 #sensenova/sensenova-6.7-flash-lite

@@ -14,11 +14,11 @@
       "npm": "@ai-sdk/openai-compatible",
       "name": "Modal",
       "options": {
-        "baseURL": "https://inference.us-west.modal.direct/v1",
+        "baseURL": "https://mli84--ep-kimi-k3-server.us-west.modal.direct/v1",
         "apiKey": "{env:MODAL_PROXY_TOKEN}"
       },
       "models": {
-        "mli84--ep-kimi-k3-server.us-west.modal.direct": {
+        "moonshotai/Kimi-K3": {
           "name": "Kimi K3",
           "attachment": false,
           "reasoning": true,
@@ -64,6 +64,36 @@
         },
         "deepseek-v4-flash": {
           "name": "Sense Nova deepseek-v4-flash",
+          "stream": true,
+          "variants": {
+            "low": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
+              "reasoningEffort": "low"
+            },
+            "medium": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
+              "reasoningEffort": "medium"
+            },
+            "high": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
+              "reasoningEffort": "high"
+            },
+            "none": {
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
+              "reasoningEffort": "none"
+            }
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "glm-5.2": {
+          "name": "Glm 5.2",
           "stream": true,
           "variants": {
             "low": {
