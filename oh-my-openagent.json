@@ -8,7 +8,7 @@
           "model": "sensenova/sensenova-6.7-flash-lite"
         },
         {
-          "model": "agnes/agnes-2.0-flash"
+          "model": "agnes/agnes-2.5-flash"
         },
         {
           "model": "modal/moonshotai/Kimi-K3"
@@ -58,7 +58,7 @@
           "variant": "medium"
         },
         {
-          "model": "agnes/agnes-2.0-flash"
+          "model": "agnes/agnes-2.5-flash"
         },
         {
           "model": "opencode/gemini-3.6-flash"
@@ -137,7 +137,7 @@
           "model": "sensenova/sensenova-6.7-flash-lite"
         },
         {
-          "model": "agnes/agnes-2.0-flash"
+          "model": "agnes/agnes-2.5-flash"
         },
         {
           "model": "modal/moonshotai/Kimi-K3"
@@ -160,7 +160,7 @@
       ]
     },
     "explore": {
-      "model": "agnes/agnes-2.0-flash",
+      "model": "agnes/agnes-2.5-flash",
       "fallback_models": [
         {
           "model": "longcat/LongCat-2.0"
@@ -302,7 +302,7 @@
           "model": "longcat/LongCat-2.0"
         },
         {
-          "model": "agnes/agnes-2.0-flash"
+          "model": "agnes/agnes-2.5-flash"
         },
         {
           "model": "modal/moonshotai/Kimi-K3"
@@ -381,7 +381,7 @@
           "model": "sensenova/sensenova-6.7-flash-lite"
         },
         {
-          "model": "agnes/agnes-2.0-flash"
+          "model": "agnes/agnes-2.5-flash"
         },
         {
           "model": "cline/deepseek/deepseek-v4-flash"
@@ -424,7 +424,7 @@
           "model": "longcat/LongCat-2.0"
         },
         {
-          "model": "agnes/agnes-2.0-flash"
+          "model": "agnes/agnes-2.5-flash"
         },
         {
           "model": "opencode/mimo-v2.5-free",
@@ -447,7 +447,7 @@
           "model": "longcat/LongCat-2.0"
         },
         {
-          "model": "agnes/agnes-2.0-flash"
+          "model": "agnes/agnes-2.5-flash"
         },
         {
           "model": "modal/moonshotai/Kimi-K3"
@@ -498,7 +498,7 @@
           "model": "sensenova/glm-5.2"
         },
         {
-          "model": "agnes/agnes-2.0-flash"
+          "model": "agnes/agnes-2.5-flash"
         },
         {
           "model": "modal/moonshotai/Kimi-K3"

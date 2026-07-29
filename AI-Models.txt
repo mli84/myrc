@@ -33,5 +33,6 @@
 #sensenova/glm-5.2
 
 #agnes/agnes-2.0-flash
+#agnes/agnes-2.5-flash
 
 #modal/moonshotai/Kimi-K3
