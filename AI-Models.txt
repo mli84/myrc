@@ -1,5 +1,3 @@
-#longcat/LongCat-2.0
-
 #nvidia/openai/gpt-oss-120b (low/medium/high)
 #nvidia/stepfun-ai/step-3.7-flash (low/medium/high)
 #nvidia/deepseek-ai/deepseek-v4-pro
