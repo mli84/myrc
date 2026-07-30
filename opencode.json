@@ -155,7 +155,7 @@
       "npm": "@ai-sdk/openai-compatible",
       "name": "Agnes",
       "options": {
-        "baseURL": "https://apihub.agnes-ai.com/v1",
+        "baseURL": "https://apihub.agnes-ai.cn/v1",
         "apiKey": "{env:AGNES_API_KEY}",
         "headers": {
           "Authorization": "Bearer {env:AGNES_API_KEY}"
