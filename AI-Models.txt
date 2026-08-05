@@ -30,7 +30,9 @@
 #sensenova/deepseek-v4-flash (none/low/medium/high)
 #sensenova/glm-5.2
 
-agnes/agnes-2.0-flash
-agnes/agnes-2.5-flash
+#agnes/agnes-2.0-flash
+#agnes/agnes-2.5-flash
 
 #modal/moonshotai/Kimi-K3
+
+token-router/moonshotai/kimi-k3-free

@@ -10,6 +10,31 @@
     "auto": true
   },
   "provider": {
+    "tokenRouter": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Token Router",
+      "options": {
+        "baseURL": "https://api.tokenrouter.com/v1",
+        "apiKey": "{env:TOKENROUTER_API_KEY}"
+      },
+      "models": {
+        "moonshotai/kimi-k3-free": {
+          "name": "Kimi K3",
+          "attachment": false,
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
+    },
     "modal": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Modal",
