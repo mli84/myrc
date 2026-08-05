@@ -35,4 +35,6 @@
 
 #modal/moonshotai/Kimi-K3
 
-token-router/moonshotai/kimi-k3-free
+#token-router/moonshotai/kimi-k3-free
+
+#big-model/glm-4.7-flash
