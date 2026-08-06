@@ -1,4 +1,3 @@
-#nvidia/openai/gpt-oss-120b (low/medium/high)
 #nvidia/stepfun-ai/step-3.7-flash (low/medium/high)
 #nvidia/deepseek-ai/deepseek-v4-pro
 #nvidia/nvidia/nemotron-3-super-120b-a12b (low/medium/high) 
@@ -12,17 +11,10 @@
 #opencode/deepseek-v4-flash-free (low/medium/high/max)
 #opencode/mimo-v2.5-free (low/medium/high)
 #opencode/laguna-s-2.1-free
-#opencode/laguna-3.0-flash-free
+#opencode/ling-3.0-flash-free
+#opencode/longcat-2.0-free (low/medium/high)
 #opencode/nemotron-3-ultra-free (low/medium/high)
 #opencode/north-mini-code-free (none/high) 
-
-#freemodel/gpt-5.2 (low/medium/high/max)
-#freemodel/gpt-5 (low/medium/high/max)
-#freemodel/gpt-5.5 (low/medium/high/max)
-#freemodel/claude-haiku-4.5 
-#freemodel/claude-4.6 (low/medium/high/max)
-#freemodel/claude-opus-4.7 (low/medium/high/max)
-#freemodel/claude-opus-4.8 (low/medium/high/max)
 
 #cline/deepseek/deepseek-v4-flash
 
