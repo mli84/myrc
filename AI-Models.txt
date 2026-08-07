@@ -30,3 +30,11 @@
 #token-router/moonshotai/kimi-k3-free
 
 #big-model/glm-4.7-flash
+
+# 支持图片
+#agnes
+#nvidia/stepfun-ai/step-3.7-flash
+#opencode
+#sensenova
+#modal
+

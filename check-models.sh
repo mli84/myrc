@@ -74,6 +74,8 @@ is_known_provider() {
 available=0
 unavailable=0
 skipped=0
+image_ok=0
+image_fail=0
 missing_providers=""
 
 check_model() {
@@ -146,6 +148,51 @@ check_model() {
   fi
 }
 
+check_model_image() {
+  local provider="$1" model="$2"
+  local base_url key_env api_key extra_header
+
+  base_url="$(get_base_url "$provider")"
+  key_env="$(get_key_env "$provider")"
+  eval "api_key=\${$key_env:-}"
+  extra_header="$(get_extra_header "$provider")"
+
+  if [[ -z "$api_key" ]]; then
+    echo "SKIP|${provider}/${model}|缺少 ${key_env}"
+    return
+  fi
+
+  local request_body
+  request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"hi\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=\"}}]}],\"max_tokens\":1}"
+
+  local http_code
+  http_code=$(curl -s -o /dev/null -w "%{http_code}" \
+    --max-time "$TIMEOUT" \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer ${api_key}" \
+    ${extra_header:+-H "$extra_header"} \
+    -d "$request_body" \
+    "${base_url}/chat/completions" 2>/dev/null) || http_code="000"
+
+  if [[ "$http_code" == "200" ]]; then
+    echo "OK|${provider}/${model}|支持图片 ${TIMEOUT}s"
+  else
+    local error_msg
+    case "$http_code" in
+      000) error_msg="超时或连接失败" ;;
+      400) error_msg="图片输入不被支持" ;;
+      401) error_msg="API Key 无效" ;;
+      403) error_msg="无权限" ;;
+      404) error_msg="模型不存在" ;;
+      429) error_msg="频率超限" ;;
+      500|502|503) error_msg="服务器错误" ;;
+      *) error_msg="HTTP $http_code" ;;
+    esac
+    echo "FAIL|${provider}/${model}|不支持图片 — ${error_msg}"
+  fi
+}
+
 print_result() {
   local result="$1"
 
@@ -186,7 +233,7 @@ if [[ ! -f "$MODELS_FILE" ]]; then
   exit 1
 fi
 
-echo "🔍 AI 模型可用性检测（chat/completions + responses）"
+echo "🔍 AI 模型可用性检测（chat/completions + responses + 图片检测）"
 echo "📋 模型列表: $MODELS_FILE"
 echo "🔌 提供商配置: $PROVIDERS_FILE"
 if [[ -f "$ENV_FILE" ]]; then
@@ -280,6 +327,14 @@ while IFS= read -r provider; do
     result="$(check_model "$provider" "$m" "$chat_variant" "chat/completions")"
     print_result "$result"
 
+    image_result="$(check_model_image "$provider" "$m")"
+    _image_st="${image_result%%|*}"
+    case "$_image_st" in
+      OK) printf "  🖼️  %s — %s\n" "${image_result#*|}" "支持图片"; image_ok=$((image_ok + 1)) ;;
+      FAIL) printf "  🖼️  %s — %s\n" "${image_result#*|}" "不支持图片"; image_fail=$((image_fail + 1)) ;;
+      SKIP) printf "  ⚠️  %s — %s\n" "${image_result#*|}" "图片检测跳过"; ;;
+    esac
+
     result="$(check_model "$provider" "$m" "" "responses")"
     print_result "$result"
   done < "$model_file"
@@ -287,10 +342,12 @@ while IFS= read -r provider; do
 done <<< "$provider_list"
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "📊 检测汇总（按接口）"
+echo "📊 检测汇总"
 echo "  ✅ 可用: $available"
 echo "  ❌ 不可用: $unavailable"
 echo "  ⚠️  跳过: $skipped"
+echo "  🖼️  支持图片: $image_ok"
+echo "  🖼️  不支持图片: $image_fail"
 if [[ -n "$missing_providers" ]]; then
   echo "  🔑 缺少 API Key:${missing_providers}"
 fi
