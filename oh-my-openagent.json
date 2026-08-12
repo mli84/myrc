@@ -5,9 +5,6 @@
       "model": "sensenova/sensenova-6.7-flash-lite",
       "fallback_models": [
         {
-          "model": "cline/deepseek/deepseek-v4-flash"
-        },
-        {
           "model": "agnes/agnes-2.5-flash"
         },
         {
@@ -23,12 +20,8 @@
       ]
     },
     "prometheus": {
-      "model": "cline/deepseek/deepseek-v4-flash",
+      "model": "sensenova/deepseek-v4-flash",
       "fallback_models": [
-        {
-          "model": "sensenova/deepseek-v4-flash",
-          "variant": "low"
-        },
         {
           "model": "agnes/agnes-2.5-flash"
         },
@@ -49,9 +42,6 @@
       "fallback_models": [
         {
           "model": "sensenova/sensenova-6.7-flash-lite"
-        },
-        {
-          "model": "cline/deepseek/deepseek-v4-flash"
         },
         {
           "model": "big-model/glm-4.7-flash"
@@ -96,9 +86,6 @@
           "variant": "medium"
         },
         {
-          "model": "cline/deepseek/deepseek-v4-flash"
-        },
-        {
           "model": "agnes/agnes-2.5-flash"
         },
         {
@@ -139,9 +126,6 @@
         {
           "model": "sensenova/deepseek-v4-flash",
           "variant": "medium"
-        },
-        {
-          "model": "cline/deepseek/deepseek-v4-flash"
         },
         {
           "model": "agnes/agnes-2.5-flash"
@@ -207,9 +191,6 @@
         {
           "model": "sensenova/deepseek-v4-flash",
           "variant": "high"
-        },
-        {
-          "model": "cline/deepseek/deepseek-v4-flash"
         },
         {
           "model": "big-model/glm-4.7-flash"
@@ -284,9 +265,6 @@
           "variant": "high"
         },
         {
-          "model": "cline/deepseek/deepseek-v4-flash"
-        },
-        {
           "model": "opencode/nemotron-3-ultra-free",
           "variant": "high"
         },
@@ -307,9 +285,6 @@
           "variant": "medium"
         },
         {
-          "model": "cline/deepseek/deepseek-v4-flash"
-        },
-        {
           "model": "opencode/deepseek-v4-flash-free",
           "variant": "max"
         },
@@ -326,9 +301,6 @@
     "quick": {
       "model": "sensenova/sensenova-6.7-flash-lite",
       "fallback_models": [
-        {
-          "model": "cline/deepseek/deepseek-v4-flash"
-        },
         {
           "model": "agnes/agnes-2.0-flash"
         },
@@ -355,9 +327,6 @@
         {
           "model": "sensenova/deepseek-v4-flash",
           "variant": "high"
-        },
-        {
-          "model": "cline/deepseek/deepseek-v4-flash"
         },
         {
           "model": "opencode/nemotron-3-ultra-free",
@@ -424,9 +393,6 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "cline/deepseek/deepseek-v4-flash"
-        },
-        {
           "model": "sensenova/deepseek-v4-flash",
           "variant": "medium"
         },
@@ -449,9 +415,6 @@
       "model": "sensenova/deepseek-v4-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "cline/deepseek/deepseek-v4-flash"
-        },
         {
           "model": "agnes/agnes-2.5-flash"
         },

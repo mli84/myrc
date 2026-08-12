@@ -16,8 +16,6 @@
 #opencode/nemotron-3-ultra-free (low/medium/high)
 #opencode/north-mini-code-free (none/high) 
 
-#cline/deepseek/deepseek-v4-flash
-
 #sensenova/sensenova-6.7-flash-lite
 #sensenova/deepseek-v4-flash (none/low/medium/high)
 #sensenova/glm-5.2
@@ -36,5 +34,5 @@
 #nvidia/stepfun-ai/step-3.7-flash
 #opencode
 #sensenova
-#modal
+#token-router
 
