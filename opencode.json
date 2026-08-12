@@ -10,7 +10,7 @@
     "auto": true
   },
   "provider": {
-    "bigModel": {
+    "big-model": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "BigModel",
       "options": {
