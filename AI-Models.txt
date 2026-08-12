@@ -23,10 +23,6 @@
 #agnes/agnes-2.0-flash
 #agnes/agnes-2.5-flash
 
-#modal/moonshotai/Kimi-K3
-
-#token-router/moonshotai/kimi-k3-free
-
 #big-model/glm-4.7-flash
 
 # 支持图片
@@ -34,5 +30,4 @@
 #nvidia/stepfun-ai/step-3.7-flash
 #opencode
 #sensenova
-#token-router
 

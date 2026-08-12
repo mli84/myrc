@@ -137,6 +137,15 @@
               "reasoningEffort": "none"
             }
           },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
           "limit": {
             "context": 200000,
             "output": 65536
@@ -166,6 +175,15 @@
             "reasoningSummary": "auto",
               "reasoningEffort": "none"
             }
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
           },
           "limit": {
             "context": 200000,
