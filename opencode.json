@@ -97,8 +97,8 @@
         }
       },
       "models": {
-        "sensenova-6.7-flash-lite": {
-          "name": "sensenova-6.7-flash-lite",
+        "sensenova-6.8-flash-lite": {
+          "name": "sensenova-6.8-flash-lite",
           "modalities": {
             "input": [
               "text",
