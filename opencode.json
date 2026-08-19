@@ -2,8 +2,9 @@
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
     "opencode-gemini-auth@latest",
-    "oh-my-openagent",
-    "opencode-antigravity-auth@latest"
+    "opencode-antigravity-auth@latest",
+    "opencode-plugin-peers",
+    "oh-my-openagent@latest"
   ],
   "lsp": true,
   "compaction": {
@@ -117,23 +118,23 @@
           "stream": true,
           "variants": {
             "low": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "low"
             },
             "medium": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "medium"
             },
             "high": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "high"
             },
             "none": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "none"
             }
           },
@@ -156,23 +157,23 @@
           "stream": true,
           "variants": {
             "low": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "low"
             },
             "medium": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "medium"
             },
             "high": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "high"
             },
             "none": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "none"
             }
           },
@@ -247,7 +248,9 @@
             "reasoningEffort": "high",
             "textVerbosity": "low",
             "reasoningSummary": "auto",
-            "include": ["reasoning.encrypted_content"],
+            "include": [
+              "reasoning.encrypted_content"
+            ],
             "thinking": {
               "type": "enabled",
               "budgetTokens": 16000
@@ -275,7 +278,9 @@
             "reasoningEffort": "high",
             "textVerbosity": "low",
             "reasoningSummary": "auto",
-            "include": ["reasoning.encrypted_content"],
+            "include": [
+              "reasoning.encrypted_content"
+            ],
             "thinking": {
               "type": "enabled",
               "budgetTokens": 16000
@@ -435,23 +440,23 @@
           "name": "FreeModel claude-opus-4.8",
           "variants": {
             "low": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "low"
             },
             "medium": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "medium"
             },
             "high": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "high"
             },
             "max": {
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
               "reasoningEffort": "max"
             }
           },
