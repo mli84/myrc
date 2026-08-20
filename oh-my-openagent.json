@@ -3,27 +3,7 @@
   "agents": {
     "sisyphus": {
       "model": "opencode/gemini-3.7-flash",
-      "variant": "high",
-      "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash"
-        },
-        {
-          "model": "sensenova/deepseek-v4-flash",
-          "variant": "high"
-        },
-        {
-          "model": "opencode/deepseek-v4-flash-free",
-          "variant": "high"
-        },
-        {
-          "model": "big-model/glm-4.7-flash"
-        },
-        {
-          "model": "nvidia/nemotron-3-ultra-550b-a55b",
-          "variant": "high"
-        }
-      ]
+      "variant": "high"
     },
     "metis": {
       "model": "sensenova/deepseek-v4-flash",
