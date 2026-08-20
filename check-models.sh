@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-https_proxy=http://127.0.0.1:7897
-http_proxy=http://127.0.0.1:7897
-all_proxy=socks5://127.0.0.1:7897
+# https_proxy=http://127.0.0.1:7897
+# http_proxy=http://127.0.0.1:7897
+# all_proxy=socks5://127.0.0.1:7897
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MODELS_FILE="${1:-$SCRIPT_DIR/AI-Models.txt}"
