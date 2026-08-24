@@ -26,9 +26,16 @@
 
 #big-model/glm-4.7-flash
 
+# 需要代理
+#bai/deepseek-v4-flash
+#bai/deepseek-v4-flash-vision-exp
+#bai/hy3
+
 # 支持图片
 #agnes
 #nvidia/stepfun-ai/step-3.7-flash
 #opencode
 #sensenova
+#bai/deepseek-v4-flash-vision-exp
+#bai/hy3
 

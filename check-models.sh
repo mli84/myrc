@@ -1,9 +1,5 @@
 #!/usr/bin/env zsh
 
-# https_proxy=http://127.0.0.1:7897
-# http_proxy=http://127.0.0.1:7897
-# all_proxy=socks5://127.0.0.1:7897
-
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MODELS_FILE="${1:-$SCRIPT_DIR/AI-Models.txt}"
 ENV_FILE="${2:-$SCRIPT_DIR/.env}"
@@ -27,6 +23,18 @@ load_env() {
 }
 
 load_env "$ENV_FILE"
+
+# curl 不读取 macOS 系统代理；未显式设置 http(s)_proxy/all_proxy 时自动启用系统代理
+if [[ -z "${http_proxy:-}${https_proxy:-}${all_proxy:-}${HTTP_PROXY:-}${HTTPS_PROXY:-}" ]] && command -v scutil >/dev/null 2>&1; then
+  _px_enabled="$(scutil --proxy | sed -n 's/^[[:space:]]*HTTPEnable[[:space:]]*:[[:space:]]*//p')"
+  _px_host="$(scutil --proxy | sed -n 's/^[[:space:]]*HTTPProxy[[:space:]]*:[[:space:]]*//p')"
+  _px_port="$(scutil --proxy | sed -n 's/^[[:space:]]*HTTPPort[[:space:]]*:[[:space:]]*//p')"
+  if [[ "$_px_enabled" == "1" && -n "$_px_host" && -n "$_px_port" ]]; then
+    export http_proxy="http://${_px_host}:${_px_port}"
+    export https_proxy="http://${_px_host}:${_px_port}"
+    echo "🌐 使用系统代理: ${http_proxy}"
+  fi
+fi
 
 typeset -A PROVIDER_BASE_URL
 typeset -A PROVIDER_KEY_ENV
@@ -97,9 +105,9 @@ check_model() {
       endpoint_path="/chat/completions"
       endpoint_label="chat/completions"
       if [[ -n "$variant" ]]; then
-        request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":1,\"thinkingLevel\":\"${variant}\"}"
+        request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"thinkingLevel\":\"${variant}\"}"
       else
-        request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":1}"
+        request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}"
       fi
       ;;
     responses)
@@ -163,7 +171,7 @@ check_model_image() {
   fi
 
   local request_body
-  request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"hi\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=\"}}]}],\"max_tokens\":1}"
+  request_body="{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"hi\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=\"}}]}]}"
 
   local http_code
   http_code=$(curl -s -o /dev/null -w "%{http_code}" \
