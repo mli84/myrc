@@ -8,14 +8,12 @@
 #opencode/gemini-3.5-flash-lite (minimal/low/medium/high)
 #opencode/gemini-3.6-flash (minimal/low/medium/high)
 #opencode/gemini-3.7-flash (low/medium/high)
-#opencode/deepseek-v4-flash-free (low/medium/high/max)
 #opencode/mimo-v2.5-free (low/medium/high)
 #opencode/hy3-free (low/medium/high)
 #opencode/laguna-s-2.1-free (low/medium/high)
 #opencode/muse-spark-1.2-free (minimal/low/medium/high/xhigh)
 #opencode/nemotron-3-ultra-free (low/medium/high)
 #opencode/nemotron-3.5-lightning-free
-#opencode/ox-alpha-free (low/high/max)
 
 #sensenova/sensenova-6.8-flash-lite
 #sensenova/deepseek-v4-flash (none/low/medium/high)
@@ -35,7 +33,7 @@
 #agnes
 #nvidia/stepfun-ai/step-3.7-flash
 #opencode
-#sensenova
+#sensenova/sensenova-6.8-flash-lite
 #bai/deepseek-v4-flash-vision-exp
 #bai/hy3
 

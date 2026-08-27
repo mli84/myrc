@@ -158,10 +158,6 @@
           "variant": "medium"
         },
         {
-          "model": "opencode/ox-alpha-free",
-          "variant": "high"
-        },
-        {
           "model": "opencode/nemotron-3.5-lightning-free"
         },
         {
@@ -205,10 +201,6 @@
         {
           "model": "opencode/laguna-s-2.1-free",
           "variant": "medium"
-        },
-        {
-          "model": "opencode/ox-alpha-free",
-          "variant": "high"
         },
         {
           "model": "big-model/glm-4.7-flash"
@@ -347,10 +339,6 @@
           "variant": "high"
         },
         {
-          "model": "opencode/ox-alpha-free",
-          "variant": "max"
-        },
-        {
           "model": "big-model/glm-4.7-flash"
         },
         {
@@ -407,13 +395,9 @@
       ]
     },
     "git": {
-      "model": "opencode/ox-alpha-free",
-      "variant": "high",
+      "model": "opencode/hy3-free",
+      "variant": "medium",
       "fallback_models": [
-        {
-          "model": "opencode/hy3-free",
-          "variant": "medium"
-        },
         {
           "model": "opencode/laguna-s-2.1-free",
           "variant": "medium"
