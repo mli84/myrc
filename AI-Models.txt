@@ -17,7 +17,7 @@
 
 #sensenova/sensenova-6.8-flash-lite
 #sensenova/deepseek-v4-flash (none/low/medium/high)
-#sensenova/glm-5.2
+#sensenova/glm-5.2 (none/low/medium/high)
 
 #agnes/agnes-2.0-flash
 #agnes/agnes-2.5-flash
@@ -25,9 +25,12 @@
 #big-model/glm-4.7-flash
 
 # 需要代理
-#bai/deepseek-v4-flash
-#bai/deepseek-v4-flash-vision-exp
-#bai/hy3
+#bai/deepseek-v4-flash (low/medium/high/max)
+#bai/deepseek-v4-flash-vision-exp (low/medium/high/max)
+#bai/hy3 (low/medium/high)
+
+#gmi/MiniMaxAI/MiniMax-M3
+#gmi/MiniMaxAI/MiniMax-M2.7
 
 # 支持图片
 #agnes
@@ -36,4 +39,5 @@
 #sensenova/sensenova-6.8-flash-lite
 #bai/deepseek-v4-flash-vision-exp
 #bai/hy3
+#gmi
 

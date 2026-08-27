@@ -11,6 +11,46 @@
     "auto": true
   },
   "provider": {
+    "gmi": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "GMI",
+      "options": {
+        "baseURL": "https://api.gmi-serving.com/v1",
+        "apiKey": "{env:GMI_API_KEY}"
+      },
+      "models": {
+        "MiniMaxAI/MiniMax-M3": {
+          "name": "MiniMax-M3",
+          "attachment": false,
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "MiniMaxAI/MiniMax-M2.7": {
+          "name": "MiniMax-M2.7",
+          "attachment": false,
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
+    },
     "b.ai": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "B.AI",
