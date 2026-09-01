@@ -17,7 +17,9 @@
 
 #sensenova/sensenova-6.8-flash-lite
 #sensenova/deepseek-v4-flash (none/low/medium/high)
+#sensenova/deepseek-v4-pro (none/low/medium/high/xhigh/max)
 #sensenova/glm-5.2 (none/low/medium/high)
+#sensenova/kimi-k3 (low/high/max)
 
 #agnes/agnes-2.0-flash
 #agnes/agnes-2.5-flash
@@ -37,6 +39,7 @@
 #nvidia/stepfun-ai/step-3.7-flash
 #opencode
 #sensenova/sensenova-6.8-flash-lite
+#sensenova/kimi-k3
 #bai/deepseek-v4-flash-vision-exp
 #bai/hy3
 #gmi

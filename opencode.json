@@ -346,6 +346,88 @@
             "context": 200000,
             "output": 65536
           }
+        },
+        "deepseek-v4-pro": {
+          "name": "Deepseek v4 pro",
+          "stream": true,
+          "variants": {
+            "low": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "high"
+            },
+            "xhigh": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "xhigh"
+            },
+            "max": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "max"
+            },
+            "none": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "none"
+            }
+          },
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "kimi-k3": {
+          "name": "Kimi k3",
+          "stream": true,
+          "variants": {
+            "low": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "low"
+            },
+            "high": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "high"
+            },
+            "max": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "max"
+            }
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
         }
       }
     },
