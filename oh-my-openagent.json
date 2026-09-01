@@ -140,7 +140,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "agnes/agnes-2.0-flash",
+          "model": "agnes/agnes-2.5-flash",
           "variant": "high"
         },
         {
@@ -162,7 +162,7 @@
       ]
     },
     "explore": {
-      "model": "agnes/agnes-2.0-flash",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "medium",
       "fallback_models": [
         {
@@ -195,7 +195,7 @@
       "variant": "medium",
       "fallback_models": [
         {
-          "model": "agnes/agnes-2.0-flash",
+          "model": "agnes/agnes-2.5-flash",
           "variant": "medium"
         },
         {
@@ -397,7 +397,7 @@
       ]
     },
     "quick": {
-      "model": "agnes/agnes-2.0-flash",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "low",
       "fallback_models": [
         {
@@ -471,7 +471,7 @@
       ]
     },
     "unspecified-low": {
-      "model": "agnes/agnes-2.0-flash",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "low",
       "fallback_models": [
         {
@@ -537,7 +537,7 @@
       ]
     },
     "git": {
-      "model": "agnes/agnes-2.0-flash",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "medium",
       "fallback_models": [
         {

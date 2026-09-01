@@ -469,36 +469,6 @@
         }
       },
       "models": {
-        "agnes-2.0-flash": {
-          "name": "agnes-2.0-flash",
-          "stream": true,
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "options": {
-            "stream": true,
-            "reasoningEffort": "high",
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
-            "include": [
-              "reasoning.encrypted_content"
-            ],
-            "thinking": {
-              "type": "enabled",
-              "budgetTokens": 16000
-            }
-          },
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        },
         "agnes-2.5-flash": {
           "name": "agnes-2.5-flash",
           "stream": true,
