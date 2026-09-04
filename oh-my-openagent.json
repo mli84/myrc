@@ -10,10 +10,6 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "bai/hy3",
-          "variant": "high"
-        },
-        {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "high"
         },
@@ -32,13 +28,9 @@
       ]
     },
     "prometheus": {
-      "model": "bai/hy3",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash",
-          "variant": "high"
-        },
         {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "high"
@@ -66,10 +58,6 @@
           "variant": "high"
         },
         {
-          "model": "bai/hy3",
-          "variant": "high"
-        },
-        {
           "model": "opencode/gemini-3.6-flash",
           "variant": "high"
         },
@@ -89,10 +77,6 @@
       "fallback_models": [
         {
           "model": "agnes/agnes-2.5-flash",
-          "variant": "high"
-        },
-        {
-          "model": "bai/hy3",
           "variant": "high"
         },
         {
@@ -118,10 +102,6 @@
           "variant": "high"
         },
         {
-          "model": "bai/deepseek-v4-flash-vision-exp",
-          "variant": "high"
-        },
-        {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "high"
         },
@@ -144,10 +124,6 @@
           "variant": "high"
         },
         {
-          "model": "bai/hy3",
-          "variant": "high"
-        },
-        {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "medium"
         },
@@ -165,10 +141,6 @@
       "model": "agnes/agnes-2.5-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "bai/hy3",
-          "variant": "medium"
-        },
         {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "medium"
@@ -191,13 +163,9 @@
       ]
     },
     "librarian": {
-      "model": "bai/hy3",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash",
-          "variant": "medium"
-        },
         {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "medium"
@@ -224,14 +192,6 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "bai/deepseek-v4-flash-vision-exp",
-          "variant": "high"
-        },
-        {
-          "model": "bai/hy3",
-          "variant": "high"
-        },
-        {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "high"
         },
@@ -253,10 +213,6 @@
       "model": "agnes/agnes-2.5-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "bai/hy3",
-          "variant": "medium"
-        },
         {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "medium"
@@ -289,10 +245,6 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "bai/deepseek-v4-flash-vision-exp",
-          "variant": "high"
-        },
-        {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "high"
         },
@@ -311,13 +263,9 @@
       ]
     },
     "artistry": {
-      "model": "bai/hy3",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash",
-          "variant": "high"
-        },
         {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "high"
@@ -345,10 +293,6 @@
           "variant": "high"
         },
         {
-          "model": "bai/hy3",
-          "variant": "high"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
         },
@@ -367,13 +311,9 @@
       ]
     },
     "deep": {
-      "model": "bai/hy3",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash",
-          "variant": "high"
-        },
         {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "high"
@@ -400,10 +340,6 @@
       "model": "agnes/agnes-2.5-flash",
       "variant": "low",
       "fallback_models": [
-        {
-          "model": "bai/hy3",
-          "variant": "low"
-        },
         {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "low"
@@ -449,10 +385,6 @@
           "variant": "high"
         },
         {
-          "model": "bai/hy3",
-          "variant": "high"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
         },
@@ -474,10 +406,6 @@
       "model": "agnes/agnes-2.5-flash",
       "variant": "low",
       "fallback_models": [
-        {
-          "model": "bai/hy3",
-          "variant": "low"
-        },
         {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "low"
@@ -511,13 +439,9 @@
       ]
     },
     "writing": {
-      "model": "bai/hy3",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash",
-          "variant": "high"
-        },
         {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "high"
@@ -540,10 +464,6 @@
       "model": "agnes/agnes-2.5-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "bai/hy3",
-          "variant": "medium"
-        },
         {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "medium"
@@ -574,10 +494,6 @@
           "variant": "medium"
         },
         {
-          "model": "bai/hy3",
-          "variant": "medium"
-        },
-        {
           "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "medium"
         },
@@ -601,7 +517,6 @@
   },
   "background_task": {
     "providerConcurrency": {
-      "bai": 1,
       "sensenova": 1,
       "gmi": 1,
       "agnes": 2,
