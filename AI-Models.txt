@@ -25,6 +25,11 @@
 
 #big-model/glm-4.7-flash
 
+amd/MiniCPM5-1B
+amd/DeepSeek-V4-Flash
+amd/DeepSeek-V4-Flash-Vision-Exp
+amd/Qwen3.8-Flash-Next
+
 # 需要代理
 #bai/deepseek-v4-flash (low/medium/high/max)
 #bai/deepseek-v4-flash-vision-exp (low/medium/high/max)
@@ -42,4 +47,6 @@
 #bai/deepseek-v4-flash-vision-exp
 #bai/hy3
 #gmi
+#amd/DeepSeek-V4-Flash-Vision-Exp
+#amd/Qwen3.8-Flash-Next
 
