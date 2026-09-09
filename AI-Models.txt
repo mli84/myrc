@@ -22,13 +22,14 @@
 #sensenova/kimi-k3 (low/high/max)
 
 #agnes/agnes-2.5-flash
+#agnes/agnes-3.0-flash
 
 #big-model/glm-4.7-flash
 
-amd/MiniCPM5-1B
-amd/DeepSeek-V4-Flash
-amd/DeepSeek-V4-Flash-Vision-Exp
-amd/Qwen3.8-Flash-Next
+#amd/MiniCPM5-1B
+#amd/DeepSeek-V4-Flash
+#amd/DeepSeek-V4-Flash-Vision-Exp
+#amd/Qwen3.8-Flash-Next
 
 # 需要代理
 #bai/deepseek-v4-flash (low/medium/high/max)
