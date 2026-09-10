@@ -4,7 +4,8 @@
     "opencode-gemini-auth@latest",
     "opencode-antigravity-auth@latest",
     "opencode-plugin-peers",
-    "oh-my-openagent@latest"
+    "oh-my-openagent@latest",
+    "@dietrichgebert/ponytail"
   ],
   "lsp": true,
   "compaction": {
