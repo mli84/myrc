@@ -26,6 +26,9 @@
 
 #big-model/glm-4.7-flash
 
+#freellm/auto
+
+# 代理
 #amd/MiniCPM5-1B
 #amd/DeepSeek-V4-Flash
 #amd/DeepSeek-V4-Flash-Vision-Exp

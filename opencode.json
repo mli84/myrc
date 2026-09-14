@@ -12,6 +12,55 @@
     "auto": true
   },
   "provider": {
+    "free-llm": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Free LLM",
+      "options": {
+        "baseURL": "http://127.0.0.1:31415/v1",
+        "apiKey": "{env:FREELLM_API_KEY}"
+      },
+      "models": {
+        "auto": {
+          "name": "Auto",
+          "stream": true,
+          "variants": {
+            "low": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "high"
+            },
+            "none": {
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+              "reasoningEffort": "none"
+            }
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        }
+      }
+    },
     "big-model": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "BigModel",
