@@ -2,17 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "gmi/MiniMaxAI/MiniMax-M2.7",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "high"
     },
     "metis": {
       "model": "agnes/agnes-2.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "high"
-        },
         {
           "model": "opencode/gemini-3.5-flash",
           "variant": "high"
@@ -32,10 +28,6 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "high"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
         },
@@ -50,13 +42,9 @@
       ]
     },
     "atlas": {
-      "model": "gmi/MiniMaxAI/MiniMax-M2.7",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash",
-          "variant": "high"
-        },
         {
           "model": "opencode/gemini-3.6-flash",
           "variant": "high"
@@ -80,10 +68,6 @@
           "variant": "high"
         },
         {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "high"
-        },
-        {
           "model": "opencode/gemini-3.7-flash",
           "variant": "high"
         },
@@ -99,10 +83,6 @@
       "fallback_models": [
         {
           "model": "agnes/agnes-2.5-flash",
-          "variant": "high"
-        },
-        {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
           "variant": "high"
         },
         {
@@ -124,10 +104,6 @@
           "variant": "high"
         },
         {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "medium"
-        },
-        {
           "model": "opencode/gemini-3.5-flash",
           "variant": "high"
         },
@@ -141,10 +117,6 @@
       "model": "agnes/agnes-2.5-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "medium"
-        },
         {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "medium"
@@ -167,10 +139,6 @@
       "variant": "medium",
       "fallback_models": [
         {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "medium"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "medium"
         },
@@ -192,10 +160,6 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "high"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
         },
@@ -213,10 +177,6 @@
       "model": "agnes/agnes-2.5-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "medium"
-        },
         {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "medium"
@@ -245,10 +205,6 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "high"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
         },
@@ -267,10 +223,6 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "high"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
         },
@@ -285,13 +237,9 @@
       ]
     },
     "ultrabrain": {
-      "model": "gmi/MiniMaxAI/MiniMax-M2.7",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash",
-          "variant": "high"
-        },
         {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
@@ -315,10 +263,6 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "high"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
         },
@@ -340,10 +284,6 @@
       "model": "agnes/agnes-2.5-flash",
       "variant": "low",
       "fallback_models": [
-        {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "low"
-        },
         {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "low"
@@ -377,13 +317,9 @@
       ]
     },
     "unspecified-high": {
-      "model": "gmi/MiniMaxAI/MiniMax-M2.7",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash",
-          "variant": "high"
-        },
         {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
@@ -406,10 +342,6 @@
       "model": "agnes/agnes-2.5-flash",
       "variant": "low",
       "fallback_models": [
-        {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "low"
-        },
         {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "low"
@@ -443,10 +375,6 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "high"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
         },
@@ -464,10 +392,6 @@
       "model": "agnes/agnes-2.5-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "medium"
-        },
         {
           "model": "opencode/gemini-3.5-flash-lite",
           "variant": "medium"
@@ -494,10 +418,6 @@
           "variant": "medium"
         },
         {
-          "model": "gmi/MiniMaxAI/MiniMax-M2.7",
-          "variant": "medium"
-        },
-        {
           "model": "opencode/gemini-3.6-flash",
           "variant": "medium"
         },
@@ -518,7 +438,6 @@
   "background_task": {
     "providerConcurrency": {
       "sensenova": 1,
-      "gmi": 1,
       "agnes": 2,
       "nvidia": 3,
       "opencode": 4
