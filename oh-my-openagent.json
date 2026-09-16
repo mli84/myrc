@@ -67,10 +67,6 @@
           "variant": "high"
         },
         {
-          "model": "nvidia/stepfun-ai/step-3.7-flash",
-          "variant": "high"
-        },
-        {
           "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
           "variant": "high"
         }
@@ -169,10 +165,6 @@
         {
           "model": "opencode/gemini-3.8-flash",
           "variant": "high"
-        },
-        {
-          "model": "nvidia/stepfun-ai/step-3.7-flash",
-          "variant": "high"
         }
       ]
     },
@@ -218,10 +210,6 @@
         },
         {
           "model": "opencode/gemini-3.8-flash",
-          "variant": "high"
-        },
-        {
-          "model": "nvidia/stepfun-ai/step-3.7-flash",
           "variant": "high"
         }
       ]
