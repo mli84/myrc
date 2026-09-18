@@ -29,16 +29,20 @@
 #freellm/auto
 
 # 代理
-#amd/MiniCPM5-1B
-#amd/DeepSeek-V4-Flash
-#amd/DeepSeek-V4-Flash-Vision-Exp
-#amd/Qwen3.8-Flash-Next
+#amd/MiniCPM5-2B
+#amd/Qwen3.8-Flash-Next (low/medium/xhigh)
+#amd/Qwen3.8-27B (low/medium)
+amd/DeepSeek-V4.1-Flash (none/minimal/low/medium/high/xhigh/max)
+#amd/DeepSeek-V4-Flash-0731 (none/minimal/low/medium/high/xhigh/max)
+#amd/DeepSeek-V4-Flash-Vision-Exp (none/minimal/low/medium/high/xhigh/max)
+amd/GLM-5.3-Flash 
 
 # 支持图片
 #agnes
-#nvidia/stepfun-ai/step-3.7-flash
 #opencode
 #sensenova/sensenova-6.8-flash-lite
+#amd/DeepSeek-V4.1-Flash 
 #amd/DeepSeek-V4-Flash-Vision-Exp
 #amd/Qwen3.8-Flash-Next
+#amd/Qwen3.8-27B 
 

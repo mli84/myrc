@@ -293,7 +293,7 @@
           "variant": "low"
         },
         "opencode/nemotron-3.5-lightning-free",
-        "amd/MiniCPM5-1B"
+        "amd/MiniCPM5-2B"
       ]
     },
     "unspecified-high": {
@@ -329,7 +329,7 @@
           "variant": "low"
         },
         "opencode/nemotron-3.5-lightning-free",
-        "amd/MiniCPM5-1B"
+        "amd/MiniCPM5-2B"
       ]
     },
     "writing": {
