@@ -163,8 +163,8 @@
             "output": 65536
           }
         },
-        "deepseek-v4-flash": {
-          "name": "deepseek-v4-flash",
+        "deepseek-flash": {
+          "name": "Deepseek V4.1 Flash",
           "stream": true,
           "variants": {
             "low": {
@@ -219,54 +219,6 @@
               "textVerbosity": "low",
               "reasoningSummary": "auto",
               "reasoningEffort": "high"
-            },
-            "none": {
-              "textVerbosity": "low",
-              "reasoningSummary": "auto",
-              "reasoningEffort": "none"
-            }
-          },
-          "modalities": {
-            "input": [
-              "text"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "limit": {
-            "context": 200000,
-            "output": 65536
-          }
-        },
-        "deepseek-v4-pro": {
-          "name": "Deepseek v4 pro",
-          "stream": true,
-          "variants": {
-            "low": {
-              "textVerbosity": "low",
-              "reasoningSummary": "auto",
-              "reasoningEffort": "low"
-            },
-            "medium": {
-              "textVerbosity": "low",
-              "reasoningSummary": "auto",
-              "reasoningEffort": "medium"
-            },
-            "high": {
-              "textVerbosity": "low",
-              "reasoningSummary": "auto",
-              "reasoningEffort": "high"
-            },
-            "xhigh": {
-              "textVerbosity": "low",
-              "reasoningSummary": "auto",
-              "reasoningEffort": "xhigh"
-            },
-            "max": {
-              "textVerbosity": "low",
-              "reasoningSummary": "auto",
-              "reasoningEffort": "max"
             },
             "none": {
               "textVerbosity": "low",
