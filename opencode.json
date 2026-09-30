@@ -12,6 +12,186 @@
     "auto": true
   },
   "provider": {
+    "discovery": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Discovery",
+      "options": {
+        "baseURL": "https://discovery-api.intern-ai.org.cn/v1",
+        "apiKey": "{env:DISCOVERY_API_KEY}"
+      },
+      "models": {
+        "intern-s2": {
+          "name": "Intern-s2",
+          "stream": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "Atria-Dawn-Preview": {
+          "name": "Atria-Dawn-Preview",
+          "stream": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "Agents-A1": {
+          "name": "Agents-A1",
+          "stream": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "deepseek-v4-flash-0731": {
+          "name": "deepseek-v4-flash-0731",
+          "stream": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "deepseek-v4-flash-vision": {
+          "name": "deepseek-v4-flash-vision",
+          "stream": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "deepseek-v4-pro-0813": {
+          "name": "deepseek-v4-pro-0813",
+          "stream": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "glm-5.3": {
+          "name": "glm-5.3",
+          "stream": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "kimi-k2.6": {
+          "name": "kimi-k2.6",
+          "stream": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "minimax-m3": {
+          "name": "minimax-m3",
+          "stream": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        },
+        "qwen3.8-27b": {
+          "name": "qwen3.8-27b",
+          "stream": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 200000,
+            "output": 65536
+          }
+        }
+      }
+    },
     "free-llm": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Free LLM",

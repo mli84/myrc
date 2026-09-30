@@ -28,6 +28,17 @@
 
 #freellm/auto
 
+#discovery/intern-s2
+#discovery/Atria-Dawn-Preview
+#discovery/Agents-A1
+#discovery/deepseek-v4-flash-0731
+#discovery/deepseek-v4-flash-vision
+#discovery/deepseek-v4-pro-0813
+#discovery/glm-5.3
+#discovery/kimi-k2.6
+#discovery/minimax-m3
+#discovery/qwen3.8-27b
+
 # 代理
 #amd/MiniCPM5-2B
 #amd/DeepSeek-V4.1-Flash (none/minimal/low/medium/high/xhigh/max)
@@ -41,4 +52,5 @@
 #sensenova/sensenova-6.8-flash-lite
 #amd/DeepSeek-V4.1-Flash 
 #amd/DeepSeek-V4-Flash-Vision-Exp
+#discovery
 
