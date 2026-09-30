@@ -15,11 +15,11 @@
 #opencode/nemotron-3-ultra-free (low/medium/high)
 #opencode/nemotron-3.5-lightning-free
 
-#sensenova/sensenova-6.8-flash-lite
-#sensenova/deepseek-v4-flash (none/low/medium/high)
-#sensenova/deepseek-v4-pro (none/low/medium/high/xhigh/max)
-#sensenova/glm-5.2 (none/low/medium/high)
-#sensenova/kimi-k3 (low/high/max)
+#sensenova/sensenova-6.8-flash-lite (none/low/medium/high/max)
+#sensenova/deepseek-v4-flash (none/low/medium/high/max)
+#sensenova/deepseek-v4.1-flash (none/low/high/max)
+#sensenova/glm-5.2 (none/minimal/low/medium/high/xhigh/max)
+#sensenova/kimi-k3 (low/medium/high/max)
 
 #agnes/agnes-2.5-flash
 #agnes/agnes-3.0-flash
