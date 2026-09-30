@@ -2,16 +2,20 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "opencode/gemini-3.8-flash",
-      "variant": "high",
-      "fallback_models": []
+      "model": "agnes/agnes-3.0-flash"
     },
     "metis": {
-      "model": "agnes/agnes-2.5-flash",
+      "model": "sensenova/sensenova-6.8-flash-lite",
       "fallback_models": [
-        "sensenova/sensenova-6.8-flash-lite",
+        "agnes/agnes-3.0-flash",
+        "discovery/Atria-Dawn-Preview",
+        "big-model/glm-4.7-flash",
         {
-          "model": "opencode/gemini-3.5-flash",
+          "model": "opencode/muse-spark-1.3-free",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/gemini-3.7-flash",
           "variant": "high"
         },
         {
@@ -21,66 +25,87 @@
       ]
     },
     "prometheus": {
-      "model": "sensenova/sensenova-6.8-flash-lite",
+      "model": "discovery/Atria-Dawn-Preview",
       "fallback_models": [
+        "agnes/agnes-3.0-flash",
+        "sensenova/sensenova-6.8-flash-lite",
+        "big-model/glm-4.7-flash",
         {
-          "model": "opencode/gemini-3.5-flash",
+          "model": "opencode/muse-spark-1.3-free",
+          "variant": "xhigh"
+        },
+        {
+          "model": "opencode/nemotron-3-ultra-free",
           "variant": "high"
         },
         {
-          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
           "variant": "high"
         }
       ]
     },
     "atlas": {
-      "model": "opencode/gemini-3.5-flash-lite",
-      "variant": "medium",
+      "model": "big-model/glm-4.7-flash",
       "fallback_models": [
+        "agnes/agnes-2.5-flash",
+        "sensenova/sensenova-6.8-flash-lite",
+        "discovery/Agents-A1",
         {
-          "model": "opencode/muse-spark-1.3-free",
-          "variant": "medium"
+          "model": "opencode/gemini-3.6-flash",
+          "variant": "high"
         },
         {
-          "model": "big-model/glm-4.7-flash"
+          "model": "opencode/nemotron-3-ultra-free",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "medium"
         }
       ]
     },
     "hephaestus": {
       "model": "amd/DeepSeek-V4-Flash-Vision-Exp",
-      "variant": "high",
       "fallback_models": [
-        {
-          "model": "opencode/gemini-3.7-flash",
-          "variant": "high"
-        },
-        {
-          "model": "opencode/ling-3.0-flash-fin-free",
-          "variant": "high"
-        },
-        {
-          "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
-          "variant": "high"
-        }
-      ]
-    },
-    "oracle": {
-      "model": "big-model/glm-4.7-flash",
-      "fallback_models": [
+        "agnes/agnes-3.0-flash",
+        "sensenova/sensenova-6.8-flash-lite",
+        "discovery/Agents-A1",
+        "big-model/glm-4.7-flash",
         {
           "model": "opencode/gemini-3.8-flash",
           "variant": "high"
         },
         {
-          "model": "opencode/gemini-3.7-flash",
-          "variant": "high"
-        },
-        {
-          "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+          "model": "opencode/nemotron-3-ultra-free",
           "variant": "high"
         },
         {
           "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "high"
+        }
+      ]
+    },
+    "oracle": {
+      "model": "opencode/gemini-3.8-flash",
+      "variant": "high",
+      "fallback_models": [
+        "agnes/agnes-3.0-flash",
+        {
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "max"
+        },
+        "discovery/intern-s2",
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/gemini-3.7-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/muse-spark-1.3-free",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
           "variant": "high"
         }
       ]
@@ -89,10 +114,206 @@
       "model": "agnes/agnes-2.5-flash",
       "fallback_models": [
         {
-          "model": "sensenova/sensenova-6.8-flash-lite"
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "high"
+        },
+        "discovery/Agents-A1",
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/gemini-3.7-flash",
+          "variant": "high"
         },
         {
           "model": "opencode/muse-spark-1.2-free",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "high"
+        }
+      ]
+    },
+    "explore": {
+      "model": "discovery/intern-s2",
+      "fallback_models": [
+        "agnes/agnes-2.5-flash",
+        {
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "low"
+        },
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/gemini-3.5-flash-lite",
+          "variant": "low"
+        },
+        "opencode/big-pickle",
+        "amd/MiniCPM5-2B"
+      ]
+    },
+    "librarian": {
+      "model": "sensenova/sensenova-6.8-flash-lite",
+      "fallback_models": [
+        "agnes/agnes-2.5-flash",
+        "discovery/Atria-Dawn-Preview",
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/gemini-3.6-flash",
+          "variant": "medium"
+        },
+        {
+          "model": "opencode/ling-3.0-flash-fin-free",
+          "variant": "medium"
+        },
+        {
+          "model": "opencode/mimo-v2.5-free",
+          "variant": "medium"
+        },
+        "opencode/big-pickle"
+      ]
+    },
+    "multimodal-looker": {
+      "model": "agnes/agnes-3.0-flash",
+      "fallback_models": [
+        {
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "high"
+        },
+        "discovery/deepseek-v4-flash-vision",
+        "amd/DeepSeek-V4-Flash-Vision-Exp",
+        {
+          "model": "opencode/gemini-3.8-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/gemini-3.7-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/gemini-3.6-flash",
+          "variant": "high"
+        }
+      ]
+    },
+    "sisyphus-junior": {
+      "model": "opencode/mimo-v2.5-free",
+      "variant": "high",
+      "fallback_models": [
+        "agnes/agnes-2.5-flash",
+        {
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "medium"
+        },
+        "discovery/Agents-A1",
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/gemini-3.5-flash",
+          "variant": "medium"
+        },
+        {
+          "model": "opencode/gemini-3.5-flash-lite",
+          "variant": "low"
+        },
+        {
+          "model": "opencode/ling-3.0-flash-fin-free",
+          "variant": "medium"
+        }
+      ]
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "agnes/agnes-3.0-flash",
+      "fallback_models": [
+        {
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "high"
+        },
+        "discovery/deepseek-v4-flash-vision",
+        "amd/DeepSeek-V4-Flash-Vision-Exp",
+        {
+          "model": "opencode/gemini-3.8-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/gemini-3.7-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/gemini-3.6-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/gemini-3.5-flash",
+          "variant": "high"
+        }
+      ]
+    },
+    "artistry": {
+      "model": "agnes/agnes-3.0-flash",
+      "fallback_models": [
+        {
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "high"
+        },
+        "discovery/Atria-Dawn-Preview",
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/muse-spark-1.3-free",
+          "variant": "xhigh"
+        },
+        {
+          "model": "opencode/muse-spark-1.2-free",
+          "variant": "xhigh"
+        },
+        {
+          "model": "opencode/gemini-3.8-flash",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "high"
+        }
+      ]
+    },
+    "ultrabrain": {
+      "model": "agnes/agnes-3.0-flash",
+      "fallback_models": [
+        {
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "max"
+        },
+        "discovery/Agents-A1",
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/nemotron-3-ultra-free",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/gemini-3.8-flash",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "variant": "high"
+        }
+      ]
+    },
+    "deep": {
+      "model": "sensenova/sensenova-6.8-flash-lite",
+      "fallback_models": [
+        "agnes/agnes-3.0-flash",
+        "discovery/intern-s2",
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/gemini-3.8-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/nemotron-3-ultra-free",
           "variant": "high"
         },
         {
@@ -105,10 +326,15 @@
         }
       ]
     },
-    "explore": {
+    "quick": {
       "model": "agnes/agnes-2.5-flash",
       "fallback_models": [
-        "sensenova/sensenova-6.8-flash-lite",
+        {
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "low"
+        },
+        "discovery/intern-s2",
+        "big-model/glm-4.7-flash",
         {
           "model": "opencode/gemini-3.5-flash-lite",
           "variant": "low"
@@ -117,155 +343,26 @@
           "model": "opencode/mimo-v2.5-free",
           "variant": "low"
         },
-        "opencode/nemotron-3.5-lightning-free"
-      ]
-    },
-    "librarian": {
-      "model": "sensenova/sensenova-6.8-flash-lite",
-      "fallback_models": [
-        "agnes/agnes-2.5-flash",
-        {
-          "model": "opencode/gemini-3.5-flash",
-          "variant": "medium"
-        },
-        {
-          "model": "opencode/ling-3.0-flash-fin-free",
-          "variant": "medium"
-        }
-      ]
-    },
-    "multimodal-looker": {
-      "model": "sensenova/sensenova-6.8-flash-lite",
-      "fallback_models": [
-        "agnes/agnes-2.5-flash",
-        {
-          "model": "amd/DeepSeek-V4-Flash-Vision-Exp",
-          "variant": "high"
-        },
-        {
-          "model": "opencode/gemini-3.8-flash",
-          "variant": "high"
-        }
-      ]
-    },
-    "sisyphus-junior": {
-      "model": "agnes/agnes-2.5-flash",
-      "variant": "medium",
-      "fallback_models": [
-        {
-          "model": "sensenova/sensenova-6.8-flash-lite"
-        },
-        {
-          "model": "opencode/gemini-3.5-flash-lite",
-          "variant": "medium"
-        },
-        {
-          "model": "opencode/ling-3.0-flash-fin-free",
-          "variant": "medium"
-        },
-        {
-          "model": "big-model/glm-4.7-flash"
-        }
-      ]
-    }
-  },
-  "categories": {
-    "visual-engineering": {
-      "model": "sensenova/sensenova-6.8-flash-lite",
-      "variant": "high",
-      "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash"
-        },
-        {
-          "model": "amd/DeepSeek-V4-Flash-Vision-Exp",
-          "variant": "high"
-        },
-        {
-          "model": "opencode/gemini-3.8-flash",
-          "variant": "high"
-        }
-      ]
-    },
-    "artistry": {
-      "model": "agnes/agnes-2.5-flash",
-      "fallback_models": [
-        "sensenova/sensenova-6.8-flash-lite",
-        {
-          "model": "opencode/muse-spark-1.3-free",
-          "variant": "xhigh"
-        },
-        {
-          "model": "opencode/muse-spark-1.2-free",
-          "variant": "xhigh"
-        },
-        {
-          "model": "opencode/gemini-3.8-flash",
-          "variant": "high"
-        }
-      ]
-    },
-    "ultrabrain": {
-          "model": "opencode/gemini-3.8-flash",
-      "variant": "high",
-      "fallback_models": [
-        {
-          "model": "opencode/gemini-3.7-flash",
-          "variant": "high"
-        },
-        {
-          "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
-          "variant": "high"
-        },
-        {
-          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
-          "variant": "high"
-        },
-        {
-          "model": "opencode/nemotron-3-ultra-free",
-          "variant": "high"
-        }
-      ]
-    },
-    "deep": {
-          "model": "opencode/gemini-3.7-flash",
-      "variant": "high",
-      "fallback_models": [
-        {
-          "model": "opencode/gemini-3.6-flash",
-          "variant": "high"
-        },
-        {
-          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
-          "variant": "high"
-        },
-        {
-          "model": "opencode/nemotron-3-ultra-free",
-          "variant": "high"
-        }
-      ]
-    },
-    "quick": {
-      "model": "agnes/agnes-2.5-flash",
-      "fallback_models": [
-        "sensenova/sensenova-6.8-flash-lite",
-        {
-          "model": "opencode/gemini-3.5-flash-lite",
-          "variant": "low"
-        },
-        "opencode/nemotron-3.5-lightning-free",
+        "opencode/big-pickle",
         "amd/MiniCPM5-2B"
       ]
     },
     "unspecified-high": {
-      "model": "sensenova/sensenova-6.8-flash-lite",
+      "model": "agnes/agnes-3.0-flash",
       "fallback_models": [
         {
-          "model": "opencode/gemini-3.8-flash",
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "high"
+        },
+        "discovery/Atria-Dawn-Preview",
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/gemini-3.7-flash",
           "variant": "high"
         },
         {
-          "model": "big-model/glm-4.7-flash"
+          "model": "opencode/muse-spark-1.3-free",
+          "variant": "high"
         },
         {
           "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
@@ -276,67 +373,108 @@
     "unspecified-low": {
       "model": "agnes/agnes-2.5-flash",
       "fallback_models": [
-        "sensenova/sensenova-6.8-flash-lite",
+        {
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "low"
+        },
+        "discovery/intern-s2",
+        "big-model/glm-4.7-flash",
         {
           "model": "opencode/gemini-3.5-flash-lite",
           "variant": "low"
         },
-        "opencode/nemotron-3.5-lightning-free",
+        {
+          "model": "opencode/mimo-v2.5-free",
+          "variant": "low"
+        },
+        {
+          "model": "opencode/ling-3.0-flash-fin-free",
+          "variant": "low"
+        },
         "amd/MiniCPM5-2B"
       ]
     },
     "writing": {
-      "model": "sensenova/sensenova-6.8-flash-lite",
+      "model": "agnes/agnes-3.0-flash",
       "fallback_models": [
-        "agnes/agnes-2.5-flash",
         {
-          "model": "opencode/gemini-3.6-flash",
+          "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "medium"
         },
+        "discovery/Atria-Dawn-Preview",
+        "big-model/glm-4.7-flash",
         {
-          "model": "opencode/gemini-3.5-flash",
-          "variant": "medium"
+          "model": "opencode/muse-spark-1.3-free",
+          "variant": "high"
         },
         {
           "model": "opencode/ling-3.0-flash-fin-free",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/gemini-3.6-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/gemini-3.5-flash",
           "variant": "medium"
         }
       ]
     },
     "git": {
-      "model": "agnes/agnes-2.5-flash",
-      "fallback_models": [
-        "sensenova/sensenova-6.8-flash-lite",
-        {
-          "model": "opencode/gemini-3.5-flash-lite",
-          "variant": "medium"
-        },
-        {
-          "model": "big-model/glm-4.7-flash"
-        }
-      ]
-    },
-    "general": {
-      "model": "sensenova/sensenova-6.8-flash-lite",
+      "model": "discovery/Agents-A1",
       "fallback_models": [
         "agnes/agnes-2.5-flash",
         {
-          "model": "opencode/gemini-3.6-flash",
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "low"
+        },
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/gemini-3.5-flash",
           "variant": "medium"
         },
         {
-          "model": "opencode/big-pickle"
+          "model": "opencode/mimo-v2.5-free",
+          "variant": "low"
         },
         {
-          "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "model": "opencode/ling-3.0-flash-fin-free",
           "variant": "medium"
+        },
+        "opencode/big-pickle"
+      ]
+    },
+    "general": {
+      "model": "agnes/agnes-3.0-flash",
+      "fallback_models": [
+        {
+          "model": "sensenova/sensenova-6.8-flash-lite",
+          "variant": "high"
+        },
+        "discovery/intern-s2",
+        "big-model/glm-4.7-flash",
+        {
+          "model": "opencode/gemini-3.8-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/gemini-3.7-flash",
+          "variant": "high"
+        },
+        {
+          "model": "opencode/nemotron-3-ultra-free",
+          "variant": "high"
+        },
+        {
+          "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+          "variant": "high"
         }
       ]
     }
   },
   "background_task": {
-    "providerConcurrency": {
-    },
+    "providerConcurrency": {},
     "modelConcurrency": {
       "opencode/gemini-3-flash": 1,
       "opencode/gemini-3.5-flash": 1,
