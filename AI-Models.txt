@@ -15,6 +15,10 @@
 #opencode/nemotron-3-ultra-free (low/medium/high)
 #opencode/nemotron-3.5-lightning-free
 
+# OpenCode Go
+#opencode/space-bunny-free (low/medium/high/xhigh/max)
+#opencode/longCat-2.5-preview-free (low/medium/high)
+
 #sensenova/sensenova-6.8-flash-lite (none/low/medium/high/max)
 #sensenova/deepseek-v4-flash (none/low/medium/high/max)
 #sensenova/deepseek-v4.1-flash (none/low/high/max)
