@@ -13,10 +13,6 @@
           "variant": "high"
         },
         {
-          "model": "opencode/gemini-3.7-flash",
-          "variant": "high"
-        },
-        {
           "model": "opencode/muse-spark-1.2-free",
           "variant": "high"
         },
@@ -37,10 +33,6 @@
           "model": "agnes/agnes-3.0-flash"
         },
         {
-          "model": "opencode/gemini-3.8-flash",
-          "variant": "high"
-        },
-        {
           "model": "opencode/nemotron-3-ultra-free",
           "variant": "high"
         },
@@ -54,16 +46,9 @@
       ]
     },
     "atlas": {
-      "model": "opencode/gemini-3.8-flash",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash"
-        },
-        {
-          "model": "opencode/gemini-3.7-flash",
-          "variant": "high"
-        },
         {
           "model": "opencode/mimo-v2.5-free",
           "variant": "high"
@@ -86,10 +71,6 @@
       "fallback_models": [
         {
           "model": "agnes/agnes-3.0-flash"
-        },
-        {
-          "model": "opencode/gemini-3.8-flash",
-          "variant": "high"
         },
         {
           "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
@@ -119,15 +100,7 @@
           "model": "agnes/agnes-3.0-flash"
         },
         {
-          "model": "opencode/gemini-3.8-flash",
-          "variant": "high"
-        },
-        {
           "model": "discovery/deepseek-v4-flash-vision"
-        },
-        {
-          "model": "opencode/gemini-3.6-flash",
-          "variant": "high"
         },
         {
           "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
@@ -150,10 +123,6 @@
           "variant": "high"
         },
         {
-          "model": "opencode/gemini-3.7-flash",
-          "variant": "high"
-        },
-        {
           "model": "opencode/muse-spark-1.2-free",
           "variant": "high"
         },
@@ -169,14 +138,6 @@
     "explore": {
       "model": "agnes/agnes-2.5-flash",
       "fallback_models": [
-        {
-          "model": "opencode/gemini-3.5-flash-lite",
-          "variant": "low"
-        },
-        {
-          "model": "opencode/gemini-3-flash",
-          "variant": "low"
-        },
         {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "low"
@@ -200,16 +161,9 @@
       ]
     },
     "librarian": {
-      "model": "opencode/gemini-3.6-flash",
+      "model": "agnes/agnes-3.0-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-3.0-flash"
-        },
-        {
-          "model": "opencode/gemini-3.5-flash",
-          "variant": "medium"
-        },
         {
           "model": "opencode/longCat-2.5-preview-free",
           "variant": "medium"
@@ -233,10 +187,6 @@
       "model": "agnes/agnes-3.0-flash",
       "fallback_models": [
         {
-          "model": "opencode/gemini-3.8-flash",
-          "variant": "high"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
           "variant": "high"
         },
@@ -248,14 +198,6 @@
           "model": "discovery/deepseek-v4-flash-vision"
         },
         {
-          "model": "opencode/gemini-3.6-flash",
-          "variant": "high"
-        },
-        {
-          "model": "opencode/gemini-3.5-flash",
-          "variant": "high"
-        },
-        {
           "model": "discovery/intern-s2"
         },
         {
@@ -265,16 +207,9 @@
       ]
     },
     "sisyphus-junior": {
-      "model": "opencode/gemini-3.7-flash",
+      "model": "agnes/agnes-3.0-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-3.0-flash"
-        },
-        {
-          "model": "opencode/gemini-3.6-flash",
-          "variant": "medium"
-        },
         {
           "model": "opencode/muse-spark-1.2-free",
           "variant": "high"
@@ -298,16 +233,9 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "opencode/gemini-3.8-flash",
+      "model": "agnes/agnes-3.0-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-3.0-flash"
-        },
-        {
-          "model": "opencode/gemini-3.7-flash",
-          "variant": "high"
-        },
         {
           "model": "amd/DeepSeek-V4-Flash-Vision-Exp",
           "variant": "high"
@@ -331,10 +259,6 @@
       "fallback_models": [
         {
           "model": "agnes/agnes-3.0-flash"
-        },
-        {
-          "model": "opencode/gemini-3.8-flash",
-          "variant": "high"
         },
         {
           "model": "opencode/space-bunny-free",
@@ -370,10 +294,6 @@
           "variant": "xhigh"
         },
         {
-          "model": "opencode/gemini-3.8-flash",
-          "variant": "high"
-        },
-        {
           "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
           "variant": "high"
         },
@@ -386,12 +306,9 @@
       ]
     },
     "deep": {
-      "model": "opencode/gemini-3.7-flash",
+      "model": "agnes/agnes-3.0-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-3.0-flash"
-        },
         {
           "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
           "variant": "high"
@@ -424,14 +341,6 @@
           "variant": "low"
         },
         {
-          "model": "opencode/gemini-3.5-flash-lite",
-          "variant": "low"
-        },
-        {
-          "model": "opencode/gemini-3-flash",
-          "variant": "low"
-        },
-        {
           "model": "opencode/nemotron-3.5-lightning-free"
         },
         {
@@ -447,12 +356,9 @@
       ]
     },
     "unspecified-high": {
-      "model": "opencode/gemini-3.8-flash",
+      "model": "agnes/agnes-3.0-flash",
       "variant": "high",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-3.0-flash"
-        },
         {
           "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
           "variant": "high"
@@ -485,14 +391,6 @@
           "variant": "low"
         },
         {
-          "model": "opencode/gemini-3.5-flash-lite",
-          "variant": "low"
-        },
-        {
-          "model": "opencode/gemini-3-flash",
-          "variant": "low"
-        },
-        {
           "model": "opencode/nemotron-3.5-lightning-free"
         },
         {
@@ -509,12 +407,9 @@
       ]
     },
     "writing": {
-      "model": "opencode/gemini-3.6-flash",
+      "model": "agnes/agnes-3.0-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-3.0-flash"
-        },
         {
           "model": "opencode/muse-spark-1.3-free",
           "variant": "high"
@@ -541,16 +436,9 @@
       ]
     },
     "git": {
-      "model": "opencode/gemini-3.5-flash",
+      "model": "agnes/agnes-2.5-flash",
       "variant": "medium",
       "fallback_models": [
-        {
-          "model": "agnes/agnes-2.5-flash"
-        },
-        {
-          "model": "opencode/gemini-3.5-flash-lite",
-          "variant": "low"
-        },
         {
           "model": "opencode/mimo-v2.5-free",
           "variant": "medium"
@@ -571,18 +459,11 @@
       ]
     },
     "general": {
-      "model": "opencode/gemini-3.6-flash",
+      "model": "agnes/agnes-3.0-flash",
       "variant": "medium",
       "fallback_models": [
         {
-          "model": "agnes/agnes-3.0-flash"
-        },
-        {
           "model": "sensenova/sensenova-6.8-flash-lite",
-          "variant": "medium"
-        },
-        {
-          "model": "opencode/gemini-3.7-flash",
           "variant": "medium"
         },
         {
@@ -608,14 +489,7 @@
   },
   "background_task": {
     "providerConcurrency": {},
-    "modelConcurrency": {
-      "opencode/gemini-3-flash": 1,
-      "opencode/gemini-3.5-flash": 1,
-      "opencode/gemini-3.5-flash-lite": 1,
-      "opencode/gemini-3.6-flash": 1,
-      "opencode/gemini-3.7-flash": 1,
-      "opencode/gemini-3.8-flash": 1
-    }
+    "modelConcurrency": {}
   },
   "runtime_fallback": {
     "enabled": true,

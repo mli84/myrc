@@ -2,12 +2,6 @@
 #nvidia/nvidia/nemotron-3-ultra-550b-a55b (low/medium/high)
 
 #opencode/big-pickle
-#opencode/gemini-3-flash (minimal/low/medium/high)
-#opencode/gemini-3.5-flash (minimal/low/medium/high)
-#opencode/gemini-3.5-flash-lite (minimal/low/medium/high)
-#opencode/gemini-3.6-flash (minimal/low/medium/high)
-#opencode/gemini-3.7-flash (low/medium/high)
-#opencode/gemini-3.8-flash (low/medium/high)
 #opencode/mimo-v2.5-free (low/medium/high)
 #opencode/ling-3.0-flash-fin-free (low/medium/high)
 #opencode/muse-spark-1.2-free (minimal/low/medium/high/xhigh)
