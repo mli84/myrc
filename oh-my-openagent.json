@@ -54,7 +54,7 @@
           "variant": "high"
         },
         {
-          "model": "opencode/longCat-2.5-preview-free",
+          "model": "opencode/longcat-2.5-preview-free",
           "variant": "high"
         },
         {
@@ -165,7 +165,7 @@
       "variant": "medium",
       "fallback_models": [
         {
-          "model": "opencode/longCat-2.5-preview-free",
+          "model": "opencode/longcat-2.5-preview-free",
           "variant": "medium"
         },
         {
@@ -273,7 +273,7 @@
           "variant": "medium"
         },
         {
-          "model": "opencode/longCat-2.5-preview-free",
+          "model": "opencode/longcat-2.5-preview-free",
           "variant": "medium"
         }
       ]
@@ -415,7 +415,7 @@
           "variant": "high"
         },
         {
-          "model": "opencode/longCat-2.5-preview-free",
+          "model": "opencode/longcat-2.5-preview-free",
           "variant": "high"
         },
         {
@@ -471,7 +471,7 @@
           "variant": "medium"
         },
         {
-          "model": "opencode/longCat-2.5-preview-free",
+          "model": "opencode/longcat-2.5-preview-free",
           "variant": "medium"
         },
         {
