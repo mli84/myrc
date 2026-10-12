@@ -50,7 +50,7 @@
       "variant": "high",
       "fallback_models": [
         {
-          "model": "opencode/mimo-v2.5-free",
+          "model": "opencode/mimo-v2.6-free",
           "variant": "high"
         },
         {
@@ -169,7 +169,7 @@
           "variant": "medium"
         },
         {
-          "model": "opencode/mimo-v2.5-free",
+          "model": "opencode/mimo-v2.6-free",
           "variant": "medium"
         },
         {
@@ -398,7 +398,7 @@
           "variant": "low"
         },
         {
-          "model": "opencode/mimo-v2.5-free",
+          "model": "opencode/mimo-v2.6-free",
           "variant": "low"
         },
         {
@@ -440,7 +440,7 @@
       "variant": "medium",
       "fallback_models": [
         {
-          "model": "opencode/mimo-v2.5-free",
+          "model": "opencode/mimo-v2.6-free",
           "variant": "medium"
         },
         {
@@ -467,7 +467,7 @@
           "variant": "medium"
         },
         {
-          "model": "opencode/mimo-v2.5-free",
+          "model": "opencode/mimo-v2.6-free",
           "variant": "medium"
         },
         {
