@@ -1,17 +1,16 @@
 #nvidia/nvidia/nemotron-3-super-120b-a12b (low/medium/high) 
 #nvidia/nvidia/nemotron-3-ultra-550b-a55b (low/medium/high)
 
+#opencode/beam-free (low/medium/high/xhigh/max)
 #opencode/big-pickle
-#opencode/exo-free (high)
-#opencode/ling-3.1-flash-free (low/medium/high)
+#opencode/deepseek-v4.1-flash-free (low/high/max)
+#opencode/glm-5.3-flash-free (low/high/max)
 #opencode/longcat-2.5-preview-free (low/medium/high)
-#opencode/space-bunny-free (low/medium/high/xhigh/max)
 #opencode/mimo-v2.6-flash-free 
-#opencode/step-5-preview-free (low/medium/high)
-#opencode/muse-spark-1.3-free (minimal/low/medium/high/xhigh)
-#opencode/ling-3.0-flash-fin-free (low/medium/high)
-#opencode/nemotron-3.5-lightning-free
 #opencode/nemotron-3-ultra-free (low/medium/high)
+#opencode/nemotron-3.5-lightning-free
+#opencode/nemotron-3.5-super-vl-free (none/minimal/low/medium/high/max)
+#opencode/space-bunny-free (low/medium/high/xhigh/max)
 
 #sensenova/sensenova-6.8-flash-lite (none/low/medium/high/max)
 #sensenova/deepseek-v4-flash (none/low/medium/high/max)
