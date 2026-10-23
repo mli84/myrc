@@ -10,8 +10,11 @@
 #opencode/nemotron-3-ultra-free (low/medium/high)
 #opencode/nemotron-3.5-lightning-free
 #opencode/nemotron-3.5-super-vl-free (none/minimal/low/medium/high/max)
+# 收费
+#opencode-go/deepseek-v4.1-flash (low/high/max)
 
 #sensenova/sensenova-6.8-flash-lite (none/low/medium/high/max)
+# 收费
 #sensenova/deepseek-v4-flash (none/low/medium/high/max)
 #sensenova/deepseek-v4.1-flash (none/low/high/max)
 #sensenova/glm-5.2 (none/minimal/low/medium/high/xhigh/max)
@@ -25,28 +28,35 @@
 #freellm/auto
 
 #discovery/intern-s2
-#discovery/Atria-Dawn-Preview
 #discovery/Agents-A1
-#discovery/deepseek-v4-flash-0731
-#discovery/deepseek-v4-flash-vision
+#discovery/Atria-Dawn
+#discovery/Sage-A1.5
+# 收费
 #discovery/deepseek-v4-pro-0813
+#discovery/deepseek-v4.1-flash-1017
 #discovery/glm-5.3
 #discovery/kimi-k2.6
 #discovery/minimax-m3
 #discovery/qwen3.8-27b
 
 # 代理
-#amd/MiniCPM5-2B
+#amd/MiMo-V2.6-Flash
 #amd/DeepSeek-V4.1-Flash (none/minimal/low/medium/high/xhigh/max)
-#amd/DeepSeek-V4-Flash-0731 (none/minimal/low/medium/high/xhigh/max)
-#amd/DeepSeek-V4-Flash-Vision-Exp (none/minimal/low/medium/high/xhigh/max)
+#amd/DeepSeek-V4-Flash (none/minimal/low/medium/high/xhigh/max)
 #amd/GLM-5.3-Flash 
+#amd/Qwen3.8-Flash-Next (low/medium/xhigh)
 
 # 支持图片
 #agnes
 #opencode
 #sensenova/sensenova-6.8-flash-lite
+#amd/MiMo-V2.6-Flash
 #amd/DeepSeek-V4.1-Flash 
-#amd/DeepSeek-V4-Flash-Vision-Exp
-#discovery
+#amd/Qwen3.8-Flash-Next (low/medium/xhigh)
+#discovery/intern-s2
+#discovery/Agents-A1
+#discovery/Sage-A1.5
+#discovery/deepseek-v4.1-flash-1017
+#discovery/kimi-k2.6
+#discovery/qwen3.8-27b
 
