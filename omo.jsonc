@@ -705,6 +705,7 @@
     },
     "categories": {
       "visual-engineering": {
+        "model": "agnes/agnes-3.0-flash",
         "models": [
           "agnes/agnes-3.0-flash",
           {
@@ -773,6 +774,8 @@
         ]
       },
       "artistry": {
+        "model": "opencode/space-bunny-free",
+        "reasoning": "xhigh",
         "models": [
           {
             "model": "opencode/space-bunny-free",
@@ -843,6 +846,8 @@
         ]
       },
       "ultrabrain": {
+        "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+        "reasoning": "high",
         "models": [
           {
             "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
@@ -917,6 +922,8 @@
         ]
       },
       "deep-low": {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "reasoning": "max",
         "models": [
           {
             "model": "opencode/deepseek-v4.1-flash-free",
@@ -991,6 +998,8 @@
         ]
       },
       "deep-high": {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "reasoning": "max",
         "models": [
           {
             "model": "opencode/deepseek-v4.1-flash-free",
@@ -1065,6 +1074,7 @@
         ]
       },
       "quick": {
+        "model": "agnes/agnes-2.5-flash",
         "models": [
           "agnes/agnes-2.5-flash",
           {
@@ -1133,6 +1143,8 @@
         ]
       },
       "unspecified-high": {
+        "model": "opencode/beam-free",
+        "reasoning": "xhigh",
         "models": [
           {
             "model": "opencode/beam-free",
@@ -1207,6 +1219,7 @@
         ]
       },
       "unspecified-low": {
+        "model": "agnes/agnes-3.0-flash",
         "models": [
           "agnes/agnes-3.0-flash",
           {
@@ -1275,6 +1288,8 @@
         ]
       },
       "writing": {
+        "model": "opencode/longcat-2.5-preview-free",
+        "reasoning": "high",
         "models": [
           {
             "model": "opencode/longcat-2.5-preview-free",
@@ -1345,6 +1360,7 @@
         ]
       },
       "git": {
+        "model": "opencode/mimo-v2.6-flash-free",
         "models": [
           "opencode/mimo-v2.6-flash-free",
           {
@@ -1413,6 +1429,8 @@
         ]
       },
       "general": {
+        "model": "opencode/glm-5.3-flash-free",
+        "reasoning": "medium",
         "models": [
           {
             "model": "opencode/glm-5.3-flash-free",
