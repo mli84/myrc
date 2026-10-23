@@ -1,0 +1,380 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
+  "[opencode]": {
+    "agent_order": [
+      "sisyphus",
+      "metis",
+      "prometheus",
+      "atlas",
+      "hephaestus",
+      "oracle",
+      "momus",
+      "explore",
+      "librarian",
+      "multimodal-looker",
+      "sisyphus-junior"
+    ],
+    "agents": {
+      "sisyphus": {
+        "model": "opencode-go/kimi-k3",
+        "reasoning": "high",
+        "fallback_models": [
+          {
+            "model": "opencode-go/kimi-k2.7-code",
+            "reasoning": "high"
+          },
+          {
+            "model": "opencode-go/glm-5.3",
+            "reasoning": "high"
+          },
+          {
+            "model": "opencode-go/deepseek-v4-pro",
+            "reasoning": "high"
+          },
+          {
+            "model": "opencode-go/grok-4.7",
+            "reasoning": "high"
+          },
+          {
+            "model": "opencode-go/minimax-m3",
+            "reasoning": "high"
+          },
+          {
+            "model": "opencode-go/qwen3.8-max",
+            "reasoning": "high"
+          }
+        ]
+      },
+      "metis": {
+        "model": "opencode-go/deepseek-v4-pro",
+        "reasoning": "high",
+        "fallback_models": [
+          "opencode-go/deepseek-v4.1-flash",
+          "opencode-go/glm-5.3-flash",
+          "opencode-go/kimi-k2.6",
+          "opencode-go/mimo-v2.6-flash",
+          "opencode-go/glm-5.2",
+          "opencode-go/step-5-preview"
+        ]
+      },
+      "prometheus": {
+        "model": "opencode-go/qwen3.8-max",
+        "reasoning": "high",
+        "fallback_models": [
+          "opencode-go/kimi-k3",
+          "opencode-go/deepseek-v4-pro",
+          "opencode-go/grok-4.7",
+          "opencode-go/glm-5.3",
+          "opencode-go/qwen3.7-max",
+          "opencode-go/mimo-v2.6-pro"
+        ]
+      },
+      "atlas": {
+        "model": "opencode-go/minimax-m3",
+        "reasoning": "high",
+        "fallback_models": [
+          "opencode-go/minimax-m3.1-flash",
+          "opencode-go/glm-5.3",
+          "opencode-go/kimi-k2.7-code",
+          "opencode-go/deepseek-v4.1-flash",
+          "opencode-go/qwen3.7-plus",
+          "opencode-go/mimo-v2.5-pro"
+        ]
+      },
+      "hephaestus": {
+        "model": "opencode-go/kimi-k2.7-code",
+        "reasoning": "high",
+        "fallback_models": [
+          "opencode-go/deepseek-v4.1-flash",
+          "opencode-go/glm-5.3-flash",
+          "opencode-go/kimi-k3",
+          "opencode-go/minimax-m3",
+          "opencode-go/step-5-preview",
+          "opencode-go/hy3"
+        ]
+      },
+      "oracle": {
+        "model": "opencode-go/grok-4.7",
+        "reasoning": "high",
+        "fallback_models": [
+          "opencode-go/deepseek-v4-pro",
+          "opencode-go/qwen3.8-max",
+          "opencode-go/glm-5.3",
+          "opencode-go/mimo-v2.6-pro",
+          "opencode-go/grok-4.6",
+          "opencode-go/gpt-6-luna"
+        ]
+      },
+      "momus": {
+        "model": "opencode-go/glm-5.3",
+        "reasoning": "high",
+        "fallback_models": [
+          "opencode-go/glm-5.3-flash",
+          "opencode-go/deepseek-v4.1-flash",
+          "opencode-go/kimi-k2.6",
+          "opencode-go/mimo-v2.5-pro",
+          "opencode-go/qwen3.7-plus",
+          "opencode-go/omen-alpha"
+        ]
+      },
+      "explore": {
+        "model": "opencode-go/glm-5.3-flash",
+        "reasoning": "low",
+        "fallback_models": [
+          "opencode-go/minimax-m3.1-flash",
+          "opencode-go/qwen3.8-flash",
+          "opencode-go/mimo-v2.6-flash",
+          "opencode-go/claude-haiku-5-5",
+          "opencode-go/hy3",
+          "opencode-go/beam-free",
+          "opencode-go/glm-5.1"
+        ]
+      },
+      "librarian": {
+        "model": "opencode-go/claude-haiku-5-5",
+        "fallback_models": [
+          "opencode-go/glm-5.3-flash",
+          "opencode-go/minimax-m3.1-flash",
+          "opencode-go/qwen3.8-flash",
+          "opencode-go/kimi-k2.6",
+          "opencode-go/mimo-v2.5",
+          "opencode-go/longcat-2.0",
+          "opencode-go/beam-free"
+        ]
+      },
+      "multimodal-looker": {
+        "model": "opencode-go/gemini-4-argon-contributor",
+        "fallback_models": [
+          "opencode-go/gpt-6-luna",
+          "opencode-go/gpt-5.6-luna",
+          "opencode-go/qwen3.8-max",
+          "opencode-go/qwen3.8-flash",
+          "opencode-go/muse-spark-1.3-contributor",
+          "opencode-go/muse-spark-1.2-contributor",
+          "opencode-go/hy4-preview"
+        ]
+      },
+      "sisyphus-junior": {
+        "model": "opencode-go/deepseek-v4.1-flash",
+        "reasoning": "medium",
+        "fallback_models": [
+          "opencode-go/glm-5.3-flash",
+          "opencode-go/kimi-k2.7-code",
+          "opencode-go/minimax-m3.1-flash",
+          "opencode-go/mimo-v2.6-flash",
+          "opencode-go/step-5-preview",
+          "opencode-go/longcat-2.0",
+          "opencode-go/omen-alpha"
+        ]
+      }
+    },
+    "categories": {
+      "visual-engineering": {
+        "model": "opencode-go/qwen3.7-max",
+        "reasoning": "high",
+        "fallback_models": [
+          "opencode-go/gemini-4-argon-contributor",
+          "opencode-go/qwen3.8-max",
+          "opencode-go/muse-spark-1.3-contributor",
+          "opencode-go/grok-4.7",
+          "opencode-go/gpt-6-luna",
+          "opencode-go/muse-spark-1.2-contributor"
+        ]
+      },
+      "artistry": {
+        "model": "opencode-go/muse-spark-1.3-contributor",
+        "fallback_models": [
+          "opencode-go/gemini-4-argon-contributor",
+          "opencode-go/qwen3.7-max",
+          "opencode-go/grok-4.6",
+          "opencode-go/muse-spark-1.2-contributor",
+          "opencode-go/qwen3.7-plus",
+          "opencode-go/longcat-2.0"
+        ]
+      },
+      "ultrabrain": {
+        "model": "opencode-go/qwen3.6-plus",
+        "reasoning": "high",
+        "fallback_models": [
+          "opencode-go/deepseek-v4-pro",
+          "opencode-go/kimi-k3",
+          "opencode-go/qwen3.8-max",
+          "opencode-go/glm-5.3",
+          "opencode-go/grok-4.7",
+          "opencode-go/mimo-v2.6-pro"
+        ]
+      },
+      "deep-low": {
+        "model": "opencode-go/mimo-v2.6-flash",
+        "reasoning": "medium",
+        "fallback_models": [
+          "opencode-go/deepseek-v4.1-flash",
+          "opencode-go/glm-5.3-flash",
+          "opencode-go/kimi-k2.7-code",
+          "opencode-go/minimax-m3.1-flash",
+          "opencode-go/step-5-preview",
+          "opencode-go/hy3",
+          "opencode-go/glm-5.2"
+        ]
+      },
+      "deep-high": {
+        "model": "opencode-go/grok-4.6",
+        "reasoning": "high",
+        "fallback_models": [
+          "opencode-go/deepseek-v4-pro",
+          "opencode-go/qwen3.7-max",
+          "opencode-go/kimi-k3",
+          "opencode-go/glm-5.3",
+          "opencode-go/gpt-6-luna",
+          "opencode-go/mimo-v2.6-pro"
+        ]
+      },
+      "quick": {
+        "model": "opencode-go/minimax-m3.1-flash",
+        "reasoning": "low",
+        "fallback_models": [
+          "opencode-go/glm-5.3-flash",
+          "opencode-go/qwen3.8-flash",
+          "opencode-go/mimo-v2.6-flash",
+          "opencode-go/claude-haiku-5-5",
+          "opencode-go/kimi-k2.6",
+          "opencode-go/beam-free",
+          "opencode-go/omen-alpha"
+        ]
+      },
+      "unspecified-high": {
+        "model": "opencode-go/longcat-2.0",
+        "reasoning": "high",
+        "fallback_models": [
+          "opencode-go/glm-5.3",
+          "opencode-go/kimi-k3",
+          "opencode-go/deepseek-v4-pro",
+          "opencode-go/qwen3.8-max",
+          "opencode-go/minimax-m3",
+          "opencode-go/mimo-v2.5-pro"
+        ]
+      },
+      "unspecified-low": {
+        "model": "opencode-go/mimo-v2.5",
+        "reasoning": "medium",
+        "fallback_models": [
+          "opencode-go/mimo-v2.6-flash",
+          "opencode-go/glm-5.3-flash",
+          "opencode-go/minimax-m3.1-flash",
+          "opencode-go/qwen3.7-plus",
+          "opencode-go/kimi-k2.6",
+          "opencode-go/glm-5.2",
+          "opencode-go/beam-free"
+        ]
+      },
+      "writing": {
+        "model": "opencode-go/qwen3.8-flash",
+        "fallback_models": [
+          "opencode-go/claude-haiku-5-5",
+          "opencode-go/muse-spark-1.3-contributor",
+          "opencode-go/kimi-k3",
+          "opencode-go/mimo-v2.5",
+          "opencode-go/gpt-6-luna",
+          "opencode-go/longcat-2.0"
+        ]
+      },
+      "git": {
+        "model": "opencode-go/hy3",
+        "fallback_models": [
+          "opencode-go/deepseek-v4.1-flash",
+          "opencode-go/glm-5.3-flash",
+          "opencode-go/kimi-k2.7-code",
+          "opencode-go/minimax-m3.1-flash",
+          "opencode-go/step-5-preview",
+          "opencode-go/hy4-preview",
+          "opencode-go/omen-alpha"
+        ]
+      },
+      "general": {
+        "model": "opencode-go/step-5-preview",
+        "reasoning": "medium",
+        "fallback_models": [
+          "opencode-go/kimi-k2.7-code",
+          "opencode-go/deepseek-v4.1-flash",
+          "opencode-go/glm-5.3",
+          "opencode-go/mimo-v2.5-pro",
+          "opencode-go/minimax-m2.7",
+          "opencode-go/minimax-m2.5",
+          "opencode-go/glm-5.1"
+        ]
+      }
+    },
+    "background_task": {
+      "providerConcurrency": {
+      },
+      "modelConcurrency": {}
+    },
+    "runtime_fallback": {
+      "enabled": true,
+      "retry_on_errors": [
+        400,
+        401,
+        403,
+        404,
+        429,
+        500,
+        502,
+        503,
+        504
+      ],
+      "max_fallback_attempts": 4,
+      "cooldown_seconds": 15,
+      "timeout_seconds": 12,
+      "notify_on_fallback": true
+    },
+    "model_capabilities": {
+      "enabled": true,
+      "auto_refresh_on_start": true,
+      "refresh_timeout_ms": 5000,
+      "source_url": "https://models.dev/api.json"
+    },
+    "experimental": {
+      "truncate_all_tool_outputs": false,
+      "aggressive_truncation": false,
+      "disable_omo_env": false,
+      "task_system": true,
+      "dynamic_context_pruning": {
+        "enabled": false,
+        "notification": "detailed",
+        "turn_protection": {
+          "enabled": true,
+          "turns": 3
+        },
+        "protected_tools": [
+          "task",
+          "todowrite",
+          "todoread",
+          "lsp_rename",
+          "session_read",
+          "session_write",
+          "session_search"
+        ],
+        "strategies": {
+          "deduplication": {
+            "enabled": true
+          },
+          "supersede_writes": {
+            "enabled": true,
+            "aggressive": false
+          },
+          "purge_errors": {
+            "enabled": true,
+            "turns": 5
+          }
+        }
+      }
+    },
+    "tmux": {
+      "enabled": true,
+      "layout": "main-vertical",
+      "main_pane_size": 60,
+      "main_pane_min_width": 120,
+      "agent_pane_min_width": 40
+    }
+  }
+}
