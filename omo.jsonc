@@ -4,28 +4,8 @@
   "[opencode]": {
     "agents": {
       "sisyphus": {
-        "model": "sensenova/kimi-k3",
-        "reasoning": "high",
-        "fallback_models": [
-          {
-            "model": "agnes/agnes-3.0-flash"
-          },
-          {
-            "model": "discovery/glm-5.3"
-          },
-          {
-            "model": "opencode/deepseek-v4.1-flash-free",
-            "reasoning": "high"
-          },
-          {
-            "model": "amd/DeepSeek-V4.1-Flash",
-            "reasoning": "high"
-          },
-          {
-            "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
-            "reasoning": "high"
-          }
-        ]
+        "model": "opencode-go/deepseek-v4.1-flash",
+        "reasoning": "high"
       },
       "metis": {
         "model": "agnes/agnes-2.5-flash",
