@@ -391,6 +391,20 @@
       "main_pane_size": 60,
       "main_pane_min_width": 120,
       "agent_pane_min_width": 40
+    },
+    // Allowlist only: lets each project's .opencode/skills symlinks point into
+    // ~/code/agent-skills without tripping OMO's "skill link outside project" guard.
+    // The glob matches nothing on purpose, so these skills are NOT loaded globally -
+    // they load per project via `.opencode/skills/<name> -> ~/code/agent-skills/<name>`
+    // (their SKILL.md resolves scripts through `.opencode/skills/<name>/...`).
+    // Must live inside "[opencode]" - top-level "skills" is an unknown key in omo.jsonc.
+    "skills": {
+      "sources": [
+        {
+          "path": "~/code/agent-skills",
+          "glob": "__allowlist_only__/SKILL.md"
+        }
+      ]
     }
   },
   "_migrations": [
