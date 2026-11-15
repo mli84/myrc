@@ -8,43 +8,55 @@
         "reasoning": "high"
       },
       "metis": {
-        "model": "agnes/agnes-2.5-flash",
+        "model": "agnes/agnes-3.0-flash",
         "fallback_models": [
-          "sensenova/sensenova-6.8-flash-lite",
+          {
+            "model": "sensenova/sensenova-6.8-flash-lite",
+            "reasoning": "high"
+          },
           "discovery/Agents-A1",
           {
             "model": "opencode/glm-5.3-flash-free",
             "reasoning": "high"
           },
-          "big-model/glm-4.7-flash",
-          "amd/GLM-5.3-Flash"
+          {
+            "model": "nvidia/z-ai/glm-5.3-flash",
+            "reasoning": "high"
+          },
+          {
+            "model": "amd/GLM-5.3-Flash",
+            "reasoning": "high"
+          }
         ]
       },
       "prometheus": {
-        "model": "sensenova/deepseek-v4.1-flash",
+        "model": "sensenova/deepseek-flash",
         "reasoning": "high",
         "fallback_models": [
           "agnes/agnes-3.0-flash",
-          "discovery/deepseek-v4.1-flash-1017",
+          "discovery/deepseek-v4-pro-0813",
           {
             "model": "opencode-go/deepseek-v4.1-flash",
             "reasoning": "high"
           },
           {
-            "model": "amd/DeepSeek-V4-Flash",
+            "model": "amd/DeepSeek-V4.1-Flash",
+            "reasoning": "high"
+          },
+          {
+            "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
             "reasoning": "high"
           }
         ]
       },
       "atlas": {
-        "model": "discovery/deepseek-v4-pro-0813",
+        "model": "discovery/glm-5.3",
         "fallback_models": [
           "agnes/agnes-3.0-flash",
           "sensenova/kimi-k3",
           "opencode/big-pickle",
           {
-            "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
-            "reasoning": "high"
+            "model": "nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b"
           }
         ]
       },
@@ -61,7 +73,7 @@
             "reasoning": "xhigh"
           },
           {
-            "model": "amd/Qwen3.8-Flash-Next",
+            "model": "amd/DeepSeek-V4-Flash",
             "reasoning": "xhigh"
           },
           {
@@ -75,7 +87,7 @@
         "reasoning": "high",
         "fallback_models": [
           "agnes/agnes-3.0-flash",
-          "discovery/Sage-A1.5",
+          "discovery/deepseek-v4-pro-0813",
           {
             "model": "opencode/deepseek-v4.1-flash-free",
             "reasoning": "high"
@@ -85,7 +97,7 @@
             "reasoning": "high"
           },
           {
-            "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+            "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
             "reasoning": "high"
           }
         ]
@@ -93,54 +105,78 @@
       "momus": {
         "model": "agnes/agnes-3.0-flash",
         "fallback_models": [
-          "sensenova/deepseek-v4-flash",
+          {
+            "model": "sensenova/deepseek-v4-flash",
+            "reasoning": "high"
+          },
           "discovery/minimax-m3",
           {
             "model": "opencode/glm-5.3-flash-free",
             "reasoning": "high"
           },
-          "big-model/glm-4.7-flash",
-          "amd/GLM-5.3-Flash"
+          {
+            "model": "nvidia/z-ai/glm-5.3-flash",
+            "reasoning": "high"
+          },
+          {
+            "model": "amd/GLM-5.3-Flash",
+            "reasoning": "high"
+          }
         ]
       },
       "explore": {
         "model": "agnes/agnes-2.5-flash",
         "fallback_models": [
-          "sensenova/sensenova-6.8-flash-lite",
+          {
+            "model": "sensenova/sensenova-6.8-flash-lite",
+            "reasoning": "high"
+          },
           "discovery/Agents-A1",
-          "opencode/mimo-v2.6-flash-free",
           "opencode/nemotron-3.5-lightning-free",
-          "opencode-go/deepseek-v4.1-flash"
+          {
+            "model": "nvidia/nvidia/nemotron-3.5-lightning-30b-a3b"
+          },
+          "opencode/mimo-v2.6-flash-free"
         ]
       },
       "librarian": {
         "model": "sensenova/deepseek-v4-flash",
+        "reasoning": "high",
         "fallback_models": [
           "agnes/agnes-3.0-flash",
           "discovery/intern-s2",
-          "opencode/beam-free",
-          "opencode/deepseek-v4.1-flash-free",
-          "amd/DeepSeek-V4-Flash"
+          {
+            "model": "opencode/deepseek-v4.1-flash-free",
+            "reasoning": "high"
+          },
+          {
+            "model": "amd/DeepSeek-V4-Flash",
+            "reasoning": "high"
+          }
         ]
       },
       "multimodal-looker": {
         "model": "agnes/agnes-3.0-flash",
         "fallback_models": [
-          "sensenova/sensenova-6.8-flash-lite",
+          {
+            "model": "sensenova/sensenova-6.8-flash-lite",
+            "reasoning": "high"
+          },
           "discovery/intern-s2",
-          "discovery/Agents-A1",
-          "discovery/Sage-A1.5",
-          "discovery/deepseek-v4.1-flash-1017",
-          "discovery/kimi-k2.6",
-          "discovery/qwen3.8-27b",
-          "opencode/nemotron-3.5-super-vl-free",
+          {
+            "model": "nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b"
+          },
+          {
+            "model": "opencode/nemotron-3.5-super-vl-free",
+            "reasoning": "medium"
+          },
           "amd/MiMo-V2.6-Flash",
           {
-            "model": "amd/DeepSeek-V4.1-Flash",
+            "model": "amd/Qwen3.8-27B",
             "reasoning": "medium"
           },
           {
-            "model": "amd/Qwen3.8-Flash-Next",
+            "model": "nvidia/stepfun-ai/step-5-preview",
             "reasoning": "medium"
           }
         ]
@@ -149,9 +185,17 @@
         "model": "discovery/qwen3.8-27b",
         "fallback_models": [
           "agnes/agnes-2.5-flash",
-          "sensenova/deepseek-v4-flash",
-          "opencode/flint-40b-free",
-          "opencode/nemotron-3.5-lightning-free",
+          {
+            "model": "sensenova/deepseek-v4-flash",
+            "reasoning": "high"
+          },
+          {
+            "model": "opencode/flint-40b-free",
+            "reasoning": "medium"
+          },
+          {
+            "model": "nvidia/nvidia/nemotron-3.5-lightning-30b-a3b"
+          },
           "amd/MiMo-V2.6-Flash"
         ]
       }
@@ -160,19 +204,34 @@
       "visual-engineering": {
         "model": "agnes/agnes-3.0-flash",
         "fallback_models": [
-          "sensenova/sensenova-6.8-flash-lite",
-          "discovery/Atria-Dawn",
-          "opencode/nemotron-3.5-super-vl-free",
-          "amd/MiMo-V2.6-Flash"
+          {
+            "model": "sensenova/sensenova-6.8-flash-lite",
+            "reasoning": "high"
+          },
+          "discovery/Atria-Dawn-Preview",
+          {
+            "model": "opencode/nemotron-3.5-super-vl-free",
+            "reasoning": "medium"
+          },
+          "amd/MiMo-V2.6-Flash",
+          {
+            "model": "nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b"
+          }
         ]
       },
       "artistry": {
         "model": "agnes/agnes-2.5-flash",
         "fallback_models": [
-          "sensenova/kimi-k3",
+          {
+            "model": "sensenova/kimi-k3",
+            "reasoning": "high"
+          },
           "discovery/minimax-m3",
           "opencode/big-pickle",
-          "amd/Qwen3.8-Flash-Next"
+          {
+            "model": "amd/Qwen3.8-27B",
+            "reasoning": "medium"
+          }
         ]
       },
       "ultrabrain": {
@@ -209,15 +268,11 @@
             "reasoning": "xhigh"
           },
           {
-            "model": "opencode/nemotron-3-ultra-free",
-            "reasoning": "high"
-          },
-          {
             "model": "amd/DeepSeek-V4-Flash",
             "reasoning": "xhigh"
           },
           {
-            "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+            "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
             "reasoning": "high"
           }
         ]
@@ -225,20 +280,27 @@
       "quick": {
         "model": "agnes/agnes-2.5-flash",
         "fallback_models": [
-          "sensenova/sensenova-6.8-flash-lite",
+          {
+            "model": "sensenova/sensenova-6.8-flash-lite",
+            "reasoning": "high"
+          },
           "discovery/Agents-A1",
-          "opencode/mimo-v2.6-flash-free",
           "opencode/nemotron-3.5-lightning-free",
-          "big-model/glm-4.7-flash",
-          "amd/GLM-5.3-Flash"
+          {
+            "model": "nvidia/nvidia/nemotron-3.5-lightning-30b-a3b"
+          },
+          {
+            "model": "amd/GLM-5.3-Flash",
+            "reasoning": "high"
+          }
         ]
       },
       "unspecified-high": {
-        "model": "sensenova/deepseek-v4.1-flash",
+        "model": "sensenova/deepseek-flash",
         "reasoning": "high",
         "fallback_models": [
           "agnes/agnes-3.0-flash",
-          "discovery/deepseek-v4.1-flash-1017",
+          "discovery/deepseek-v4-pro-0813",
           {
             "model": "opencode-go/deepseek-v4.1-flash",
             "reasoning": "max"
@@ -256,48 +318,77 @@
       "unspecified-low": {
         "model": "agnes/agnes-2.5-flash",
         "fallback_models": [
-          "sensenova/deepseek-v4-flash",
+          {
+            "model": "sensenova/deepseek-v4-flash",
+            "reasoning": "high"
+          },
           "discovery/qwen3.8-27b",
-          "opencode/beam-free",
-          "opencode/glm-5.3-flash-free",
-          "opencode/nemotron-3.5-lightning-free"
+          "opencode/big-pickle",
+          {
+            "model": "opencode/glm-5.3-flash-free",
+            "reasoning": "high"
+          },
+          {
+            "model": "nvidia/nvidia/nemotron-3.5-lightning-30b-a3b"
+          }
         ]
       },
       "writing": {
         "model": "agnes/agnes-3.0-flash",
         "fallback_models": [
-          "sensenova/glm-5.2",
-          "discovery/Sage-A1.5",
+          {
+            "model": "sensenova/glm-5.2",
+            "reasoning": "high"
+          },
+          "discovery/Agents-A1",
           "opencode/big-pickle",
-          "opencode/flint-40b-free",
-          "amd/GLM-5.3-Flash"
+          {
+            "model": "opencode/flint-40b-free",
+            "reasoning": "medium"
+          },
+          {
+            "model": "amd/GLM-5.3-Flash",
+            "reasoning": "high"
+          }
         ]
       },
       "git": {
         "model": "sensenova/deepseek-v4-flash",
+        "reasoning": "high",
         "fallback_models": [
           "agnes/agnes-2.5-flash",
-          "discovery/deepseek-v4.1-flash-1017",
-          "opencode/deepseek-v4.1-flash-free",
-          "opencode-go/deepseek-v4.1-flash",
-          "amd/DeepSeek-V4-Flash"
+          "discovery/deepseek-v4-pro-0813",
+          {
+            "model": "opencode/deepseek-v4.1-flash-free",
+            "reasoning": "high"
+          },
+          {
+            "model": "opencode-go/deepseek-v4.1-flash",
+            "reasoning": "high"
+          },
+          {
+            "model": "amd/DeepSeek-V4-Flash",
+            "reasoning": "high"
+          }
         ]
       },
       "general": {
         "model": "discovery/glm-5.3",
         "fallback_models": [
           "agnes/agnes-3.0-flash",
-          "sensenova/deepseek-v4-flash",
+          {
+            "model": "sensenova/deepseek-v4-flash",
+            "reasoning": "high"
+          },
           "discovery/intern-s2",
-          "discovery/Atria-Dawn",
+          "discovery/Atria-Dawn-Preview",
           "discovery/kimi-k2.6",
           "opencode/mimo-v2.6-flash-free",
-          "opencode/nemotron-3-ultra-free",
-          "amd/MiMo-V2.6-Flash",
           {
-            "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+            "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
             "reasoning": "medium"
-          }
+          },
+          "amd/MiMo-V2.6-Flash"
         ]
       }
     },
@@ -313,12 +404,12 @@
         "amd": 1
       },
       "modelConcurrency": {
+        "opencode-go/deepseek-v4.1-flash": 1,
+        "sensenova/deepseek-flash": 1,
         "sensenova/deepseek-v4-flash": 1,
-        "sensenova/deepseek-v4.1-flash": 1,
         "sensenova/glm-5.2": 1,
         "sensenova/kimi-k3": 1,
         "discovery/deepseek-v4-pro-0813": 1,
-        "discovery/deepseek-v4.1-flash-1017": 1,
         "discovery/glm-5.3": 1,
         "discovery/kimi-k2.6": 1,
         "discovery/minimax-m3": 1,

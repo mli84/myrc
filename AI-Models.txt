@@ -1,11 +1,32 @@
-#nvidia/nvidia/nemotron-3-ultra-550b-a55b (low/medium/high) 
-#nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b (low/medium/high)
+# 免费模型清单（nvidia / opencode / amd 已抓取并实测）
+# 验证时间: 2026-11-15  方式: nvidia/amd 直连 /chat/completions(HTTP 200)；opencode 走 `opencode run`(rc=0)
+# 已过滤: embedding / rerank / guard / safety / 检测 / 语音 / 纯视觉(VLM-only) / 图像生成
+# 档位取自 models.json 的 reasoning_options（toggle 记为 on/off）
 
-#opencode/beam-free (low/medium/high/xhigh/max)
+#nvidia/nvidia/nemotron-3-ultra-550b-a55b (none/medium/high)
+#nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b (on/off)
+#nvidia/nvidia/nemotron-3.5-lightning-30b-a3b (on/off)
+#nvidia/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning (on/off)
+#nvidia/z-ai/glm-5.3-flash (low/high/max)
+#nvidia/deepseek-ai/deepseek-v4.1-flash (none/low/high/max)
+#nvidia/stepfun-ai/step-5-preview (none/minimal/low/medium/high/xhigh/max)
+#nvidia/meta/muse-glimmer-30b (none/minimal/low/medium/high/max)
+#nvidia/minimaxai/minimax-m3.1-flash (low/medium/high/xhigh/max)
+#nvidia/poolside/laguna-xs-2.1
+
+# opencode 免费模型（已实测 via `opencode run`：11/51 可用，其余多为上游 500 / 区域限制）
 #opencode/big-pickle
 #opencode/deepseek-v4.1-flash-free (low/high/max)
 #opencode/flint-40b-free (low/medium/high/xhigh/max)
 #opencode/glm-5.3-flash-free (low/high/max)
+#opencode/longcat-2.5-free (on/off)
+#opencode/iceman-free
+#opencode/nemotron-3.5-lightning-free
+#opencode/minimax-m3.1-flash-free (low/medium/high/xhigh/max)
+#opencode/inkling-2-small-free (none/minimal/low/medium/high/max)
+#opencode/mimo-v2.6-flash-free
+#opencode/nemotron-3.5-super-vl-free (none/minimal/low/medium/high/xhigh)
+# 不可用示例: opencode/beam-free（区域限制）、opencode/nemotron-3-super-free（上游 500）
 # 收费
 #opencode-go/deepseek-v4.1-flash (low/high/max)
 
@@ -23,19 +44,29 @@
 #discovery/kimi-k3.1-pro
 #discovery/qwen3.8-27b
 
-# 代理
-#amd/MiMo-V2.6-Flash
-#amd/DeepSeek-V4.1-Flash (none/minimal/low/medium/high/xhigh/max)
+# 代理 / amd 免费（已实测）
+#amd/GLM-5.3-Flash (low/high/max)
+#amd/Qwen3.8-27B (low/medium)
+#amd/DeepSeek-V4.1-Flash (none/minimal/low/medium/high/xhigh/max)   # 偶发 429 容量限制
 #amd/DeepSeek-V4-Flash (none/minimal/low/medium/high/xhigh/max)
-#amd/GLM-5.3-Flash 
-#amd/Qwen3.8-Flash-Next (low/medium/xhigh)
+#amd/MiMo-V2.6-Flash
+#amd/Gemma-4-31B-IT
+#amd/MiniCPM5-2B
+# 不可用: amd/Qwen3.8-Flash-Next (404 not available)
 
 # 支持图片
 #agnes
 #opencode
 #sensenova/sensenova-6.8-flash-lite
+#nvidia/z-ai/glm-5.3-flash
+#nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b
+#nvidia/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+#nvidia/stepfun-ai/step-5-preview
+#nvidia/meta/muse-glimmer-30b
+#nvidia/minimaxai/minimax-m3.1-flash
 #amd/MiMo-V2.6-Flash
-#amd/DeepSeek-V4.1-Flash 
-#amd/Qwen3.8-Flash-Next (low/medium/xhigh)
+#amd/DeepSeek-V4.1-Flash
+#amd/Qwen3.8-27B
+#amd/Gemma-4-31B-IT
 #discovery
 
