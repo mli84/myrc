@@ -2,6 +2,19 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
   "[opencode]": {
+    "agent_order": [
+      "sisyphus",
+      "metis",
+      "prometheus",
+      "atlas",
+      "hephaestus",
+      "oracle",
+      "momus",
+      "explore",
+      "librarian",
+      "multimodal-looker",
+      "sisyphus-junior"
+    ],
     "agents": {
       "sisyphus": {
         "model": "opencode-go/deepseek-v4.1-flash",
@@ -16,7 +29,7 @@
           },
           "discovery/Agents-A1",
           {
-            "model": "opencode/glm-5.3-flash-free",
+            "model": "opencode/deepseek-v4.1-flash-free",
             "reasoning": "high"
           },
           {
@@ -111,7 +124,7 @@
           },
           "discovery/minimax-m3",
           {
-            "model": "opencode/glm-5.3-flash-free",
+            "model": "opencode/deepseek-v4.1-flash-free",
             "reasoning": "high"
           },
           {
@@ -255,20 +268,44 @@
           }
         ]
       },
-      "deep": {
-        "model": "discovery/deepseek-v4-pro-0813",
+      "deep-low": {
+        "model": "sensenova/deepseek-v4-flash",
+        "reasoning": "high",
         "fallback_models": [
           "agnes/agnes-3.0-flash",
           {
-            "model": "sensenova/glm-5.2",
+            "model": "opencode/deepseek-v4.1-flash-free",
             "reasoning": "high"
           },
           {
             "model": "opencode/flint-40b-free",
-            "reasoning": "xhigh"
+            "reasoning": "medium"
           },
           {
             "model": "amd/DeepSeek-V4-Flash",
+            "reasoning": "high"
+          },
+          {
+            "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+            "reasoning": "medium"
+          }
+        ]
+      },
+      "deep-high": {
+        "model": "discovery/deepseek-v4-pro-0813",
+        "fallback_models": [
+          "agnes/agnes-3.0-flash",
+          {
+            "model": "sensenova/kimi-k3",
+            "reasoning": "high"
+          },
+          "discovery/glm-5.3",
+          {
+            "model": "opencode/deepseek-v4.1-flash-free",
+            "reasoning": "max"
+          },
+          {
+            "model": "amd/DeepSeek-V4.1-Flash",
             "reasoning": "xhigh"
           },
           {
@@ -325,7 +362,7 @@
           "discovery/qwen3.8-27b",
           "opencode/big-pickle",
           {
-            "model": "opencode/glm-5.3-flash-free",
+            "model": "opencode/deepseek-v4.1-flash-free",
             "reasoning": "high"
           },
           {

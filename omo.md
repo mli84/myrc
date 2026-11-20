@@ -30,12 +30,14 @@
   - visual-engineering
   - artistry
   - ultrabrain
-  - deep
+  - deep-low
+  - deep-high
   - quick
   - unspecified-high
   - unspecified-low
   - writing
   - git
+  - general
 
 ## 要求: 
 - 尽量使用所有的模型，即使就放在fallback中 
