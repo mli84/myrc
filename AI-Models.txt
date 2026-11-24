@@ -32,7 +32,7 @@
 
 #sensenova/sensenova-6.8-flash-lite (none/low/medium/high/max)
 # 收费
-#sensenova/deepseek-v4.1-flash (none/low/high/max)
+#sensenova/deepseek-flash (none/low/high/max)
 #sensenova/glm-5.3 (low/high/max)
 #sensenova/kimi-k3 (low/medium/high/max)
 
